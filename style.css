@@ -10,3 +10,7 @@ video {
     -webkit-appearance: button;
     text-decoration: none;
 }
+
+.image {
+    width: 70%;
+}
