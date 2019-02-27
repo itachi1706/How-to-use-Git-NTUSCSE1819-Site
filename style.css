@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;  
+}
+
+#divvid b {
+    font-family: 'Open Sans', sans-serif;
+}
+
 video {
     width: 70%;
 }
