@@ -1,3 +1,11 @@
 video {
     width: 70%;
 }
+
+#button {
+    -webkit-appearance: button;
+    color: initial;
+    -moz-appearance: button;
+    -webkit-appearance: button;
+    text-decoration: none;
+}
