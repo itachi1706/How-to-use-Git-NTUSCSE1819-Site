@@ -2,7 +2,8 @@ video {
     width: 70%;
 }
 
-#button {
+.button {
+    padding: 1px 10px;
     -webkit-appearance: button;
     color: initial;
     -moz-appearance: button;
