@@ -11,13 +11,26 @@
   <body>
     <h1>Resolve Conflicts in Code</h1>
     <a class="button" id="rtnbtn" href="../index.html">↵ Return to Main Screen</a>
-    <p id="description">Brief Description</p>
+    <p id="description">The following guide shows you how to resolve conflicts if it happens (either through rebasing or pulling code). Console usage is required</p>
 
-    <img class="image" src="../media/conflict-1.jpg"/>
-    <img class="image" src="../media/conflict-2.jpg"/>
-    <img class="image" src="../media/conflict-3.jpg"/>
-    <img class="image" src="../media/conflict-4.jpg"/>
-    <img class="image" src="../media/conflict-5.jpg"/>
+    <ol>
+      <li>If a merge conflict occurs (either through pull or rebase or whatever), an error will pop up somewhere along the lines shown in this console window</li>
+      <img class="image" src="../media/conflict-1.jpg"/>
+      <li>When then happen, check the files that have conflicted (you can see it in the console or in the File Status tab on SourceTree where they will display them as ! files)</li>
+      <li>Use your IDE to head over to that file (or open in any text editor)</li>
+      <li>Identify the conflicted code and resolve them normally</li>
+      <span><b>Before Conflict Resolution</b><br>
+      <img class="image" src="../media/conflict-2.jpg"/><br></span>
+      <span><b>After Conflict Resolution</b><br>
+      <img class="image" src="../media/conflict-3.jpg"/><br></span>
+      <li>Head back to SourceTree and select the resolved conflicted files in <i>Unstaged Files</i> and stage them accordingly</li>
+      <img class="image" src="../media/conflict-4.jpg"/>
+      <li>Tell git to continue the operation you are doing<br>
+      If you are doing a pull, just go ahead and click <i>Commit</i> in File Status (see <a href="commit.html">Commit Code</a>)<br>
+      If you are doing a rebase, go back to the console and execute <i>git rebase --continue</i> (See pic below)</li>
+      <img class="image" src="../media/conflict-5.jpg"/>
+    </ol>
+    
     
     <div id="divvid"><b>Demo Video</b><br>
     <span>The following is a video on how this is being done. Read the how-to guide before watching the video for actual steps to do it</span></div>
