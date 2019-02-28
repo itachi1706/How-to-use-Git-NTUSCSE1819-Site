@@ -42,13 +42,13 @@ for (var i = 0; i < array.length; i++) {
     selectList.appendChild(option);
 }
 
-var pageInArray = (myarr.indexOf(currentPage) > -1);
+var pageInArray = (array.indexOf(currentPage) > -1);
 if (pageInArray) {
     selectList.value = currentPage;
 }
 
 selectList.addEventListener("change", function() {
-    var url = document.getElementById('list').value + ".html";
+    var url = selectList.value + ".html";
         if(url != 'none') {
             window.location = url;
         }

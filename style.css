@@ -43,11 +43,11 @@ video {
 }
 
 #prebtn:before {
-  content: "<- ";
+  content: "← ";
 }
 
 #nxtbtn:after {
-  content: " ->";
+  content: " →";
 }
 
 #breadcrumb-select {
