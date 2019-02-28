@@ -37,11 +37,12 @@ video {
   flex: 50.0%;
 }
 
-#nxtbtn {
-  float: right;
-}
-
 #prebtn {
   float: right;
   margin: 0 5px;
 }
+
+#nxtbtn {
+  float: right;
+}
+
