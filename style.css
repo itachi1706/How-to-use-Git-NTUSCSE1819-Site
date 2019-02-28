@@ -53,6 +53,7 @@ video {
 #breadcrumb-select {
   float: right;
   width: 250px;
+  padding: 1px;
 }
 
 #topBtn {
