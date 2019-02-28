@@ -27,11 +27,11 @@ var arrayText = [
     "How to commit a file",
     "How to update local repo with new code from GitHub (pull)",
     "How to push to GitHub",
-    "<b>IMPORTANT</b> How to create a feature (Pull Requests)",
+    "[IMPORTANT] How to create a feature (Pull Requests)",
     "Resolve Code Conflicts",
     "Rebase Branch against another branch",
-    "<i>Optional</i> Amend unpushed commits",
-    "<i>Optional</i> View CI Builds"
+    "[Optional] Amend unpushed commits",
+    "[Optional] View CI Builds"
 ];
 
 //Create and append the options
