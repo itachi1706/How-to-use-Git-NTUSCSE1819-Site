@@ -37,13 +37,14 @@ video {
   flex: 50.0%;
 }
 
-#prebtn {
+#prebtn, #nxtbtn {
   float: right;
   margin: 0 5px;
 }
 
-#nxtbtn {
+#breadcrumb-select {
   float: right;
+  size: 100px;
 }
 
 #topBtn {
