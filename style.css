@@ -28,3 +28,11 @@ video {
 .image {
     width: 70%;
 }
+
+.imgrow {
+  display: flex;
+}
+
+.imgcol {
+  flex: 50.0%;
+}

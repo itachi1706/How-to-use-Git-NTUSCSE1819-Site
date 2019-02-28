@@ -21,7 +21,7 @@
       <li><a href="/guides/commit.html">How to commit a file</a></li>
       <li><a href="/guides/pull.html">How to update local repo with new code from GitHub (pull)</a></li>
       <li><a href="/guides/push.html">How to push to GitHub</a></li>
-      <li><a href="/guides/pr.html"><b>IMPORTANT</b> How to create a feature</a></li>
+      <li><a href="/guides/pr.html"><b>IMPORTANT</b> How to create a feature (Pull Requests)</a></li>
       <li><a href="/guides/conflict.html">Resolve Merge Conflicts</a></li>
       <li><a href="/guides/rebase.html">Rebase Branch against another branch</a></li>
       <li><a href="/guides/amend.html"><i>Optional</i> Amend unpushed commits</a></li>
@@ -48,6 +48,15 @@
     <p>YES! However, this guide is catered to SourceTree but other Git GUI programs will have their own equivalent. Or you can always use git console	&#128527;</p>
     <h2>I'm actually interested in the Console Command equivalents of the various tools! How do I find them?</h2>
     <p>Scroll all the way down to the bottom of each page and I will add the console command equivalent beside it if available</p>
+    <h2>Why do we need to work in branches and do a PR? Can't we just commit directly to Master?</h2>
+    <p>The main reason for working in seperate branches is to allow us to be able to work on the codebase simultaneously without much conflicts (hopefully). It is also done to ensure that
+      the master branch will always be compilable and bad code does not land there. This is why branch protection exists as well to prevent direct pushes
+      <div class="imgrow"><div class="imgcol"><b>Branch Protection in place</b><br>
+      <img class="image" src="media/branch-protect-2.jpg" /></div>
+      <div class="imgcol"><b>Sample Branch Protection Rule Configuration</b><br>
+      <img class="image" src="media/branch-protect-1.jpg" /></div></div>
+
+    </p>
 
     <h1>Extra Guides</h1>
     <p><a href="https://git-scm.com/book/en/v2">Git Holy Grail Book</a></p>
