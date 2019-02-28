@@ -37,8 +37,13 @@ video {
   flex: 50.0%;
 }
 
-#prebtn, #nxtbtn {
+#breadcrumb-ctrl {
+  right: 0px;
+  position: relative;
   float: right;
+}
+
+#prebtn, #nxtbtn {
   margin: 0 5px;
 }
 
@@ -51,9 +56,8 @@ video {
 }
 
 #breadcrumb-select {
-  float: right;
   width: 250px;
-  padding: 1px;
+  padding: 1.3px;
 }
 
 #topBtn {
