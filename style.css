@@ -42,6 +42,14 @@ video {
   margin: 0 5px;
 }
 
+#prebtn:before {
+  content: "<- ";
+}
+
+#nxtbtn:after {
+  content: " ->";
+}
+
 #breadcrumb-select {
   float: right;
   size: 100px;
