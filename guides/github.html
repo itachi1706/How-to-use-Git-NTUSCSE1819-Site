@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GitHub - How to Git for Dummies (NTU SCSE Style)</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+  </head>
+
+  <body>
+    <h1>Introduction to GitHub</h1>
+    <a class="button" id="rtnbtn" href="../index.html">↵ Return to Main Screen</a>
+    <p id="description">This page will give you a brief guide on the <a href="https://github.com">GitHub.com</a> User Interface. It is color coded to tell you what it's referring to</p>
+
+    <h2>Quick Jump References</h2>
+    <ul>
+      <li><a href="#jump-mics">Main Interface and Code Screen</a></li>
+      <li><a href="#jump-issue">Issue Screen</a></li>
+      <li><a href="#jump-pr">Pull Request Screen</a></li>
+      <li><a href="#jump-proj">Project Screen</a></li>
+    </ul>
+    
+    <h2><a id="jump-mics"></a>Main Interface and Code Screen</h2>
+    <img class="image" src="../media/ghst/main-1.png" />
+    <ol>
+      <li>Repository Statistics: Total Commits, Branches, Releases and Contributors. Clicking on the thin colored line will provide a list of languages detected in the repository</li>
+      <li>A dropbown box to swtich branches and a quick shortcut to create a new PR</li>
+      <li>Some useful buttons (from left to right): <ul>
+        <li>Create New File - Creates a new file for you to edit directly from the website</li>
+        <li>Upload files - Uploads files to the repository from the website</li>
+        <li>Find file - Finds a file in the repository by the file name</li>
+        <li>Clone or download - Provides a URL where you can use to clone the repository. Also some buttons to open the repository in GitHub Desktop or to download the entire repository as a .zip file (See <a href="clone.html">Clone Repository</a> for more information)</li>
+      </ul></li>
+      <li>Latest commit made to the repository's branch</li>
+        <li>The file list in the current selected branch as well as the last commit made that modified the file and how long ago that was</li>
+    </ol>
+    <br>
+    <img class="image" src="../media/ghst/code-1.png" />
+    <ol>
+      <li>Dropdown box to switch branches</li>
+      <li>Latest commit made that modified this file</li>
+      <li>Some useful screens (left to right): <ul>
+        <li>Raw - View the file directly</li>
+        <li>Blame - View who exactly changed which part of the code in this file at which commit</li>
+        <li>History - View the entire history of the file</li>
+      </ul></li>
+      <li>Edit button to edit the file from the web directly</li>
+      <li>Content of file</li>
+    </ol>
+    <br>
+    <img class="image" src="../media/ghst/code-2.png" />
+    <ol>
+      <li>Preview changes made to the file</li>
+      <li>Content of the file where you can edit</li>
+      <li>Commit Title</li>
+      <li>Commit Description</li>
+      <li>Which email to commit as and to commit to which branch/PR</li>
+      <li>Button to commit or cancel edit</li>
+    </ol>
+
+    <h2><a id="jump-issue"></a>Issue Screen</h2>
+    <img class="image" src="../media/ghst/issue-1.png" />
+    <ol>
+      <li>Button to create a new issue</li>
+      <li>Switch between open and closed issues</li>
+      <li>Filters to filter issues by the various properties</li>
+      <li>List of all issues</li>
+    </ol>
+    <br>
+    <img class="image" src="../media/ghst/issue-2.png" />
+    <ol>
+      <li>Button to edit title or create a new issue</li>
+      <li>Comment and changes made to the issue</li>
+      <li>Issue Properties (top to bottom): <ul>
+        <li>Assignee - Who is assigned to the issue</li>
+        <li>Labels - Labels assigned to the issue (bug, enhancement etc)</li>
+        <li>Projects - What project board this issue is linked to</li>
+        <li>Milestone - Which milestone this issue is linked to</li>
+      </ul></li>
+      <li>Box where you can enter comments to the issue as well as close it (if you are the issue creator)</li>
+      <li>Some issue controls (top to bottom): <ul>
+        <li>Lock Conversation - Restrict comments to collaborators only</li>
+        <li>Pin Issue - Pin issue to the top of the list</li>
+        <li>Transfer Issue - Transfer issue to another repository</li>
+        <li>Delete Issue - Delete this issue</li>
+      </ul></li>
+    </ol>
+    
+    <h2><a id="jump-pr"></a>Pull Requests Screen</h2>
+    <img class="image" src="../media/ghst/pr-1.png" />
+    <ol>
+      <li>Button to create a new pull request</li>
+      <li>Switch between open and closed pull requests</li>
+      <li>Filters to filter pull requests by the various properties</li>
+      <li>List of all pull requests</li>
+    </ol>
+    <br>
+    <img class="image" src="../media/ghst/pr-2.png" />
+    <ol>
+      <li>Button to edit PR title</li>
+      <li>Tabs to switch pages (left to right): <ul>
+        <li>Conversation - The screen you see now</li>
+        <li>Commits - List of commits in the PR</li>
+        <li>Checks - Checks that are being ran on this PR by a CI or service</li>
+        <li>Files changed - Diff of files that are changed in this Pull Request</li>
+      </ul></li>
+      <li>Comment and changes made to the issue</li>
+      <li>Issue Properties (top to bottom): <ul>
+        <li>Reviewers - Who is involved in reviewing the PR</li>
+        <li>Assignee - Who is assigned to the PR</li>
+        <li>Labels - Labels assigned to the PR (bug, enhancement etc)</li>
+        <li>Projects - What project board this PR is linked to</li>
+        <li>Milestone - Which milestone this PR is linked to</li>
+        <li>Notifications - Whether to receive GitHub notifications on this PR</li>
+        <li>Lock Conversation - Restrict comments to collaborators only</li>
+      </ul></li>
+      <li>Checks being done to this PR as well as the button to merge the PR</li>
+      <li>Box where you can enter comments to the PR as well as close it (if you are the issue creator)</li>
+    </ol>
+
+    <h2><a id="jump-project"></a>Project Screen (It's like Trello/JIRA)</h2>
+    <img class="image" src="../media/ghst/proj-1.png" />
+    <ol>
+      <li>Create new projects</li>
+      <li>Filter between open and closed projects</li>
+      <li>List of all projects</li>
+    </ol>
+    <br>
+    <img class="image" src="../media/ghst/proj-2.png" />
+    <ol>
+      <li>Add issue cards (or add issue to the specific board)</li>
+      <li>Issue Cards</li>
+    </ol>
+  </body>
+</html>
