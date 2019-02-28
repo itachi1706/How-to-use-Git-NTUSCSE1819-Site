@@ -28,7 +28,7 @@ var arrayText = [
     "How to update local repo with new code from GitHub (pull)",
     "How to push to GitHub",
     "<b>IMPORTANT</b> How to create a feature (Pull Requests)",
-    "Resolve Merge Conflicts",
+    "Resolve Code Conflicts",
     "Rebase Branch against another branch",
     "<i>Optional</i> Amend unpushed commits",
     "<i>Optional</i> View CI Builds"
