@@ -10,7 +10,12 @@
 
   <body>
     <h1>Update with latest changes to main branch (git rebase)</h1>
-    <a class="button" id="rtnbtn" href="../index.html">↵ Return to Main Screen</a>
+        <div id="sidebar">
+      <a class="button" id="rtnbtn" href="../index.html">↵ Return to Main Screen</a>
+      <a class="button" id="prebtn" href="../index.html">Previous</a>
+      <a class="button" id="nxtbtn" href="../index.html">Next</a>
+    </div>
+
     <p id="description">The following guide shows you how to update your current branch with code from another branch that may have more commits since you have branched off it<br>
     This is extremely useful in the case where you may be working on your own branch and in the meantime the <i>master</i> branch has been updated. By rebasing, you are able to test 
     your code against the latest code as well as preemptively ensuring that your PR will not fail to merge. Console usage is required<br><br>Speaking of which, if your PR fails to merge, rebase your branch against the 

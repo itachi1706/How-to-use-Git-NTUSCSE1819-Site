@@ -10,7 +10,12 @@
 
   <body>
     <h1>Issue Pull Request (PR) for features</h1>
-    <a class="button" id="rtnbtn" href="../index.html">↵ Return to Main Screen</a>
+        <div id="sidebar">
+      <a class="button" id="rtnbtn" href="../index.html">↵ Return to Main Screen</a>
+      <a class="button" id="prebtn" href="../index.html">Previous</a>
+      <a class="button" id="nxtbtn" href="../index.html">Next</a>
+    </div>
+
     <p id="description">This will show you how to do git-flow style of committing. Ideal git guidelines is that we never commit anything to master directly. So instead, we make use
       of branches where we will do our code/feature/implementation/whatever and then we will issue a Pull Request (PR) to commit said code back to master. This way we are able to do
       extra validation on our code through code review by Continuous Integration (CI) servers or other collaborators. This will ensure that bad code will never be found on master
