@@ -12,6 +12,7 @@
         +getTableNum(): int
         +setNumSeats(numSeats:Table.TableSeats): void
         +getNumSeats(): Table.TableSeats
+        +getNumSeatsInt(): int
         +setState(state:Table.TableState): void
         +getState(): Table.TableState
         +setReserved(reserved:boolean): void

@@ -8,12 +8,12 @@
         -viewOrder(): void
         -editOrder(): void
         -addOrderItem(o:Order): void
+        -addAlaCarteItem(o:Order): void
         -editOrderItem(o:Order): void
         -removeOrderItem(o:Order): void
         -findOrder(id:int, allowFromPaid:boolean): Order
         -printOrderList(orders:ArrayList<Order>, tag:String): void
         -printOrderDetails(o:Order): void
-        -printPromotionDetail(p:Promotion): void
         -getOrderItemToEdit(o:Order, prompt:String): int
         -printOrderItems(items:ArrayList<OrderItem>, prettyPrint:boolean): void
     }

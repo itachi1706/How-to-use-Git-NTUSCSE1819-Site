@@ -101,6 +101,7 @@
             +toCsv(): String[]
             +setTableNum(tableNum:int): void
             +getTableNum(): int
+            +getNumSeatsInt(): int
             +setReserved(reserved:boolean): void
             +checkReserved(): boolean
             {static} +getTableByNumber(tableNum:int): Table

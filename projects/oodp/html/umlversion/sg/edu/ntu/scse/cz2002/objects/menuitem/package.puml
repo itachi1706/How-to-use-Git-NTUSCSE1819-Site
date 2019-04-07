@@ -22,6 +22,7 @@
             +setDescription(description:String): void
             +getPrice(): double
             +setPrice(price:double): void
+            +printItemDetail(): String
         }
 
         class ItemNotFoundException [[../sg/edu/ntu/scse/cz2002/objects/menuitem/ItemNotFoundException.html]] {
@@ -51,6 +52,7 @@
             +setPromoDessert(promoDessert:int): void
             +getPromoDrink(): int
             +setPromoDrink(promoDrink:int): void
+            +printPromotionDetail(): String
         }
 
         interface sg.edu.ntu.scse.cz2002.util.ICsvSerializable {

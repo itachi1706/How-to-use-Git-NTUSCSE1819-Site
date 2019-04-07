@@ -23,6 +23,7 @@
         +setPromoDessert(promoDessert:int): void
         +getPromoDrink(): int
         +setPromoDrink(promoDrink:int): void
+        +printPromotionDetail(): String
     }
 
 

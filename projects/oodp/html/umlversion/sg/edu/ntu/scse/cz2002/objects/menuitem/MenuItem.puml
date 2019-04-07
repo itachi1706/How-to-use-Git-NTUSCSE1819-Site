@@ -20,6 +20,7 @@
         +setDescription(description:String): void
         +getPrice(): double
         +setPrice(price:double): void
+        +printItemDetail(): String
     }
 
 
