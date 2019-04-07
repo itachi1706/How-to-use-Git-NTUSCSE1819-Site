@@ -1,6 +1,6 @@
 @startuml
 
-    enum OrderItem.OrderItemType {
+    enum OrderItem.OrderItemType [[../sg/edu/ntu/scse/cz2002/features/OrderItem.OrderItemType.html]] {
         {static} +TYPE_MENU
         {static} +TYPE_PROMO
     }

@@ -2,50 +2,83 @@
 
     namespace sg.edu.ntu.scse.cz2002.ui {
 
-        class ReservationMenuUI {
+        class ReservationMenuUI [[../sg/edu/ntu/scse/cz2002/ui/ReservationMenuUI.html]] {
+            -input: Scanner
+            -MAX_TABLES: int
             #generateMenuScreen(): int
+            -createReservationBooking(): void
+            -findTableForReservation(numPax:int, resvDate:LocalDate, resvSession:char): int
+            -checkReservationBooking(): void
+            -removeReservationBooking(): void
+            -listReservations(): void
+            -checkExpiredReservations(): void
+            -printReservationLine(telNo:String): int
+            -printReservationLine(r:Reservation): void
+            -checkMorningSessionDate(date:LocalDate, isToday:boolean): boolean
+            -checkEveningSessionDate(date:LocalDate, isToday:boolean): boolean
         }
 
-        class FoodMenuUI {
+        class FoodMenuUI [[../sg/edu/ntu/scse/cz2002/ui/FoodMenuUI.html]] {
+            ~sc: Scanner
             #generateMenuScreen(): int
             +printMenu(): void
-            +addNewMenuItem(String, String, String, double): void
-            +editMenuItem(int, String, String, String, double): void
-            +deleteMenuItem(int): void
-            {static} +retrieveMenuItem(int): MenuItem
-            {static} +retrieveMenuItemListFiltered(String): ArrayList<MenuItem>
+            +addNewMenuItem(newItemName:String, newItemType:String, newItemDescription:String, newItemPrice:double): void
+            +editMenuItem(targetItemID:int, editItemName:String, editItemType:String, editItemDescription:String, editItemPrice:double): void
+            +deleteMenuItem(targetItemID:int): void
+            {static} +retrieveMenuItem(targetItemID:int): MenuItem
+            {static} +retrieveMenuItemListFiltered(targetItemType:String): ArrayList<MenuItem>
         }
 
-        class PromotionMenuUI {
+        class PromotionMenuUI [[../sg/edu/ntu/scse/cz2002/ui/PromotionMenuUI.html]] {
+            ~sc: Scanner
             #generateMenuScreen(): int
             +printPromotion(): void
-            +addNewPromotion(String, double, int, int, int): void
-            +editPromotion(int, String, double, int, int, int): void
-            +deletePromotion(int): void
-            {static} +retrievePromotion(int): Promotion
+            +addNewPromotion(newPromoName:String, newPromoPrice:double, newPromoMain:int, newPromoDessert:int, newPromoDrink:int): void
+            +editPromotion(targetPromoID:int, editPromoName:String, editPromoPrice:double, editPromoMain:int, editPromoDessert:int, editPromoDrink:int): void
+            +deletePromotion(targetPromoID:int): void
+            {static} +retrievePromotion(targetPromoID:int): Promotion
         }
 
-        class MainMenuUI {
+        class MainMenuUI [[../sg/edu/ntu/scse/cz2002/ui/MainMenuUI.html]] {
             #generateMenuScreen(): int
+            -checkTableAvailability(): void
         }
 
-        class StaffMgmtMenuUI {
+        class StaffMgmtMenuUI [[../sg/edu/ntu/scse/cz2002/ui/StaffMgmtMenuUI.html]] {
             #generateMenuScreen(): int
+            -createNewStaff(): void
+            -editStaffInfo(): void
+            -removeStaff(): void
+            -listAllStaff(): void
         }
 
-        abstract class BaseMenu {
+        abstract class BaseMenu [[../sg/edu/ntu/scse/cz2002/ui/BaseMenu.html]] {
+            {static} -PRINT_WINDOW_MAX_SIZE: int
             +startMainMenu(): boolean
-            {static} #printHeader(String): void
-            {static} #printHeader(String, int): void
-            {static} #printBreaks(int): void
+            {static} #printHeader(headerName:String): void
+            {static} #printHeader(headerName:String, length:int): void
+            {static} #printBreaks(length:int): void
             {static} #printBreaks(): void
-            {static} #doMenuChoice(int, int): int
+            {static} #doMenuChoice(max:int, specialEscape:int): int
             {abstract} #generateMenuScreen(): int
         }
 
-        class OrderMenuUI {
+        class OrderMenuUI [[../sg/edu/ntu/scse/cz2002/ui/OrderMenuUI.html]] {
             {static} +incompleteOrders: ArrayList<Order>
             #generateMenuScreen(): int
+            -editOrderMenuScreen(orderNumber:int): void
+            -createOrder(): void
+            -viewOrder(): void
+            -editOrder(): void
+            -addOrderItem(o:Order): void
+            -editOrderItem(o:Order): void
+            -removeOrderItem(o:Order): void
+            -findOrder(id:int, allowFromPaid:boolean): Order
+            -printOrderList(orders:ArrayList<Order>, tag:String): void
+            -printOrderDetails(o:Order): void
+            -printPromotionDetail(p:Promotion): void
+            -getOrderItemToEdit(o:Order, prompt:String): int
+            -printOrderItems(items:ArrayList<OrderItem>, prettyPrint:boolean): void
         }
 
         BaseMenu <|-- ReservationMenuUI

@@ -1,12 +1,13 @@
 @startuml
 
-    abstract class BaseMenu {
+    abstract class BaseMenu [[../sg/edu/ntu/scse/cz2002/ui/BaseMenu.html]] {
+        {static} -PRINT_WINDOW_MAX_SIZE: int
         +startMainMenu(): boolean
-        {static} #printHeader(String): void
-        {static} #printHeader(String, int): void
-        {static} #printBreaks(int): void
+        {static} #printHeader(headerName:String): void
+        {static} #printHeader(headerName:String, length:int): void
+        {static} #printBreaks(length:int): void
         {static} #printBreaks(): void
-        {static} #doMenuChoice(int, int): int
+        {static} #doMenuChoice(max:int, specialEscape:int): int
         {abstract} #generateMenuScreen(): int
     }
 

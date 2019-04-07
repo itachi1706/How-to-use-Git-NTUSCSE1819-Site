@@ -1,7 +1,19 @@
 @startuml
 
-    class ReservationMenuUI {
+    class ReservationMenuUI [[../sg/edu/ntu/scse/cz2002/ui/ReservationMenuUI.html]] {
+        -input: Scanner
+        -MAX_TABLES: int
         #generateMenuScreen(): int
+        -createReservationBooking(): void
+        -findTableForReservation(numPax:int, resvDate:LocalDate, resvSession:char): int
+        -checkReservationBooking(): void
+        -removeReservationBooking(): void
+        -listReservations(): void
+        -checkExpiredReservations(): void
+        -printReservationLine(telNo:String): int
+        -printReservationLine(r:Reservation): void
+        -checkMorningSessionDate(date:LocalDate, isToday:boolean): boolean
+        -checkEveningSessionDate(date:LocalDate, isToday:boolean): boolean
     }
 
 

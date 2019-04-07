@@ -2,98 +2,119 @@
 
     namespace sg.edu.ntu.scse.cz2002.features {
 
-        class OrderItem {
-            +OrderItem(String[])
-            +OrderItem(int, int, OrderItem.OrderItemType)
+        class OrderItem [[../sg/edu/ntu/scse/cz2002/features/OrderItem.html]] {
+            -itemId: int
+            -quantity: int
+            -itemTotal: double
+            +OrderItem(otherData:String[])
+            +OrderItem(itemId:int, quantity:int, itemType:OrderItem.OrderItemType)
             +toCompiledString(): String
+            -getPromo(): Promotion
+            -getMenuItem(): MenuItem
             +getItem(): Object
             +getItemName(): String
             +getQuantity(): int
-            +setQuantity(int): void
+            +setQuantity(quantity:int): void
             +isPromotion(): boolean
             +getItemTotal(): double
             +calculateTotal(): void
         }
 
-        enum sg.edu.ntu.scse.cz2002.features.OrderItem.OrderItemType {
+        enum sg.edu.ntu.scse.cz2002.features.OrderItem.OrderItemType [[../sg/edu/ntu/scse/cz2002/features/OrderItem.OrderItemType.html]] {
             {static} +TYPE_MENU
             {static} +TYPE_PROMO
         }
 
-        class Reservation {
-            +Reservation(int, LocalDate, LocalTime, char, String, String, int, int)
-            +Reservation(String[])
+        class Reservation [[../sg/edu/ntu/scse/cz2002/features/Reservation.html]] {
+            -resvId: int
+            -resvDate: LocalDate
+            -resvTime: LocalTime
+            -custTelNo: String
+            -custName: String
+            -numPax: int
+            -tableNum: int
+            +Reservation(id:int, rd:LocalDate, rt:LocalTime, sess:char, telNo:String, name:String, pax:int, t:int)
+            +Reservation(csv:String[])
             +toCsv(): String[]
             +getResvId(): int
-            +setResvId(int): void
+            +setResvId(resvId:int): void
             +getResvDate(): LocalDate
-            +setResvDate(LocalDate): void
+            +setResvDate(resvDate:LocalDate): void
             +getResvTime(): LocalTime
-            +setResvTime(LocalTime): void
+            +setResvTime(resvTime:LocalTime): void
             +getNumPax(): int
-            +setNumPax(int): void
+            +setNumPax(numPax:int): void
             +getCustName(): String
-            +setCustName(String): void
+            +setCustName(custName:String): void
             +getCustTelNo(): String
-            +setCustTelNo(String): void
+            +setCustTelNo(custTelNo:String): void
             +getTableNum(): int
-            +setTableNum(int): void
-            {static} +hasReservation(String): Table
-            {static} +getTablesBookedOnDateBySession(LocalDate, char): ArrayList<Table>
+            +setTableNum(tableNum:int): void
+            {static} +hasReservation(telNo:String): Table
+            {static} +getTablesBookedOnDateBySession(resvDate:LocalDate, resvSession:char): ArrayList<Table>
         }
 
-        enum sg.edu.ntu.scse.cz2002.features.Reservation.ReservationSession {
+        enum sg.edu.ntu.scse.cz2002.features.Reservation.ReservationSession [[../sg/edu/ntu/scse/cz2002/features/Reservation.ReservationSession.html]] {
             {static} +AM_SESSION
             {static} +PM_SESSION
         }
 
-        class Order {
-            +Order(int)
-            +Order(String[])
+        class Order [[../sg/edu/ntu/scse/cz2002/features/Order.html]] {
+            -orderID: int
+            -orderItems: ArrayList<OrderItem>
+            -subtotal: double
+            -createdAt: long
+            -completedAt: long
+            -staffId: int
+            -tableId: int
+            +Order(orderID:int)
+            +Order(csv:String[])
             +toCsv(): String[]
             +getOrderID(): int
             +getOrderItems(): ArrayList<OrderItem>
-            +setOrderItems(ArrayList<OrderItem>): void
+            +setOrderItems(orderItems:ArrayList<OrderItem>): void
             +getSubtotal(): double
             +calculateSubtotal(): void
             +markPaid(): void
             +getCreatedAt(): long
             +getCompletedAt(): long
             +getStaffId(): int
-            +setStaffId(int): void
+            +setStaffId(staff:int): void
             +getTableId(): int
-            +setTableId(int): void
+            +setTableId(table:int): void
             +getStaff(): Staff
         }
 
-        enum sg.edu.ntu.scse.cz2002.features.Order.OrderState {
+        enum sg.edu.ntu.scse.cz2002.features.Order.OrderState [[../sg/edu/ntu/scse/cz2002/features/Order.OrderState.html]] {
             {static} +ORDER_PAID
             {static} +ORDER_UNPAID
         }
 
-        class Invoice {
+        class Invoice [[../sg/edu/ntu/scse/cz2002/features/Invoice.html]] {
         }
 
-        class Table {
-            +Table(int, boolean, int, int)
-            +Table(String[])
+        class Table [[../sg/edu/ntu/scse/cz2002/features/Table.html]] {
+            -tableNum: int
+            -isReserved: boolean
+            +Table(num:int, res:boolean, seats:int, state:int)
+            +Table(csv:String[])
             +toCsv(): String[]
-            +setTableNum(int): void
+            +setTableNum(tableNum:int): void
             +getTableNum(): int
-            +setReserved(boolean): void
+            +setReserved(reserved:boolean): void
             +checkReserved(): boolean
-            {static} +getTableByNumber(int): Table
-            {static} +getVacantTablesByNumPax(int, ArrayList<Table>): ArrayList<Table>
+            {static} +getTableByNumber(tableNum:int): Table
+            {static} +getVacantTablesByNumPax(numPax:int, bookedTables:ArrayList<Table>): ArrayList<Table>
         }
 
-        enum sg.edu.ntu.scse.cz2002.features.Table.TableState {
+        enum sg.edu.ntu.scse.cz2002.features.Table.TableState [[../sg/edu/ntu/scse/cz2002/features/Table.TableState.html]] {
             {static} +TABLE_VACATED
             {static} +TABLE_OCCUPIED
             {static} +TABLE_RESERVED
             {static} +TABLE_STATE_UNKNOWN
         }
 
-        enum sg.edu.ntu.scse.cz2002.features.Table.TableSeats {
+        enum sg.edu.ntu.scse.cz2002.features.Table.TableSeats [[../sg/edu/ntu/scse/cz2002/features/Table.TableSeats.html]] {
             {static} +TWO_SEATER
             {static} +FOUR_SEATER
             {static} +EIGHT_SEATER
@@ -120,15 +141,17 @@
 
         Table +-- sg.edu.ntu.scse.cz2002.features.Table.TableSeats
 
+        OrderItem --> sg.edu.ntu.scse.cz2002.features.OrderItem.OrderItemType: itemType
+
         Reservation --> sg.edu.ntu.scse.cz2002.features.Reservation.ReservationSession: resvSession
 
         Order --> sg.edu.ntu.scse.cz2002.features.Order.OrderState: orderState
 
         Order --> Table: table
 
-        Table --> sg.edu.ntu.scse.cz2002.features.Table.TableSeats: numSeats
-
         Table --> sg.edu.ntu.scse.cz2002.features.Table.TableState: state
+
+        Table --> sg.edu.ntu.scse.cz2002.features.Table.TableSeats: numSeats
 
     }
 

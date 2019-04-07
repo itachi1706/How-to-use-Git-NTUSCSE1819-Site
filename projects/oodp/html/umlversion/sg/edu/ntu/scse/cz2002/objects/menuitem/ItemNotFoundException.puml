@@ -1,7 +1,7 @@
 @startuml
 
-    class ItemNotFoundException {
-        +ItemNotFoundException(String)
+    class ItemNotFoundException [[../sg/edu/ntu/scse/cz2002/objects/menuitem/ItemNotFoundException.html]] {
+        +ItemNotFoundException(message:String)
     }
 
 

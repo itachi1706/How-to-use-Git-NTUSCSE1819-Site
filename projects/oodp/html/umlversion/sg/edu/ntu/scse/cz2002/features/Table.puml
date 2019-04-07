@@ -1,19 +1,23 @@
 @startuml
 
-    class Table {
-        +Table(int, boolean, int, int)
-        +Table(String[])
+    class Table [[../sg/edu/ntu/scse/cz2002/features/Table.html]] {
+        -tableNum: int
+        -isReserved: boolean
+        -state: Table.TableState
+        -numSeats: Table.TableSeats
+        +Table(num:int, res:boolean, seats:int, state:int)
+        +Table(csv:String[])
         +toCsv(): String[]
-        +setTableNum(int): void
+        +setTableNum(tableNum:int): void
         +getTableNum(): int
-        +setNumSeats(Table.TableSeats): void
+        +setNumSeats(numSeats:Table.TableSeats): void
         +getNumSeats(): Table.TableSeats
-        +setState(Table.TableState): void
+        +setState(state:Table.TableState): void
         +getState(): Table.TableState
-        +setReserved(boolean): void
+        +setReserved(reserved:boolean): void
         +checkReserved(): boolean
-        {static} +getTableByNumber(int): Table
-        {static} +getVacantTablesByNumPax(int, ArrayList<Table>): ArrayList<Table>
+        {static} +getTableByNumber(tableNum:int): Table
+        {static} +getVacantTablesByNumPax(numPax:int, bookedTables:ArrayList<Table>): ArrayList<Table>
     }
 
 

@@ -1,9 +1,13 @@
 @startuml
 
-    class ReservationCSVHelper {
+    class ReservationCSVHelper [[../sg/edu/ntu/scse/cz2002/util/ReservationCSVHelper.html]] {
+        {static} -mInstance: ReservationCSVHelper
+        -reservationCsv: String
+        -ReservationCSVHelper()
+        + --ReservationCSVHelper-- (filename:String)
         {static} +getInstance(): ReservationCSVHelper
         +readFromCsv(): ArrayList<Reservation>
-        +writeToCsv(ArrayList<Reservation>): void
+        +writeToCsv(reservations:ArrayList<Reservation>): void
     }
 
 

@@ -1,9 +1,11 @@
 @startuml
 
-    class PromoCSVHelper {
+    class PromoCSVHelper [[../sg/edu/ntu/scse/cz2002/util/PromoCSVHelper.html]] {
+        {static} -pInstance: PromoCSVHelper
+        -promotionCsv: String
         {static} +getInstance(): PromoCSVHelper
         +readFromCsv(): ArrayList<Promotion>
-        +writeToCsv(ArrayList<Promotion>): void
+        +writeToCsv(promotions:ArrayList<Promotion>): void
     }
 
 

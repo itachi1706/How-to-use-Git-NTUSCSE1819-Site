@@ -1,8 +1,8 @@
 @startuml
 
-    class CSVBaseHelper {
-        #readAll(BufferedReader, int): List<String[]>
-        #writeToCsvFile(List<String[]>, BufferedWriter): void
+    class CSVBaseHelper [[../sg/edu/ntu/scse/cz2002/util/CSVBaseHelper.html]] {
+        #readAll(reader:BufferedReader, skip:int): List<String[]>
+        #writeToCsvFile(writeStrings:List<String[]>, writer:BufferedWriter): void
     }
 
 

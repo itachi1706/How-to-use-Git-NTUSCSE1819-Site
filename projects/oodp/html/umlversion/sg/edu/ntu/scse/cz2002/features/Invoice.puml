@@ -1,6 +1,6 @@
 @startuml
 
-    class Invoice {
+    class Invoice [[../sg/edu/ntu/scse/cz2002/features/Invoice.html]] {
     }
 
 

@@ -2,79 +2,107 @@
 
     namespace sg.edu.ntu.scse.cz2002.util {
 
-        class CSVBaseHelper {
-            #readAll(BufferedReader, int): List<String[]>
-            #writeToCsvFile(List<String[]>, BufferedWriter): void
+        class CSVBaseHelper [[../sg/edu/ntu/scse/cz2002/util/CSVBaseHelper.html]] {
+            #readAll(reader:BufferedReader, skip:int): List<String[]>
+            #writeToCsvFile(writeStrings:List<String[]>, writer:BufferedWriter): void
         }
 
-        class TableCSVHelper {
+        class TableCSVHelper [[../sg/edu/ntu/scse/cz2002/util/TableCSVHelper.html]] {
+            {static} -mInstance: TableCSVHelper
+            -tableCsv: String
+            -TableCSVHelper()
+            + --TableCSVHelper-- (filename:String)
             {static} +getInstance(): TableCSVHelper
             +readFromCsv(): ArrayList<Table>
+            + --writeToCsv-- (tables:ArrayList<Table>): void
         }
 
-        interface ICsvSerializable {
+        interface ICsvSerializable [[../sg/edu/ntu/scse/cz2002/util/ICsvSerializable.html]] {
             {abstract} +toCsv(): String[]
         }
 
-        class OrderCSVHelper {
+        class OrderCSVHelper [[../sg/edu/ntu/scse/cz2002/util/OrderCSVHelper.html]] {
+            {static} -mInstance: OrderCSVHelper
+            -orderCsv: String
+            -OrderCSVHelper()
+            + --OrderCSVHelper-- (filename:String)
             {static} +getInstance(): OrderCSVHelper
             +readFromCsv(): ArrayList<Order>
-            +writeToCsv(ArrayList<Order>): void
+            +writeToCsv(items:ArrayList<Order>): void
         }
 
-        class PromoCSVHelper {
+        class PromoCSVHelper [[../sg/edu/ntu/scse/cz2002/util/PromoCSVHelper.html]] {
+            {static} -pInstance: PromoCSVHelper
+            -promotionCsv: String
             {static} +getInstance(): PromoCSVHelper
             +readFromCsv(): ArrayList<Promotion>
-            +writeToCsv(ArrayList<Promotion>): void
+            +writeToCsv(promotions:ArrayList<Promotion>): void
         }
 
-        class StaffCSVHelper {
+        class StaffCSVHelper [[../sg/edu/ntu/scse/cz2002/util/StaffCSVHelper.html]] {
+            {static} -mInstance: StaffCSVHelper
+            -staffCsv: String
+            -StaffCSVHelper()
+            + --StaffCSVHelper-- (filename:String)
             {static} +getInstance(): StaffCSVHelper
             +readFromCsv(): ArrayList<Staff>
-            +writeToCsv(ArrayList<Staff>): void
+            +writeToCsv(staffs:ArrayList<Staff>): void
         }
 
-        class FileIOHelper {
-            {static} +exists(String): boolean
-            {static} +getFile(String): File
-            {static} +getFileBufferedReader(String): BufferedReader
-            {static} +getFileBufferedWriter(String): BufferedWriter
+        class FileIOHelper [[../sg/edu/ntu/scse/cz2002/util/FileIOHelper.html]] {
+            {static} -init(): File
+            {static} +exists(name:String): boolean
+            {static} +getFile(name:String): File
+            {static} +getFileBufferedReader(name:String): BufferedReader
+            {static} +getFileBufferedWriter(name:String): BufferedWriter
         }
 
-        class ReservationCSVHelper {
+        class ReservationCSVHelper [[../sg/edu/ntu/scse/cz2002/util/ReservationCSVHelper.html]] {
+            {static} -mInstance: ReservationCSVHelper
+            -reservationCsv: String
+            -ReservationCSVHelper()
+            + --ReservationCSVHelper-- (filename:String)
             {static} +getInstance(): ReservationCSVHelper
             +readFromCsv(): ArrayList<Reservation>
-            +writeToCsv(ArrayList<Reservation>): void
+            +writeToCsv(reservations:ArrayList<Reservation>): void
         }
 
-        class ScannerHelper {
+        class ScannerHelper [[../sg/edu/ntu/scse/cz2002/util/ScannerHelper.html]] {
             {static} +instance: Scanner
-            {static} +getIntegerInput(String): int
-            {static} +getIntegerInput(String, int): int
-            {static} +getIntegerInput(String, int, int): int
-            {static} +getYesNoInput(String): boolean
+            {static} +getIntegerInput(prompt:String): int
+            {static} +getIntegerInput(prompt:String, min:int): int
+            {static} +getIntegerInput(prompt:String, min:int, max:int): int
+            {static} +getYesNoInput(prompt:String): boolean
             {static} +getScannerInput(): Scanner
         }
 
-        class MenuItemCSVHelper {
+        class MenuItemCSVHelper [[../sg/edu/ntu/scse/cz2002/util/MenuItemCSVHelper.html]] {
+            {static} -mInstance: MenuItemCSVHelper
+            -menuItemCsv: String
+            -MenuItemCSVHelper()
+            + --MenuItemCSVHelper-- (filename:String)
             {static} +getInstance(): MenuItemCSVHelper
             +readFromCsv(): ArrayList<MenuItem>
-            +writeToCsv(ArrayList<MenuItem>): void
+            +writeToCsv(items:ArrayList<MenuItem>): void
         }
 
-        class DateTimeFormatHelper {
-            {static} +formatToStringDate(LocalDate): String
-            {static} +formatToStringTime(LocalTime): String
-            {static} +formatToLocalDate(String): LocalDate
-            {static} +formatToLocalTime(String): LocalTime
-            {static} +getTodayDate(boolean): LocalDate
+        class DateTimeFormatHelper [[../sg/edu/ntu/scse/cz2002/util/DateTimeFormatHelper.html]] {
+            {static} -MILLIS_TO_DAYS: long
+            {static} -TO_UTC_PLUS_8: long
+            {static} +formatToStringDate(date:LocalDate): String
+            {static} +formatToStringTime(time:LocalTime): String
+            {static} +formatToLocalDate(date:String): LocalDate
+            {static} +formatToLocalTime(time:String): LocalTime
+            {static} +getTodayDate(getNextMonth:boolean): LocalDate
             {static} +getTimeNow(): LocalTime
-            {static} +getTimeDifferenceMinutes(LocalTime, LocalTime): long
-            {static} +compareIfBeforeToday(LocalDate): boolean
-            {static} +formatMillisToDateTime(long): String
-            {static} +checkResvTimeSession(LocalTime, LocalTime, LocalTime): boolean
-            {static} +validateDate(String): boolean
+            {static} +getTimeDifferenceMinutes(time1:LocalTime, time2:LocalTime): long
+            {static} +compareIfBeforeToday(inputDate:LocalDate): boolean
+            {static} +formatMillisToDateTime(millis:long): String
+            {static} +checkResvTimeSession(resvTime:LocalTime, sessionStart:LocalTime, sessionEnd:LocalTime): boolean
+            {static} + --formatToStringTodayDateTime-- (): String
+            {static} +validateDate(date:String): boolean
             {static} +getSysTimeMillisWithSGTimeZone(): long
+            {static} + --validateDate-- (d:int, m:int, y:int): boolean
         }
 
         CSVBaseHelper <|-- TableCSVHelper

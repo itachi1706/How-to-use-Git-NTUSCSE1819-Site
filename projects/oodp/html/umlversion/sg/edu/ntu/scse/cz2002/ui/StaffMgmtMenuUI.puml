@@ -1,7 +1,11 @@
 @startuml
 
-    class StaffMgmtMenuUI {
+    class StaffMgmtMenuUI [[../sg/edu/ntu/scse/cz2002/ui/StaffMgmtMenuUI.html]] {
         #generateMenuScreen(): int
+        -createNewStaff(): void
+        -editStaffInfo(): void
+        -removeStaff(): void
+        -listAllStaff(): void
     }
 
 

@@ -1,13 +1,14 @@
 @startuml
 
-    class FoodMenuUI {
+    class FoodMenuUI [[../sg/edu/ntu/scse/cz2002/ui/FoodMenuUI.html]] {
+        ~sc: Scanner
         #generateMenuScreen(): int
         +printMenu(): void
-        +addNewMenuItem(String, String, String, double): void
-        +editMenuItem(int, String, String, String, double): void
-        +deleteMenuItem(int): void
-        {static} +retrieveMenuItem(int): MenuItem
-        {static} +retrieveMenuItemListFiltered(String): ArrayList<MenuItem>
+        +addNewMenuItem(newItemName:String, newItemType:String, newItemDescription:String, newItemPrice:double): void
+        +editMenuItem(targetItemID:int, editItemName:String, editItemType:String, editItemDescription:String, editItemPrice:double): void
+        +deleteMenuItem(targetItemID:int): void
+        {static} +retrieveMenuItem(targetItemID:int): MenuItem
+        {static} +retrieveMenuItemListFiltered(targetItemType:String): ArrayList<MenuItem>
     }
 
 

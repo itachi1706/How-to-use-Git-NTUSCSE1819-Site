@@ -1,9 +1,13 @@
 @startuml
 
-    class OrderCSVHelper {
+    class OrderCSVHelper [[../sg/edu/ntu/scse/cz2002/util/OrderCSVHelper.html]] {
+        {static} -mInstance: OrderCSVHelper
+        -orderCsv: String
+        -OrderCSVHelper()
+        + --OrderCSVHelper-- (filename:String)
         {static} +getInstance(): OrderCSVHelper
         +readFromCsv(): ArrayList<Order>
-        +writeToCsv(ArrayList<Order>): void
+        +writeToCsv(items:ArrayList<Order>): void
     }
 
 

@@ -1,11 +1,11 @@
 @startuml
 
-    class ScannerHelper {
+    class ScannerHelper [[../sg/edu/ntu/scse/cz2002/util/ScannerHelper.html]] {
         {static} +instance: Scanner
-        {static} +getIntegerInput(String): int
-        {static} +getIntegerInput(String, int): int
-        {static} +getIntegerInput(String, int, int): int
-        {static} +getYesNoInput(String): boolean
+        {static} +getIntegerInput(prompt:String): int
+        {static} +getIntegerInput(prompt:String, min:int): int
+        {static} +getIntegerInput(prompt:String, min:int, max:int): int
+        {static} +getYesNoInput(prompt:String): boolean
         {static} +getScannerInput(): Scanner
     }
 

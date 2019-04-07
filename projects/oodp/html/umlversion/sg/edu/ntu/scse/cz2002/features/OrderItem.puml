@@ -1,13 +1,19 @@
 @startuml
 
-    class OrderItem {
-        +OrderItem(String[])
-        +OrderItem(int, int, OrderItem.OrderItemType)
+    class OrderItem [[../sg/edu/ntu/scse/cz2002/features/OrderItem.html]] {
+        -itemId: int
+        -quantity: int
+        -itemTotal: double
+        -itemType: OrderItem.OrderItemType
+        +OrderItem(otherData:String[])
+        +OrderItem(itemId:int, quantity:int, itemType:OrderItem.OrderItemType)
         +toCompiledString(): String
+        -getPromo(): Promotion
+        -getMenuItem(): MenuItem
         +getItem(): Object
         +getItemName(): String
         +getQuantity(): int
-        +setQuantity(int): void
+        +setQuantity(quantity:int): void
         +isPromotion(): boolean
         +getItemTotal(): double
         +calculateTotal(): void

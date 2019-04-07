@@ -1,7 +1,8 @@
 @startuml
 
-    class MainMenuUI {
+    class MainMenuUI [[../sg/edu/ntu/scse/cz2002/ui/MainMenuUI.html]] {
         #generateMenuScreen(): int
+        -checkTableAvailability(): void
     }
 
 

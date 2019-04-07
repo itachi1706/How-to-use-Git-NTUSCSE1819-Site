@@ -1,25 +1,25 @@
 @startuml
 
-    class MenuItem {
+    class MenuItem [[../sg/edu/ntu/scse/cz2002/objects/menuitem/MenuItem.html]] {
         #id: int
         #name: String
         #type: String
         #description: String
         #price: double
         +MenuItem()
-        +MenuItem(int, String, String, String, double)
-        +MenuItem(String[])
+        +MenuItem(id:int, name:String, type:String, description:String, price:double)
+        +MenuItem(csv:String[])
         +toCsv(): String[]
         +getId(): int
-        +setId(int): void
+        +setId(id:int): void
         +getName(): String
-        +setName(String): void
+        +setName(name:String): void
         +getType(): String
-        +setType(String): void
+        +setType(type:String): void
         +getDescription(): String
-        +setDescription(String): void
+        +setDescription(description:String): void
         +getPrice(): double
-        +setPrice(double): void
+        +setPrice(price:double): void
     }
 
 

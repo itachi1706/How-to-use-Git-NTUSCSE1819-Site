@@ -1,6 +1,6 @@
 @startuml
 
-    enum Reservation.ReservationSession {
+    enum Reservation.ReservationSession [[../sg/edu/ntu/scse/cz2002/features/Reservation.ReservationSession.html]] {
         {static} +AM_SESSION
         {static} +PM_SESSION
     }

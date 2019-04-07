@@ -1,6 +1,6 @@
 @startuml
 
-    enum Order.OrderState {
+    enum Order.OrderState [[../sg/edu/ntu/scse/cz2002/features/Order.OrderState.html]] {
         {static} +ORDER_PAID
         {static} +ORDER_UNPAID
     }

@@ -1,6 +1,6 @@
 @startuml
 
-    interface ICsvSerializable {
+    interface ICsvSerializable [[../sg/edu/ntu/scse/cz2002/util/ICsvSerializable.html]] {
         {abstract} +toCsv(): String[]
     }
 

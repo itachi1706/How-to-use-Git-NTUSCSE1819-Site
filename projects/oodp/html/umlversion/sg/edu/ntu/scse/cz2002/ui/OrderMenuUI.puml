@@ -1,8 +1,21 @@
 @startuml
 
-    class OrderMenuUI {
+    class OrderMenuUI [[../sg/edu/ntu/scse/cz2002/ui/OrderMenuUI.html]] {
         {static} +incompleteOrders: ArrayList<Order>
         #generateMenuScreen(): int
+        -editOrderMenuScreen(orderNumber:int): void
+        -createOrder(): void
+        -viewOrder(): void
+        -editOrder(): void
+        -addOrderItem(o:Order): void
+        -editOrderItem(o:Order): void
+        -removeOrderItem(o:Order): void
+        -findOrder(id:int, allowFromPaid:boolean): Order
+        -printOrderList(orders:ArrayList<Order>, tag:String): void
+        -printOrderDetails(o:Order): void
+        -printPromotionDetail(p:Promotion): void
+        -getOrderItemToEdit(o:Order, prompt:String): int
+        -printOrderItems(items:ArrayList<OrderItem>, prettyPrint:boolean): void
     }
 
 

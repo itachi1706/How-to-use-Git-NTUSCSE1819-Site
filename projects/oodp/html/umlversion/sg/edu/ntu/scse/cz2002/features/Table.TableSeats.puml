@@ -1,6 +1,6 @@
 @startuml
 
-    enum Table.TableSeats {
+    enum Table.TableSeats [[../sg/edu/ntu/scse/cz2002/features/Table.TableSeats.html]] {
         {static} +TWO_SEATER
         {static} +FOUR_SEATER
         {static} +EIGHT_SEATER

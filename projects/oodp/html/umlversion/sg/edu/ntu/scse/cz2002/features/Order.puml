@@ -1,12 +1,20 @@
 @startuml
 
-    class Order {
-        +Order(int)
-        +Order(String[])
+    class Order [[../sg/edu/ntu/scse/cz2002/features/Order.html]] {
+        -orderID: int
+        -orderItems: ArrayList<OrderItem>
+        -subtotal: double
+        -orderState: Order.OrderState
+        -createdAt: long
+        -completedAt: long
+        -staffId: int
+        -tableId: int
+        +Order(orderID:int)
+        +Order(csv:String[])
         +toCsv(): String[]
         +getOrderID(): int
         +getOrderItems(): ArrayList<OrderItem>
-        +setOrderItems(ArrayList<OrderItem>): void
+        +setOrderItems(orderItems:ArrayList<OrderItem>): void
         +getSubtotal(): double
         +calculateSubtotal(): void
         +getOrderState(): Order.OrderState
@@ -14,9 +22,9 @@
         +getCreatedAt(): long
         +getCompletedAt(): long
         +getStaffId(): int
-        +setStaffId(int): void
+        +setStaffId(staff:int): void
         +getTableId(): int
-        +setTableId(int): void
+        +setTableId(table:int): void
         +getStaff(): Staff
         +getTable(): Table
     }

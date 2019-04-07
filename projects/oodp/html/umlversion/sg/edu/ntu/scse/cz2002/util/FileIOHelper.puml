@@ -1,10 +1,11 @@
 @startuml
 
-    class FileIOHelper {
-        {static} +exists(String): boolean
-        {static} +getFile(String): File
-        {static} +getFileBufferedReader(String): BufferedReader
-        {static} +getFileBufferedWriter(String): BufferedWriter
+    class FileIOHelper [[../sg/edu/ntu/scse/cz2002/util/FileIOHelper.html]] {
+        {static} -init(): File
+        {static} +exists(name:String): boolean
+        {static} +getFile(name:String): File
+        {static} +getFileBufferedReader(name:String): BufferedReader
+        {static} +getFileBufferedWriter(name:String): BufferedWriter
     }
 
 

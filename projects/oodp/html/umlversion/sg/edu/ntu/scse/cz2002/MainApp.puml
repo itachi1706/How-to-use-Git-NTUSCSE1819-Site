@@ -1,6 +1,6 @@
 @startuml
 
-    class MainApp {
+    class MainApp [[../sg/edu/ntu/scse/cz2002/MainApp.html]] {
         {static} +tables: ArrayList<Table>
         {static} +menuItems: ArrayList<MenuItem>
         {static} +completedOrders: ArrayList<Order>
@@ -9,8 +9,11 @@
         {static} +staffs: ArrayList<Staff>
         {static} +restaurantSession: char
         {static} +DEBUG: boolean
+        {static} -init(): void
         {static} +saveAll(): boolean
-        {static} +main(String[]): void
+        {static} +main(args:String[]): void
+        {static} -printWelcomeAscii(): void
+        {static} -checkTodayReservations(): int
     }
 
 

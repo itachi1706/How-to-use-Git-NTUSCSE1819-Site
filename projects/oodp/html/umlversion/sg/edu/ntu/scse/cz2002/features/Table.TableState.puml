@@ -1,6 +1,6 @@
 @startuml
 
-    enum Table.TableState {
+    enum Table.TableState [[../sg/edu/ntu/scse/cz2002/features/Table.TableState.html]] {
         {static} +TABLE_VACATED
         {static} +TABLE_OCCUPIED
         {static} +TABLE_RESERVED

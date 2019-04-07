@@ -2,33 +2,33 @@
 
     namespace sg.edu.ntu.scse.cz2002.objects.menuitem {
 
-        class MenuItem {
+        class MenuItem [[../sg/edu/ntu/scse/cz2002/objects/menuitem/MenuItem.html]] {
             #id: int
             #name: String
             #type: String
             #description: String
             #price: double
             +MenuItem()
-            +MenuItem(int, String, String, String, double)
-            +MenuItem(String[])
+            +MenuItem(id:int, name:String, type:String, description:String, price:double)
+            +MenuItem(csv:String[])
             +toCsv(): String[]
             +getId(): int
-            +setId(int): void
+            +setId(id:int): void
             +getName(): String
-            +setName(String): void
+            +setName(name:String): void
             +getType(): String
-            +setType(String): void
+            +setType(type:String): void
             +getDescription(): String
-            +setDescription(String): void
+            +setDescription(description:String): void
             +getPrice(): double
-            +setPrice(double): void
+            +setPrice(price:double): void
         }
 
-        class ItemNotFoundException {
-            +ItemNotFoundException(String)
+        class ItemNotFoundException [[../sg/edu/ntu/scse/cz2002/objects/menuitem/ItemNotFoundException.html]] {
+            +ItemNotFoundException(message:String)
         }
 
-        class Promotion {
+        class Promotion [[../sg/edu/ntu/scse/cz2002/objects/menuitem/Promotion.html]] {
             #promoID: int
             #promoName: String
             #promoPrice: double
@@ -36,21 +36,21 @@
             #promoDessert: int
             #promoDrink: int
             +Promotion()
-            +Promotion(int, String, double, int, int, int)
-            +Promotion(String[])
+            +Promotion(promoID:int, promoName:String, promoPrice:double, promoMain:int, promoDessert:int, promoDrink:int)
+            +Promotion(csv:String[])
             +toCsv(): String[]
             +getPromoID(): int
-            +setPromoID(int): void
+            +setPromoID(promoID:int): void
             +getPromoName(): String
-            +setPromoName(String): void
+            +setPromoName(promoName:String): void
             +getPromoPrice(): double
-            +setPromoPrice(double): void
+            +setPromoPrice(promoPrice:double): void
             +getPromoMain(): int
-            +setPromoMain(int): void
+            +setPromoMain(promoMain:int): void
             +getPromoDessert(): int
-            +setPromoDessert(int): void
+            +setPromoDessert(promoDessert:int): void
             +getPromoDrink(): int
-            +setPromoDrink(int): void
+            +setPromoDrink(promoDrink:int): void
         }
 
         interface sg.edu.ntu.scse.cz2002.util.ICsvSerializable {

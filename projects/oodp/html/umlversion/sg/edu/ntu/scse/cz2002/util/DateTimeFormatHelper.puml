@@ -1,18 +1,22 @@
 @startuml
 
-    class DateTimeFormatHelper {
-        {static} +formatToStringDate(LocalDate): String
-        {static} +formatToStringTime(LocalTime): String
-        {static} +formatToLocalDate(String): LocalDate
-        {static} +formatToLocalTime(String): LocalTime
-        {static} +getTodayDate(boolean): LocalDate
+    class DateTimeFormatHelper [[../sg/edu/ntu/scse/cz2002/util/DateTimeFormatHelper.html]] {
+        {static} -MILLIS_TO_DAYS: long
+        {static} -TO_UTC_PLUS_8: long
+        {static} +formatToStringDate(date:LocalDate): String
+        {static} +formatToStringTime(time:LocalTime): String
+        {static} +formatToLocalDate(date:String): LocalDate
+        {static} +formatToLocalTime(time:String): LocalTime
+        {static} +getTodayDate(getNextMonth:boolean): LocalDate
         {static} +getTimeNow(): LocalTime
-        {static} +getTimeDifferenceMinutes(LocalTime, LocalTime): long
-        {static} +compareIfBeforeToday(LocalDate): boolean
-        {static} +formatMillisToDateTime(long): String
-        {static} +checkResvTimeSession(LocalTime, LocalTime, LocalTime): boolean
-        {static} +validateDate(String): boolean
+        {static} +getTimeDifferenceMinutes(time1:LocalTime, time2:LocalTime): long
+        {static} +compareIfBeforeToday(inputDate:LocalDate): boolean
+        {static} +formatMillisToDateTime(millis:long): String
+        {static} +checkResvTimeSession(resvTime:LocalTime, sessionStart:LocalTime, sessionEnd:LocalTime): boolean
+        {static} + --formatToStringTodayDateTime-- (): String
+        {static} +validateDate(date:String): boolean
         {static} +getSysTimeMillisWithSGTimeZone(): long
+        {static} + --validateDate-- (d:int, m:int, y:int): boolean
     }
 
 

@@ -1,27 +1,35 @@
 @startuml
 
-    class Reservation {
-        +Reservation(int, LocalDate, LocalTime, char, String, String, int, int)
-        +Reservation(String[])
+    class Reservation [[../sg/edu/ntu/scse/cz2002/features/Reservation.html]] {
+        -resvId: int
+        -resvDate: LocalDate
+        -resvTime: LocalTime
+        -resvSession: Reservation.ReservationSession
+        -custTelNo: String
+        -custName: String
+        -numPax: int
+        -tableNum: int
+        +Reservation(id:int, rd:LocalDate, rt:LocalTime, sess:char, telNo:String, name:String, pax:int, t:int)
+        +Reservation(csv:String[])
         +toCsv(): String[]
         +getResvId(): int
-        +setResvId(int): void
+        +setResvId(resvId:int): void
         +getResvDate(): LocalDate
-        +setResvDate(LocalDate): void
+        +setResvDate(resvDate:LocalDate): void
         +getResvTime(): LocalTime
-        +setResvTime(LocalTime): void
+        +setResvTime(resvTime:LocalTime): void
         +getResvSession(): Reservation.ReservationSession
-        +setResvSession(Reservation.ReservationSession): void
+        +setResvSession(resvSession:Reservation.ReservationSession): void
         +getNumPax(): int
-        +setNumPax(int): void
+        +setNumPax(numPax:int): void
         +getCustName(): String
-        +setCustName(String): void
+        +setCustName(custName:String): void
         +getCustTelNo(): String
-        +setCustTelNo(String): void
+        +setCustTelNo(custTelNo:String): void
         +getTableNum(): int
-        +setTableNum(int): void
-        {static} +hasReservation(String): Table
-        {static} +getTablesBookedOnDateBySession(LocalDate, char): ArrayList<Table>
+        +setTableNum(tableNum:int): void
+        {static} +hasReservation(telNo:String): Table
+        {static} +getTablesBookedOnDateBySession(resvDate:LocalDate, resvSession:char): ArrayList<Table>
     }
 
 

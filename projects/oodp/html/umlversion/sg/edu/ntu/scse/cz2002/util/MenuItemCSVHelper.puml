@@ -1,9 +1,13 @@
 @startuml
 
-    class MenuItemCSVHelper {
+    class MenuItemCSVHelper [[../sg/edu/ntu/scse/cz2002/util/MenuItemCSVHelper.html]] {
+        {static} -mInstance: MenuItemCSVHelper
+        -menuItemCsv: String
+        -MenuItemCSVHelper()
+        + --MenuItemCSVHelper-- (filename:String)
         {static} +getInstance(): MenuItemCSVHelper
         +readFromCsv(): ArrayList<MenuItem>
-        +writeToCsv(ArrayList<MenuItem>): void
+        +writeToCsv(items:ArrayList<MenuItem>): void
     }
 
 

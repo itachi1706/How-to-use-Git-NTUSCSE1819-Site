@@ -1,17 +1,21 @@
 @startuml
 
-    class Staff {
-        +Staff(int, String, char, String)
-        +Staff(String[])
+    class Staff [[../sg/edu/ntu/scse/cz2002/objects/person/Staff.html]] {
+        -staffId: int
+        -staffName: String
+        -gender: char
+        -jobTitle: String
+        +Staff(id:int, name:String, gender:char, title:String)
+        +Staff(csv:String[])
         +toCsv(): String[]
         +getStaffId(): int
         +getStaffName(): String
-        +setStaffName(String): void
+        +setStaffName(staffName:String): void
         +getGender(): char
-        +setGender(char): void
+        +setGender(gender:char): void
         +getJobTitle(): String
-        +setJobTitle(String): void
-        {static} +getStaff(int): Staff
+        +setJobTitle(jobTitle:String): void
+        {static} +getStaff(staffId:int): Staff
     }
 
 
