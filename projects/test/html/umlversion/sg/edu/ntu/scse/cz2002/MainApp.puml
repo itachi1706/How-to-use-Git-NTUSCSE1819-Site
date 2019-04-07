@@ -1,0 +1,17 @@
+@startuml
+
+    class MainApp {
+        {static} +tables: ArrayList<String>
+        {static} +menuItems: ArrayList<String>
+        {static} +completedOrders: ArrayList<String>
+        {static} +reservations: ArrayList<String>
+        {static} +promotions: ArrayList<String>
+        {static} +staffs: ArrayList<String>
+        {static} +restaurantSession: char
+        {static} +saveAll(): boolean
+        {static} +main(String[]): void
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml
