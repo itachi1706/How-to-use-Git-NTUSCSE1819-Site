@@ -1,0 +1,27 @@
+@startuml
+
+    class MenuItem {
+        #id: int
+        #name: String
+        #type: String
+        #description: String
+        #price: double
+        +MenuItem()
+        +MenuItem(int, String, String, String, double)
+        +MenuItem(String[])
+        +toCsv(): String[]
+        +getId(): int
+        +setId(int): void
+        +getName(): String
+        +setName(String): void
+        +getType(): String
+        +setType(String): void
+        +getDescription(): String
+        +setDescription(String): void
+        +getPrice(): double
+        +setPrice(double): void
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

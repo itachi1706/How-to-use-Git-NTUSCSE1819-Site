@@ -1,0 +1,10 @@
+@startuml
+
+    class TableCSVHelper {
+        {static} +getInstance(): TableCSVHelper
+        +readFromCsv(): ArrayList<Table>
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

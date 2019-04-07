@@ -1,0 +1,11 @@
+@startuml
+
+    class MenuItemCSVHelper {
+        {static} +getInstance(): MenuItemCSVHelper
+        +readFromCsv(): ArrayList<MenuItem>
+        +writeToCsv(ArrayList<MenuItem>): void
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

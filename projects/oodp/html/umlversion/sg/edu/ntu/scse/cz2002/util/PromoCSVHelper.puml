@@ -1,0 +1,11 @@
+@startuml
+
+    class PromoCSVHelper {
+        {static} +getInstance(): PromoCSVHelper
+        +readFromCsv(): ArrayList<Promotion>
+        +writeToCsv(ArrayList<Promotion>): void
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

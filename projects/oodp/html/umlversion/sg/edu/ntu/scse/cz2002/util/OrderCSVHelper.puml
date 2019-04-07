@@ -1,0 +1,11 @@
+@startuml
+
+    class OrderCSVHelper {
+        {static} +getInstance(): OrderCSVHelper
+        +readFromCsv(): ArrayList<Order>
+        +writeToCsv(ArrayList<Order>): void
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

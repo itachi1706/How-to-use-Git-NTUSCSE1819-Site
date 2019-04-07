@@ -1,0 +1,15 @@
+@startuml
+
+    class FoodMenuUI {
+        #generateMenuScreen(): int
+        +printMenu(): void
+        +addNewMenuItem(String, String, String, double): void
+        +editMenuItem(int, String, String, String, double): void
+        +deleteMenuItem(int): void
+        {static} +retrieveMenuItem(int): MenuItem
+        {static} +retrieveMenuItemListFiltered(String): ArrayList<MenuItem>
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

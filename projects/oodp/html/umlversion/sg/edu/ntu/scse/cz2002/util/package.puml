@@ -1,0 +1,96 @@
+@startuml
+
+    namespace sg.edu.ntu.scse.cz2002.util {
+
+        class CSVBaseHelper {
+            #readAll(BufferedReader, int): List<String[]>
+            #writeToCsvFile(List<String[]>, BufferedWriter): void
+        }
+
+        class TableCSVHelper {
+            {static} +getInstance(): TableCSVHelper
+            +readFromCsv(): ArrayList<Table>
+        }
+
+        interface ICsvSerializable {
+            {abstract} +toCsv(): String[]
+        }
+
+        class OrderCSVHelper {
+            {static} +getInstance(): OrderCSVHelper
+            +readFromCsv(): ArrayList<Order>
+            +writeToCsv(ArrayList<Order>): void
+        }
+
+        class PromoCSVHelper {
+            {static} +getInstance(): PromoCSVHelper
+            +readFromCsv(): ArrayList<Promotion>
+            +writeToCsv(ArrayList<Promotion>): void
+        }
+
+        class StaffCSVHelper {
+            {static} +getInstance(): StaffCSVHelper
+            +readFromCsv(): ArrayList<Staff>
+            +writeToCsv(ArrayList<Staff>): void
+        }
+
+        class FileIOHelper {
+            {static} +exists(String): boolean
+            {static} +getFile(String): File
+            {static} +getFileBufferedReader(String): BufferedReader
+            {static} +getFileBufferedWriter(String): BufferedWriter
+        }
+
+        class ReservationCSVHelper {
+            {static} +getInstance(): ReservationCSVHelper
+            +readFromCsv(): ArrayList<Reservation>
+            +writeToCsv(ArrayList<Reservation>): void
+        }
+
+        class ScannerHelper {
+            {static} +instance: Scanner
+            {static} +getIntegerInput(String): int
+            {static} +getIntegerInput(String, int): int
+            {static} +getIntegerInput(String, int, int): int
+            {static} +getYesNoInput(String): boolean
+            {static} +getScannerInput(): Scanner
+        }
+
+        class MenuItemCSVHelper {
+            {static} +getInstance(): MenuItemCSVHelper
+            +readFromCsv(): ArrayList<MenuItem>
+            +writeToCsv(ArrayList<MenuItem>): void
+        }
+
+        class DateTimeFormatHelper {
+            {static} +formatToStringDate(LocalDate): String
+            {static} +formatToStringTime(LocalTime): String
+            {static} +formatToLocalDate(String): LocalDate
+            {static} +formatToLocalTime(String): LocalTime
+            {static} +getTodayDate(boolean): LocalDate
+            {static} +getTimeNow(): LocalTime
+            {static} +getTimeDifferenceMinutes(LocalTime, LocalTime): long
+            {static} +compareIfBeforeToday(LocalDate): boolean
+            {static} +formatMillisToDateTime(long): String
+            {static} +checkResvTimeSession(LocalTime, LocalTime, LocalTime): boolean
+            {static} +validateDate(String): boolean
+            {static} +getSysTimeMillisWithSGTimeZone(): long
+        }
+
+        CSVBaseHelper <|-- TableCSVHelper
+
+        CSVBaseHelper <|-- OrderCSVHelper
+
+        CSVBaseHelper <|-- PromoCSVHelper
+
+        CSVBaseHelper <|-- StaffCSVHelper
+
+        CSVBaseHelper <|-- ReservationCSVHelper
+
+        CSVBaseHelper <|-- MenuItemCSVHelper
+
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

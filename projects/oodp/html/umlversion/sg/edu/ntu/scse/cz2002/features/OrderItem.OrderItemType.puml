@@ -1,0 +1,10 @@
+@startuml
+
+    enum OrderItem.OrderItemType {
+        {static} +TYPE_MENU
+        {static} +TYPE_PROMO
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

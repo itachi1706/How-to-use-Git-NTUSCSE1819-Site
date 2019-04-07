@@ -1,0 +1,11 @@
+@startuml
+
+    class ReservationCSVHelper {
+        {static} +getInstance(): ReservationCSVHelper
+        +readFromCsv(): ArrayList<Reservation>
+        +writeToCsv(ArrayList<Reservation>): void
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

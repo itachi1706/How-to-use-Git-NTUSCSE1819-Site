@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="115px" preserveAspectRatio="none" style="width:225px;height:115px;" version="1.1" viewBox="0 0 225 115" width="225px" zoomAndPan="magnify"><defs><filter height="300%" id="fnebuuk5zuugg" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--class TableCSVHelper--><rect fill="#FEFECE" filter="url(#fnebuuk5zuugg)" height="73.5986" id="TableCSVHelper" style="stroke: #A80036; stroke-width: 1.5;" width="208" x="6" y="8"/><ellipse cx="58.75" cy="24" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M62.5781,29.6563 Q60.7031,30.3125 58.8906,30.3125 Q56.2969,30.3125 54.7109,28.5313 Q53.125,26.75 53.125,23.8438 Q53.125,21.1563 54.5313,19.3906 Q55.3906,18.3125 56.5078,17.8594 Q57.625,17.4063 59.4063,17.4063 Q61.125,17.4063 62.5781,17.7656 L62.5781,19.75 Q60.7031,19.0469 59.4531,19.0469 Q57.7656,19.0469 56.7734,20.3672 Q55.7813,21.6875 55.7813,23.9219 Q55.7813,25.9688 56.8203,27.2656 Q57.8594,28.5625 59.5,28.5625 Q60.8906,28.5625 62.5781,27.7813 L62.5781,29.6563 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="94" x="79.25" y="28.4209">TableCSVHelper</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="213" y1="40" y2="40"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="213" y1="48" y2="48"/><ellipse cx="17" cy="59.8997" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="161" x="26" y="62.4521">getInstance(): TableCSVHelper</text><line style="stroke: #000000; stroke-width: 1.0;" x1="26" x2="187" y1="64.4521" y2="64.4521"/><ellipse cx="17" cy="72.699" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="182" x="26" y="75.2515">readFromCsv(): ArrayList&lt;Table&gt;</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="182" x="25" y="101.502">UMLDoclet 1.1.3, PlantUML 1.2018.12</text><!--
+@startuml
+
+    class TableCSVHelper {
+        {static} +getInstance(): TableCSVHelper
+        +readFromCsv(): ArrayList<Table>
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml
+
+PlantUML version 1.2018.12(Sun Oct 21 10:15:15 GMT 2018)
+(APACHE source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_202-b08
+Operating System: Linux
+OS Version: 4.19.23-coreos-r1
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

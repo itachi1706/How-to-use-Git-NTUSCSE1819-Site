@@ -1,0 +1,67 @@
+@startuml
+
+    namespace sg.edu.ntu.scse.cz2002.ui {
+
+        class ReservationMenuUI {
+            #generateMenuScreen(): int
+        }
+
+        class FoodMenuUI {
+            #generateMenuScreen(): int
+            +printMenu(): void
+            +addNewMenuItem(String, String, String, double): void
+            +editMenuItem(int, String, String, String, double): void
+            +deleteMenuItem(int): void
+            {static} +retrieveMenuItem(int): MenuItem
+            {static} +retrieveMenuItemListFiltered(String): ArrayList<MenuItem>
+        }
+
+        class PromotionMenuUI {
+            #generateMenuScreen(): int
+            +printPromotion(): void
+            +addNewPromotion(String, double, int, int, int): void
+            +editPromotion(int, String, double, int, int, int): void
+            +deletePromotion(int): void
+            {static} +retrievePromotion(int): Promotion
+        }
+
+        class MainMenuUI {
+            #generateMenuScreen(): int
+        }
+
+        class StaffMgmtMenuUI {
+            #generateMenuScreen(): int
+        }
+
+        abstract class BaseMenu {
+            +startMainMenu(): boolean
+            {static} #printHeader(String): void
+            {static} #printHeader(String, int): void
+            {static} #printBreaks(int): void
+            {static} #printBreaks(): void
+            {static} #doMenuChoice(int, int): int
+            {abstract} #generateMenuScreen(): int
+        }
+
+        class OrderMenuUI {
+            {static} +incompleteOrders: ArrayList<Order>
+            #generateMenuScreen(): int
+        }
+
+        BaseMenu <|-- ReservationMenuUI
+
+        BaseMenu <|-- FoodMenuUI
+
+        BaseMenu <|-- PromotionMenuUI
+
+        BaseMenu <|-- MainMenuUI
+
+        BaseMenu <|-- StaffMgmtMenuUI
+
+        BaseMenu <|-- OrderMenuUI
+
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

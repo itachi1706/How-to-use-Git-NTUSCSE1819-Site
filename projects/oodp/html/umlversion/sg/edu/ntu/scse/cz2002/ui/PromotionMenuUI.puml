@@ -1,0 +1,14 @@
+@startuml
+
+    class PromotionMenuUI {
+        #generateMenuScreen(): int
+        +printPromotion(): void
+        +addNewPromotion(String, double, int, int, int): void
+        +editPromotion(int, String, double, int, int, int): void
+        +deletePromotion(int): void
+        {static} +retrievePromotion(int): Promotion
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

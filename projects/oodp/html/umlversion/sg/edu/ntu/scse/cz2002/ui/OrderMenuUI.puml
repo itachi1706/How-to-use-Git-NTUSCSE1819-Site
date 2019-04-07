@@ -1,0 +1,10 @@
+@startuml
+
+    class OrderMenuUI {
+        {static} +incompleteOrders: ArrayList<Order>
+        #generateMenuScreen(): int
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

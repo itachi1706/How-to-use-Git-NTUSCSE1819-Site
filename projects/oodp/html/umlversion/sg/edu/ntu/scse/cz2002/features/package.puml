@@ -1,0 +1,137 @@
+@startuml
+
+    namespace sg.edu.ntu.scse.cz2002.features {
+
+        class OrderItem {
+            +OrderItem(String[])
+            +OrderItem(int, int, OrderItem.OrderItemType)
+            +toCompiledString(): String
+            +getItem(): Object
+            +getItemName(): String
+            +getQuantity(): int
+            +setQuantity(int): void
+            +isPromotion(): boolean
+            +getItemTotal(): double
+            +calculateTotal(): void
+        }
+
+        enum sg.edu.ntu.scse.cz2002.features.OrderItem.OrderItemType {
+            {static} +TYPE_MENU
+            {static} +TYPE_PROMO
+        }
+
+        class Reservation {
+            +Reservation(int, LocalDate, LocalTime, char, String, String, int, int)
+            +Reservation(String[])
+            +toCsv(): String[]
+            +getResvId(): int
+            +setResvId(int): void
+            +getResvDate(): LocalDate
+            +setResvDate(LocalDate): void
+            +getResvTime(): LocalTime
+            +setResvTime(LocalTime): void
+            +getNumPax(): int
+            +setNumPax(int): void
+            +getCustName(): String
+            +setCustName(String): void
+            +getCustTelNo(): String
+            +setCustTelNo(String): void
+            +getTableNum(): int
+            +setTableNum(int): void
+            {static} +hasReservation(String): Table
+            {static} +getTablesBookedOnDateBySession(LocalDate, char): ArrayList<Table>
+        }
+
+        enum sg.edu.ntu.scse.cz2002.features.Reservation.ReservationSession {
+            {static} +AM_SESSION
+            {static} +PM_SESSION
+        }
+
+        class Order {
+            +Order(int)
+            +Order(String[])
+            +toCsv(): String[]
+            +getOrderID(): int
+            +getOrderItems(): ArrayList<OrderItem>
+            +setOrderItems(ArrayList<OrderItem>): void
+            +getSubtotal(): double
+            +calculateSubtotal(): void
+            +markPaid(): void
+            +getCreatedAt(): long
+            +getCompletedAt(): long
+            +getStaffId(): int
+            +setStaffId(int): void
+            +getTableId(): int
+            +setTableId(int): void
+            +getStaff(): Staff
+        }
+
+        enum sg.edu.ntu.scse.cz2002.features.Order.OrderState {
+            {static} +ORDER_PAID
+            {static} +ORDER_UNPAID
+        }
+
+        class Invoice {
+        }
+
+        class Table {
+            +Table(int, boolean, int, int)
+            +Table(String[])
+            +toCsv(): String[]
+            +setTableNum(int): void
+            +getTableNum(): int
+            +setReserved(boolean): void
+            +checkReserved(): boolean
+            {static} +getTableByNumber(int): Table
+            {static} +getVacantTablesByNumPax(int, ArrayList<Table>): ArrayList<Table>
+        }
+
+        enum sg.edu.ntu.scse.cz2002.features.Table.TableState {
+            {static} +TABLE_VACATED
+            {static} +TABLE_OCCUPIED
+            {static} +TABLE_RESERVED
+            {static} +TABLE_STATE_UNKNOWN
+        }
+
+        enum sg.edu.ntu.scse.cz2002.features.Table.TableSeats {
+            {static} +TWO_SEATER
+            {static} +FOUR_SEATER
+            {static} +EIGHT_SEATER
+            {static} +TEN_SEATER
+            {static} +UNKNOWN_SEATER
+        }
+
+        OrderItem +-- sg.edu.ntu.scse.cz2002.features.OrderItem.OrderItemType
+
+        interface sg.edu.ntu.scse.cz2002.util.ICsvSerializable {
+            {abstract} +toCsv(): String[]
+        }
+        sg.edu.ntu.scse.cz2002.util.ICsvSerializable <|.. Reservation
+
+        Reservation +-- sg.edu.ntu.scse.cz2002.features.Reservation.ReservationSession
+
+        sg.edu.ntu.scse.cz2002.util.ICsvSerializable <|.. Order
+
+        Order +-- sg.edu.ntu.scse.cz2002.features.Order.OrderState
+
+        sg.edu.ntu.scse.cz2002.util.ICsvSerializable <|.. Table
+
+        Table +-- sg.edu.ntu.scse.cz2002.features.Table.TableState
+
+        Table +-- sg.edu.ntu.scse.cz2002.features.Table.TableSeats
+
+        Reservation --> sg.edu.ntu.scse.cz2002.features.Reservation.ReservationSession: resvSession
+
+        Order --> sg.edu.ntu.scse.cz2002.features.Order.OrderState: orderState
+
+        Order --> Table: table
+
+        Table --> sg.edu.ntu.scse.cz2002.features.Table.TableSeats: numSeats
+
+        Table --> sg.edu.ntu.scse.cz2002.features.Table.TableState: state
+
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

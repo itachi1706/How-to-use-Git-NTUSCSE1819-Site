@@ -1,0 +1,10 @@
+@startuml
+
+    enum Reservation.ReservationSession {
+        {static} +AM_SESSION
+        {static} +PM_SESSION
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

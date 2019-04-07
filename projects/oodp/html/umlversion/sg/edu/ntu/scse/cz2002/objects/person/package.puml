@@ -1,0 +1,28 @@
+@startuml
+
+    namespace sg.edu.ntu.scse.cz2002.objects.person {
+
+        class Staff {
+            +Staff(int, String, char, String)
+            +Staff(String[])
+            +toCsv(): String[]
+            +getStaffId(): int
+            +getStaffName(): String
+            +setStaffName(String): void
+            +getGender(): char
+            +setGender(char): void
+            +getJobTitle(): String
+            +setJobTitle(String): void
+            {static} +getStaff(int): Staff
+        }
+
+        interface sg.edu.ntu.scse.cz2002.util.ICsvSerializable {
+            {abstract} +toCsv(): String[]
+        }
+        sg.edu.ntu.scse.cz2002.util.ICsvSerializable <|.. Staff
+
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

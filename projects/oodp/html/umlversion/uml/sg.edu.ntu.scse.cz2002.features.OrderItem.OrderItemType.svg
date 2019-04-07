@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="166px" preserveAspectRatio="none" style="width:194px;height:166px;" version="1.1" viewBox="0 0 194 166" width="194px" zoomAndPan="magnify"><defs><filter height="300%" id="fo8fxx969yz3h" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--cluster OrderItem--><polygon fill="#FFFFFF" filter="url(#fo8fxx969yz3h)" points="17,16,97,16,104,38.29,153,38.29,153,125,17,125,17,16" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="17" x2="104" y1="38.29" y2="38.29"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="74" x="21" y="31.3369">OrderItem</text><!--class OrderItem.OrderItemType--><rect fill="#FEFECE" filter="url(#fo8fxx969yz3h)" height="73.5986" id="OrderItem.OrderItemType" style="stroke: #A80036; stroke-width: 1.5;" width="120" x="25" y="43"/><ellipse cx="40" cy="59" fill="#EB937F" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M36.3906,65 L36.3906,52.7188 L44.0781,52.7188 L44.0781,54.3438 L38.8594,54.3438 L38.8594,57.8281 L43.2656,57.8281 L43.2656,59.3594 L38.8594,59.3594 L38.8594,63.3594 L44.5156,63.3594 L44.5156,65 L36.3906,65 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="88" x="54" y="63.4209">OrderItemType</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="26" x2="144" y1="75" y2="75"/><ellipse cx="36" cy="86.8997" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="63" x="45" y="89.4521">TYPE_MENU</text><line style="stroke: #000000; stroke-width: 1.0;" x1="45" x2="108" y1="91.4521" y2="91.4521"/><ellipse cx="36" cy="99.699" fill="none" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="72" x="45" y="102.2515">TYPE_PROMO</text><line style="stroke: #000000; stroke-width: 1.0;" x1="45" x2="117" y1="104.2515" y2="104.2515"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="26" x2="144" y1="108.5986" y2="108.5986"/><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="182" x="0" y="152.502">UMLDoclet 1.1.3, PlantUML 1.2018.12</text><!--
+@startuml
+
+    enum OrderItem.OrderItemType {
+        {static} +TYPE_MENU
+        {static} +TYPE_PROMO
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml
+
+PlantUML version 1.2018.12(Sun Oct 21 10:15:15 GMT 2018)
+(APACHE source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_202-b08
+Operating System: Linux
+OS Version: 4.19.23-coreos-r1
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

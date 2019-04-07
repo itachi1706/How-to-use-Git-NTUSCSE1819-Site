@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="127px" preserveAspectRatio="none" style="width:270px;height:127px;" version="1.1" viewBox="0 0 270 127" width="270px" zoomAndPan="magnify"><defs><filter height="300%" id="f15uc1buzbmzro" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--class ReservationCSVHelper--><rect fill="#FEFECE" filter="url(#f15uc1buzbmzro)" height="86.3979" id="ReservationCSVHelper" style="stroke: #A80036; stroke-width: 1.5;" width="253" x="6" y="8"/><ellipse cx="64.25" cy="24" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M68.0781,29.6563 Q66.2031,30.3125 64.3906,30.3125 Q61.7969,30.3125 60.2109,28.5313 Q58.625,26.75 58.625,23.8438 Q58.625,21.1563 60.0313,19.3906 Q60.8906,18.3125 62.0078,17.8594 Q63.125,17.4063 64.9063,17.4063 Q66.625,17.4063 68.0781,17.7656 L68.0781,19.75 Q66.2031,19.0469 64.9531,19.0469 Q63.2656,19.0469 62.2734,20.3672 Q61.2813,21.6875 61.2813,23.9219 Q61.2813,25.9688 62.3203,27.2656 Q63.3594,28.5625 65,28.5625 Q66.3906,28.5625 68.0781,27.7813 L68.0781,29.6563 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="128" x="84.75" y="28.4209">ReservationCSVHelper</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="258" y1="40" y2="40"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="258" y1="48" y2="48"/><ellipse cx="17" cy="59.8997" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" text-decoration="underline" textLength="195" x="26" y="62.4521">getInstance(): ReservationCSVHelper</text><line style="stroke: #000000; stroke-width: 1.0;" x1="26" x2="221" y1="64.4521" y2="64.4521"/><ellipse cx="17" cy="72.699" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="216" x="26" y="75.2515">readFromCsv(): ArrayList&lt;Reservation&gt;</text><ellipse cx="17" cy="85.4983" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="227" x="26" y="88.0508">writeToCsv(ArrayList&lt;Reservation&gt;): void</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="182" x="47.5" y="113.502">UMLDoclet 1.1.3, PlantUML 1.2018.12</text><!--
+@startuml
+
+    class ReservationCSVHelper {
+        {static} +getInstance(): ReservationCSVHelper
+        +readFromCsv(): ArrayList<Reservation>
+        +writeToCsv(ArrayList<Reservation>): void
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml
+
+PlantUML version 1.2018.12(Sun Oct 21 10:15:15 GMT 2018)
+(APACHE source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_202-b08
+Operating System: Linux
+OS Version: 4.19.23-coreos-r1
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

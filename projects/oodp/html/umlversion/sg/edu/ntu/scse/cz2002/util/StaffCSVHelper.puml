@@ -1,0 +1,11 @@
+@startuml
+
+    class StaffCSVHelper {
+        {static} +getInstance(): StaffCSVHelper
+        +readFromCsv(): ArrayList<Staff>
+        +writeToCsv(ArrayList<Staff>): void
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

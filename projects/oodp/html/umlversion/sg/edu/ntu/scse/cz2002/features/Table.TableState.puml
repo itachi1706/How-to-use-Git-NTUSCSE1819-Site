@@ -1,0 +1,12 @@
+@startuml
+
+    enum Table.TableState {
+        {static} +TABLE_VACATED
+        {static} +TABLE_OCCUPIED
+        {static} +TABLE_RESERVED
+        {static} +TABLE_STATE_UNKNOWN
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

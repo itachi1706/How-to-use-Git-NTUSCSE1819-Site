@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="319px" preserveAspectRatio="none" style="width:279px;height:319px;" version="1.1" viewBox="0 0 279 319" width="279px" zoomAndPan="magnify"><defs><filter height="300%" id="fzn8uu77fw1p3" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--class Order--><rect fill="#FEFECE" filter="url(#fzn8uu77fw1p3)" height="278.3877" id="Order" style="stroke: #A80036; stroke-width: 1.5;" width="262" x="6" y="8"/><ellipse cx="115.75" cy="24" fill="#ADD1B2" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M119.5781,29.6563 Q117.7031,30.3125 115.8906,30.3125 Q113.2969,30.3125 111.7109,28.5313 Q110.125,26.75 110.125,23.8438 Q110.125,21.1563 111.5313,19.3906 Q112.3906,18.3125 113.5078,17.8594 Q114.625,17.4063 116.4063,17.4063 Q118.125,17.4063 119.5781,17.7656 L119.5781,19.75 Q117.7031,19.0469 116.4531,19.0469 Q114.7656,19.0469 113.7734,20.3672 Q112.7813,21.6875 112.7813,23.9219 Q112.7813,25.9688 113.8203,27.2656 Q114.8594,28.5625 116.5,28.5625 Q117.8906,28.5625 119.5781,27.7813 L119.5781,29.6563 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="34" x="136.25" y="28.4209">Order</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="267" y1="40" y2="40"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="267" y1="48" y2="48"/><ellipse cx="17" cy="59.8997" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="54" x="26" y="62.4521">Order(int)</text><ellipse cx="17" cy="72.699" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="80" x="26" y="75.2515">Order(String[])</text><ellipse cx="17" cy="85.4983" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="85" x="26" y="88.0508">toCsv(): String[]</text><ellipse cx="17" cy="98.2976" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="88" x="26" y="100.8501">getOrderID(): int</text><ellipse cx="17" cy="111.0969" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="214" x="26" y="113.6494">getOrderItems(): ArrayList&lt;OrderItem&gt;</text><ellipse cx="17" cy="123.8962" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="236" x="26" y="126.4487">setOrderItems(ArrayList&lt;OrderItem&gt;): void</text><ellipse cx="17" cy="136.6956" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="112" x="26" y="139.248">getSubtotal(): double</text><ellipse cx="17" cy="149.4949" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="128" x="26" y="152.0474">calculateSubtotal(): void</text><ellipse cx="17" cy="162.2942" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="182" x="26" y="164.8467">getOrderState(): Order.OrderState</text><ellipse cx="17" cy="175.0935" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="86" x="26" y="177.646">markPaid(): void</text><ellipse cx="17" cy="187.8928" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="109" x="26" y="190.4453">getCreatedAt(): long</text><ellipse cx="17" cy="200.6921" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="125" x="26" y="203.2446">getCompletedAt(): long</text><ellipse cx="17" cy="213.4915" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="79" x="26" y="216.0439">getStaffId(): int</text><ellipse cx="17" cy="226.2908" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="101" x="26" y="228.8433">setStaffId(int): void</text><ellipse cx="17" cy="239.0901" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="84" x="26" y="241.6426">getTableId(): int</text><ellipse cx="17" cy="251.8894" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="106" x="26" y="254.4419">setTableId(int): void</text><ellipse cx="17" cy="264.6887" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="79" x="26" y="267.2412">getStaff(): Staff</text><ellipse cx="17" cy="277.488" fill="#84BE84" rx="3" ry="3" style="stroke: #038048; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacingAndGlyphs" textLength="89" x="26" y="280.0405">getTable(): Table</text><text fill="#888888" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="182" x="52" y="305.502">UMLDoclet 1.1.3, PlantUML 1.2018.12</text><!--
+@startuml
+
+    class Order {
+        +Order(int)
+        +Order(String[])
+        +toCsv(): String[]
+        +getOrderID(): int
+        +getOrderItems(): ArrayList<OrderItem>
+        +setOrderItems(ArrayList<OrderItem>): void
+        +getSubtotal(): double
+        +calculateSubtotal(): void
+        +getOrderState(): Order.OrderState
+        +markPaid(): void
+        +getCreatedAt(): long
+        +getCompletedAt(): long
+        +getStaffId(): int
+        +setStaffId(int): void
+        +getTableId(): int
+        +setTableId(int): void
+        +getStaff(): Staff
+        +getTable(): Table
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml
+
+PlantUML version 1.2018.12(Sun Oct 21 10:15:15 GMT 2018)
+(APACHE source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_202-b08
+Operating System: Linux
+OS Version: 4.19.23-coreos-r1
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

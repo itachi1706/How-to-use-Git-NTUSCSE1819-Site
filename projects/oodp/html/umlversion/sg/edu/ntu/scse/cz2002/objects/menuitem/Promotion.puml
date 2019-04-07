@@ -1,0 +1,30 @@
+@startuml
+
+    class Promotion {
+        #promoID: int
+        #promoName: String
+        #promoPrice: double
+        #promoMain: int
+        #promoDessert: int
+        #promoDrink: int
+        +Promotion()
+        +Promotion(int, String, double, int, int, int)
+        +Promotion(String[])
+        +toCsv(): String[]
+        +getPromoID(): int
+        +setPromoID(int): void
+        +getPromoName(): String
+        +setPromoName(String): void
+        +getPromoPrice(): double
+        +setPromoPrice(double): void
+        +getPromoMain(): int
+        +setPromoMain(int): void
+        +getPromoDessert(): int
+        +setPromoDessert(int): void
+        +getPromoDrink(): int
+        +setPromoDrink(int): void
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

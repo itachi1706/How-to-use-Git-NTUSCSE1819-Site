@@ -1,0 +1,18 @@
+@startuml
+
+    class OrderItem {
+        +OrderItem(String[])
+        +OrderItem(int, int, OrderItem.OrderItemType)
+        +toCompiledString(): String
+        +getItem(): Object
+        +getItemName(): String
+        +getQuantity(): int
+        +setQuantity(int): void
+        +isPromotion(): boolean
+        +getItemTotal(): double
+        +calculateTotal(): void
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

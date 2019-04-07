@@ -1,0 +1,9 @@
+@startuml
+
+    class StaffMgmtMenuUI {
+        #generateMenuScreen(): int
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml
