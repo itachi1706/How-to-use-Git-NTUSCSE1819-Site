@@ -17,7 +17,6 @@
             +setName(name:String): void
             +setType(type:int): void
             +convertToItemType(type:int): MenuItem.MenuItemType
-            + --convertToItemType-- (type:String): MenuItem.MenuItemType
             +getDescription(): String
             +setDescription(description:String): void
             +getPrice(): double

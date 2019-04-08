@@ -26,7 +26,6 @@
             +editMenuItem(targetItemID:int, editItemName:String, editItemType:int, editItemDescription:String, editItemPrice:double): void
             +deleteMenuItem(targetItemID:int): void
             {static} +retrieveMenuItem(targetItemID:int): MenuItem
-            {static} + --retrieveMenuItemListFiltered-- (targetItemType:String): ArrayList<MenuItem>
             {static} +retrieveMenuItemListFiltered(targetItemType:MenuItem.MenuItemType): ArrayList<MenuItem>
         }
 
@@ -76,7 +75,7 @@
             -editOrderItem(o:Order): void
             -removeOrderItem(o:Order): void
             -findOrder(id:int, allowFromPaid:boolean): Order
-            -printOrderList(orders:ArrayList<Order>, tag:String): void
+            -printOrderList(orders:ArrayList<Order>, tag:String, tableSort:boolean): void
             -printOrderDetails(o:Order): void
             -getOrderItemToEdit(o:Order, prompt:String): int
             -printOrderItems(items:ArrayList<OrderItem>, prettyPrint:boolean): void

@@ -72,6 +72,7 @@
             {static} +getIntegerInput(prompt:String): int
             {static} +getIntegerInput(prompt:String, min:int): int
             {static} +getIntegerInput(prompt:String, min:int, max:int): int
+            {static} +getIntegerInput(prompt:String, acceptedValues:ArrayList<Integer>, errorMsg:String): int
             {static} +getYesNoInput(prompt:String): boolean
             {static} +getScannerInput(): Scanner
         }
