@@ -22,11 +22,12 @@
             ~sc: Scanner
             #generateMenuScreen(): int
             +printMenu(): void
-            +addNewMenuItem(newItemName:String, newItemType:String, newItemDescription:String, newItemPrice:double): void
-            +editMenuItem(targetItemID:int, editItemName:String, editItemType:String, editItemDescription:String, editItemPrice:double): void
+            +addNewMenuItem(newItemName:String, newItemType:int, newItemDescription:String, newItemPrice:double): void
+            +editMenuItem(targetItemID:int, editItemName:String, editItemType:int, editItemDescription:String, editItemPrice:double): void
             +deleteMenuItem(targetItemID:int): void
             {static} +retrieveMenuItem(targetItemID:int): MenuItem
-            {static} +retrieveMenuItemListFiltered(targetItemType:String): ArrayList<MenuItem>
+            {static} + --retrieveMenuItemListFiltered-- (targetItemType:String): ArrayList<MenuItem>
+            {static} +retrieveMenuItemListFiltered(targetItemType:MenuItem.MenuItemType): ArrayList<MenuItem>
         }
 
         class PromotionMenuUI [[../sg/edu/ntu/scse/cz2002/ui/PromotionMenuUI.html]] {

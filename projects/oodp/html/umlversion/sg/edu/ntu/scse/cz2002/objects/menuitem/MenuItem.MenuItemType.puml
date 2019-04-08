@@ -1,0 +1,12 @@
+@startuml
+
+    enum MenuItem.MenuItemType [[../sg/edu/ntu/scse/cz2002/objects/menuitem/MenuItem.MenuItemType.html]] {
+        {static} +TBA
+        {static} +MAIN
+        {static} +DESSERT
+        {static} +DRINK
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

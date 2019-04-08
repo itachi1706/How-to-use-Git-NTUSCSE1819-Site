@@ -5,24 +5,32 @@
         class MenuItem [[../sg/edu/ntu/scse/cz2002/objects/menuitem/MenuItem.html]] {
             #id: int
             #name: String
-            #type: String
+            #type: int
             #description: String
             #price: double
             +MenuItem()
-            +MenuItem(id:int, name:String, type:String, description:String, price:double)
+            +MenuItem(id:int, name:String, type:int, description:String, price:double)
             +MenuItem(csv:String[])
             +toCsv(): String[]
             +getId(): int
             +setId(id:int): void
             +getName(): String
             +setName(name:String): void
-            +getType(): String
-            +setType(type:String): void
+            +setType(type:int): void
+            +convertToItemType(type:int): MenuItem.MenuItemType
+            + --convertToItemType-- (type:String): MenuItem.MenuItemType
             +getDescription(): String
             +setDescription(description:String): void
             +getPrice(): double
             +setPrice(price:double): void
             +printItemDetail(): String
+        }
+
+        enum sg.edu.ntu.scse.cz2002.objects.menuitem.MenuItem.MenuItemType [[../sg/edu/ntu/scse/cz2002/objects/menuitem/MenuItem.MenuItemType.html]] {
+            {static} +TBA
+            {static} +MAIN
+            {static} +DESSERT
+            {static} +DRINK
         }
 
         class ItemNotFoundException [[../sg/edu/ntu/scse/cz2002/objects/menuitem/ItemNotFoundException.html]] {
@@ -60,10 +68,14 @@
         }
         sg.edu.ntu.scse.cz2002.util.ICsvSerializable <|.. MenuItem
 
+        MenuItem +-- sg.edu.ntu.scse.cz2002.objects.menuitem.MenuItem.MenuItemType
+
         class java.lang.Exception
         java.lang.Exception <|-- ItemNotFoundException
 
         sg.edu.ntu.scse.cz2002.util.ICsvSerializable <|.. Promotion
+
+        MenuItem --> sg.edu.ntu.scse.cz2002.objects.menuitem.MenuItem.MenuItemType: eType\ntype
 
     }
 
