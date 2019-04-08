@@ -7,7 +7,6 @@
         #promoMain: int
         #promoDessert: int
         #promoDrink: int
-        +Promotion()
         +Promotion(promoID:int, promoName:String, promoPrice:double, promoMain:int, promoDessert:int, promoDrink:int)
         +Promotion(csv:String[])
         +toCsv(): String[]

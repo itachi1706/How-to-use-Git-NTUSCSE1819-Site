@@ -7,7 +7,6 @@
         #description: String
         #price: double
         -eType: MenuItem.MenuItemType
-        +MenuItem()
         +MenuItem(id:int, name:String, type:int, description:String, price:double)
         +MenuItem(csv:String[])
         +toCsv(): String[]
