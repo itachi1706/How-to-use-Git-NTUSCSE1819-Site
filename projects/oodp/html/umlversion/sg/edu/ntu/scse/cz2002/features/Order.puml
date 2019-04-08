@@ -10,6 +10,7 @@
         -staffId: int
         -tableId: int
         +Order(orderID:int)
+        #Order(o:Order)
         +Order(csv:String[])
         +toCsv(): String[]
         +getOrderID(): int

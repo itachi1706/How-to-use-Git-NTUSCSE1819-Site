@@ -21,22 +21,22 @@
             {abstract} +toCsv(): String[]
         }
 
-        class OrderCSVHelper [[../sg/edu/ntu/scse/cz2002/util/OrderCSVHelper.html]] {
-            {static} -mInstance: OrderCSVHelper
-            -orderCsv: String
-            -OrderCSVHelper()
-            + --OrderCSVHelper-- (filename:String)
-            {static} +getInstance(): OrderCSVHelper
-            +readFromCsv(): ArrayList<Order>
-            +writeToCsv(items:ArrayList<Order>): void
-        }
-
         class PromoCSVHelper [[../sg/edu/ntu/scse/cz2002/util/PromoCSVHelper.html]] {
             {static} -pInstance: PromoCSVHelper
             -promotionCsv: String
             {static} +getInstance(): PromoCSVHelper
             +readFromCsv(): ArrayList<Promotion>
             +writeToCsv(promotions:ArrayList<Promotion>): void
+        }
+
+        class InvoiceCSVHelper [[../sg/edu/ntu/scse/cz2002/util/InvoiceCSVHelper.html]] {
+            {static} -mInstance: InvoiceCSVHelper
+            -orderCsv: String
+            -InvoiceCSVHelper()
+            + --InvoiceCSVHelper-- (filename:String)
+            {static} +getInstance(): InvoiceCSVHelper
+            +readFromCsv(): ArrayList<Invoice>
+            +writeToCsv(items:ArrayList<Invoice>): void
         }
 
         class StaffCSVHelper [[../sg/edu/ntu/scse/cz2002/util/StaffCSVHelper.html]] {
@@ -73,6 +73,8 @@
             {static} +getIntegerInput(prompt:String, min:int): int
             {static} +getIntegerInput(prompt:String, min:int, max:int): int
             {static} +getIntegerInput(prompt:String, acceptedValues:ArrayList<Integer>, errorMsg:String): int
+            {static} +getDoubleInput(prompt:String): double
+            {static} +getDoubleInput(prompt:String, min:int): double
             {static} +getYesNoInput(prompt:String): boolean
             {static} +getScannerInput(): Scanner
         }
@@ -108,9 +110,9 @@
 
         CSVBaseHelper <|-- TableCSVHelper
 
-        CSVBaseHelper <|-- OrderCSVHelper
-
         CSVBaseHelper <|-- PromoCSVHelper
+
+        CSVBaseHelper <|-- InvoiceCSVHelper
 
         CSVBaseHelper <|-- StaffCSVHelper
 

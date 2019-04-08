@@ -1,0 +1,15 @@
+@startuml
+
+    enum Invoice.PaymentType [[../sg/edu/ntu/scse/cz2002/features/Invoice.PaymentType.html]] {
+        {static} +PAYMENT_CASH
+        {static} +PAYMENT_CARD
+        {static} +PAYMENT_NETS
+        {static} +PAYMENT_EZLINK
+        -s: String
+        -PaymentType(s:String)
+        +toString(): String
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

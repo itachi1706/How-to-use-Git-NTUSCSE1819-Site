@@ -68,6 +68,7 @@
             -staffId: int
             -tableId: int
             +Order(orderID:int)
+            #Order(o:Order)
             +Order(csv:String[])
             +toCsv(): String[]
             +getOrderID(): int
@@ -91,6 +92,22 @@
         }
 
         class Invoice [[../sg/edu/ntu/scse/cz2002/features/Invoice.html]] {
+            -receipt: String
+            -total: double
+            -amountPaid: double
+            +Invoice(o:Order, receiptPath:String, paymentType:Invoice.PaymentType, total:double, amountPaid:double)
+            +Invoice(csv:String[])
+            +toCsv(): String[]
+        }
+
+        enum sg.edu.ntu.scse.cz2002.features.Invoice.PaymentType [[../sg/edu/ntu/scse/cz2002/features/Invoice.PaymentType.html]] {
+            {static} +PAYMENT_CASH
+            {static} +PAYMENT_CARD
+            {static} +PAYMENT_NETS
+            {static} +PAYMENT_EZLINK
+            -s: String
+            -PaymentType(s:String)
+            +toString(): String
         }
 
         class Table [[../sg/edu/ntu/scse/cz2002/features/Table.html]] {
@@ -136,6 +153,10 @@
 
         Order +-- sg.edu.ntu.scse.cz2002.features.Order.OrderState
 
+        Order <|-- Invoice
+
+        Invoice +-- sg.edu.ntu.scse.cz2002.features.Invoice.PaymentType
+
         sg.edu.ntu.scse.cz2002.util.ICsvSerializable <|.. Table
 
         Table +-- sg.edu.ntu.scse.cz2002.features.Table.TableState
@@ -149,6 +170,8 @@
         Order --> sg.edu.ntu.scse.cz2002.features.Order.OrderState: orderState
 
         Order --> Table: table
+
+        Invoice --> sg.edu.ntu.scse.cz2002.features.Invoice.PaymentType: paymentType
 
         Table --> sg.edu.ntu.scse.cz2002.features.Table.TableState: state
 

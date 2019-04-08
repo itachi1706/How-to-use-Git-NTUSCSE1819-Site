@@ -1,0 +1,16 @@
+@startuml
+
+    class CheckoutMenuUI [[../sg/edu/ntu/scse/cz2002/ui/CheckoutMenuUI.html]] {
+        #generateMenuScreen(): int
+        -checkout(): boolean
+        -reprint(): void
+        -generateReceipt(o:Order, total:double, paid:double, type:Invoice.PaymentType): ArrayList<String>
+        -centerText(toCenter:String, length:int, spacer:char): String
+        -spacer(length:int, spacer:char): String
+        -requestCashPayment(total:double): double
+        -printOrderDetails(o:Order): double
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

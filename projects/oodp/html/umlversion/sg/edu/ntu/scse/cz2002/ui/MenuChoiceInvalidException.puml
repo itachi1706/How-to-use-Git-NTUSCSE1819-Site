@@ -1,0 +1,9 @@
+@startuml
+
+    class MenuChoiceInvalidException [[../sg/edu/ntu/scse/cz2002/ui/MenuChoiceInvalidException.html]] {
+        +MenuChoiceInvalidException(tag:String)
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

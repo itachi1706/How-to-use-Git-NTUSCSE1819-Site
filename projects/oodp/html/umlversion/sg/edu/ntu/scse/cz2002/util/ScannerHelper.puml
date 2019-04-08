@@ -6,6 +6,8 @@
         {static} +getIntegerInput(prompt:String, min:int): int
         {static} +getIntegerInput(prompt:String, min:int, max:int): int
         {static} +getIntegerInput(prompt:String, acceptedValues:ArrayList<Integer>, errorMsg:String): int
+        {static} +getDoubleInput(prompt:String): double
+        {static} +getDoubleInput(prompt:String, min:int): double
         {static} +getYesNoInput(prompt:String): boolean
         {static} +getScannerInput(): Scanner
     }

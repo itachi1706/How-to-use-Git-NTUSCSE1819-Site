@@ -3,9 +3,10 @@
     namespace sg.edu.ntu.scse.cz2002 {
 
         class MainApp [[../sg/edu/ntu/scse/cz2002/MainApp.html]] {
+            {static} +APP_NAME: String
             {static} +tables: ArrayList<Table>
             {static} +menuItems: ArrayList<MenuItem>
-            {static} +completedOrders: ArrayList<Order>
+            {static} +invoices: ArrayList<Invoice>
             {static} +reservations: ArrayList<Reservation>
             {static} +promotions: ArrayList<Promotion>
             {static} +staffs: ArrayList<Staff>

@@ -18,6 +18,10 @@
             -checkEveningSessionDate(date:LocalDate, isToday:boolean): boolean
         }
 
+        class MenuChoiceInvalidException [[../sg/edu/ntu/scse/cz2002/ui/MenuChoiceInvalidException.html]] {
+            +MenuChoiceInvalidException(tag:String)
+        }
+
         class FoodMenuUI [[../sg/edu/ntu/scse/cz2002/ui/FoodMenuUI.html]] {
             ~sc: Scanner
             #generateMenuScreen(): int
@@ -37,6 +41,17 @@
             +editPromotion(targetPromoID:int, editPromoName:String, editPromoPrice:double, editPromoMain:int, editPromoDessert:int, editPromoDrink:int): void
             +deletePromotion(targetPromoID:int): void
             {static} +retrievePromotion(targetPromoID:int): Promotion
+        }
+
+        class CheckoutMenuUI [[../sg/edu/ntu/scse/cz2002/ui/CheckoutMenuUI.html]] {
+            #generateMenuScreen(): int
+            -checkout(): boolean
+            -reprint(): void
+            -generateReceipt(o:Order, total:double, paid:double, type:Invoice.PaymentType): ArrayList<String>
+            -centerText(toCenter:String, length:int, spacer:char): String
+            -spacer(length:int, spacer:char): String
+            -requestCashPayment(total:double): double
+            -printOrderDetails(o:Order): double
         }
 
         class MainMenuUI [[../sg/edu/ntu/scse/cz2002/ui/MainMenuUI.html]] {
@@ -75,17 +90,22 @@
             -editOrderItem(o:Order): void
             -removeOrderItem(o:Order): void
             -findOrder(id:int, allowFromPaid:boolean): Order
-            -printOrderList(orders:ArrayList<Order>, tag:String, tableSort:boolean): void
+            {static} +printOrderList(orders:ArrayList<Order>, tag:String, tableSort:boolean): void
             -printOrderDetails(o:Order): void
             -getOrderItemToEdit(o:Order, prompt:String): int
-            -printOrderItems(items:ArrayList<OrderItem>, prettyPrint:boolean): void
+            {static} +printOrderItems(items:ArrayList<OrderItem>, prettyPrint:boolean): void
         }
 
         BaseMenu <|-- ReservationMenuUI
 
+        class java.lang.IllegalStateException
+        java.lang.IllegalStateException <|-- MenuChoiceInvalidException
+
         BaseMenu <|-- FoodMenuUI
 
         BaseMenu <|-- PromotionMenuUI
+
+        BaseMenu <|-- CheckoutMenuUI
 
         BaseMenu <|-- MainMenuUI
 

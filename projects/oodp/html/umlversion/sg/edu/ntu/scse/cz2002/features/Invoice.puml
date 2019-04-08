@@ -1,6 +1,13 @@
 @startuml
 
     class Invoice [[../sg/edu/ntu/scse/cz2002/features/Invoice.html]] {
+        -receipt: String
+        -paymentType: Invoice.PaymentType
+        -total: double
+        -amountPaid: double
+        +Invoice(o:Order, receiptPath:String, paymentType:Invoice.PaymentType, total:double, amountPaid:double)
+        +Invoice(csv:String[])
+        +toCsv(): String[]
     }
 
 
