@@ -80,6 +80,12 @@
             {abstract} #generateMenuScreen(): int
         }
 
+        class SalesRevenueReportMenuUI [[../sg/edu/ntu/scse/cz2002/ui/SalesRevenueReportMenuUI.html]] {
+            #generateMenuScreen(): int
+            -generateDayReport(): void
+            -generatePeriodReport(): void
+        }
+
         class OrderMenuUI [[../sg/edu/ntu/scse/cz2002/ui/OrderMenuUI.html]] {
             {static} +incompleteOrders: ArrayList<Order>
             #generateMenuScreen(): int
@@ -112,6 +118,8 @@
         BaseMenu <|-- MainMenuUI
 
         BaseMenu <|-- StaffMgmtMenuUI
+
+        BaseMenu <|-- SalesRevenueReportMenuUI
 
         BaseMenu <|-- OrderMenuUI
 
