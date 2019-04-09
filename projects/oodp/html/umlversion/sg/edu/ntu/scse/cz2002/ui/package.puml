@@ -84,6 +84,7 @@
             #generateMenuScreen(): int
             -generateDayReport(): void
             -generatePeriodReport(): void
+            -generateItemList(invoices:ArrayList<Invoice>): ArrayList<String>
         }
 
         class OrderMenuUI [[../sg/edu/ntu/scse/cz2002/ui/OrderMenuUI.html]] {

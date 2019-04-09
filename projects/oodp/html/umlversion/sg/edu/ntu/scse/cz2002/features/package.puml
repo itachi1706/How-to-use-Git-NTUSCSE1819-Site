@@ -13,6 +13,7 @@
             -getMenuItem(): MenuItem
             +getItem(): Object
             +getItemName(): String
+            +getItemId(): int
             +getQuantity(): int
             +setQuantity(quantity:int): void
             +isPromotion(): boolean
