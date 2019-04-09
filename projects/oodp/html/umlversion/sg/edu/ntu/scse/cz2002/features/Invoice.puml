@@ -8,6 +8,10 @@
         +Invoice(o:Order, receiptPath:String, paymentType:Invoice.PaymentType, total:double, amountPaid:double)
         +Invoice(csv:String[])
         +toCsv(): String[]
+        +getReceipt(): String
+        +getPaymentType(): Invoice.PaymentType
+        +getTotal(): double
+        +getAmountPaid(): double
     }
 
 

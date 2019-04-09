@@ -98,6 +98,9 @@
             +Invoice(o:Order, receiptPath:String, paymentType:Invoice.PaymentType, total:double, amountPaid:double)
             +Invoice(csv:String[])
             +toCsv(): String[]
+            +getReceipt(): String
+            +getTotal(): double
+            +getAmountPaid(): double
         }
 
         enum sg.edu.ntu.scse.cz2002.features.Invoice.PaymentType [[../sg/edu/ntu/scse/cz2002/features/Invoice.PaymentType.html]] {

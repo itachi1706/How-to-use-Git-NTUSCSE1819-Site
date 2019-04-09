@@ -44,6 +44,7 @@
         }
 
         class CheckoutMenuUI [[../sg/edu/ntu/scse/cz2002/ui/CheckoutMenuUI.html]] {
+            {static} -RECEIPT_SUBFOLDER: String
             #generateMenuScreen(): int
             -checkout(): boolean
             -reprint(): void
@@ -51,6 +52,7 @@
             -centerText(toCenter:String, length:int, spacer:char): String
             -spacer(length:int, spacer:char): String
             -requestCashPayment(total:double): double
+            -writeReceipt(receipt:ArrayList<String>, receiptId:int): boolean
             -printOrderDetails(o:Order): double
         }
 
