@@ -1,9 +1,0 @@
-@startuml
-
-    class ItemNotFoundException [[../sg/edu/ntu/scse/cz2002/objects/restaurantItem/ItemNotFoundException.html]] {
-        +ItemNotFoundException(message:String)
-    }
-
-
-    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
-@enduml

@@ -10,9 +10,7 @@
         +toCompiledString(): String
         -getPromo(): PromotionItem
         -getMenuItem(): MenuItem
-        +getItem(): Object
-        +getItemName(): String
-        +getItemId(): int
+        +getItem(): RestaurantItem
         +getQuantity(): int
         +setQuantity(quantity:int): void
         +isPromotion(): boolean

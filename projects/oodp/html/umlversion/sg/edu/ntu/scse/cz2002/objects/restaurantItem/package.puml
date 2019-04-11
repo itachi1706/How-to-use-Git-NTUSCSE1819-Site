@@ -21,10 +21,6 @@
             {static} +DRINK
         }
 
-        class ItemNotFoundException [[../sg/edu/ntu/scse/cz2002/objects/restaurantItem/ItemNotFoundException.html]] {
-            +ItemNotFoundException(message:String)
-        }
-
         class PromotionItem [[../sg/edu/ntu/scse/cz2002/objects/restaurantItem/PromotionItem.html]] {
             #promoMain: int
             #promoDessert: int
@@ -64,9 +60,6 @@
         sg.edu.ntu.scse.cz2002.util.ICsvSerializable <|.. MenuItem
 
         MenuItem +-- sg.edu.ntu.scse.cz2002.objects.restaurantItem.MenuItem.MenuItemType
-
-        class java.lang.Exception
-        java.lang.Exception <|-- ItemNotFoundException
 
         RestaurantItem <|-- PromotionItem
 

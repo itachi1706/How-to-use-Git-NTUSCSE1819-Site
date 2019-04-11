@@ -23,7 +23,6 @@
         }
 
         class FoodMenuUI [[../sg/edu/ntu/scse/cz2002/ui/FoodMenuUI.html]] {
-            ~sc: Scanner
             #generateMenuScreen(): int
             +printMenu(): void
             +addNewMenuItem(newItemName:String, newItemType:int, newItemDescription:String, newItemPrice:double): void
