@@ -8,10 +8,10 @@
         -findTableForReservation(numPax:int, resvDate:LocalDate, resvSession:char): int
         -checkReservationBooking(): void
         -removeReservationBooking(): void
-        -listReservations(): void
         -checkExpiredReservations(): void
-        -printReservationLine(telNo:String): int
+        -listReservations(): void
         -printReservationLine(r:Reservation): void
+        -printReservationLine(telNo:String): int
         -checkMorningSessionDate(date:LocalDate, isToday:boolean): boolean
         -checkEveningSessionDate(date:LocalDate, isToday:boolean): boolean
     }
