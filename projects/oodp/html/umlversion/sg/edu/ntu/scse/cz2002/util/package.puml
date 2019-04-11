@@ -25,8 +25,8 @@
             {static} -pInstance: PromoCSVHelper
             -promotionCsv: String
             {static} +getInstance(): PromoCSVHelper
-            +readFromCsv(): ArrayList<Promotion>
-            +writeToCsv(promotions:ArrayList<Promotion>): void
+            +readFromCsv(): ArrayList<PromotionItem>
+            +writeToCsv(promotions:ArrayList<PromotionItem>): void
         }
 
         class InvoiceCSVHelper [[../sg/edu/ntu/scse/cz2002/util/InvoiceCSVHelper.html]] {

@@ -8,7 +8,7 @@
         +OrderItem(otherData:String[])
         +OrderItem(itemId:int, quantity:int, itemType:OrderItem.OrderItemType)
         +toCompiledString(): String
-        -getPromo(): Promotion
+        -getPromo(): PromotionItem
         -getMenuItem(): MenuItem
         +getItem(): Object
         +getItemName(): String

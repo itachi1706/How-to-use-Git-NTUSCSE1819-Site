@@ -1,0 +1,21 @@
+@startuml
+
+    class PromotionItem [[../sg/edu/ntu/scse/cz2002/objects/restaurantItem/PromotionItem.html]] {
+        #promoMain: int
+        #promoDessert: int
+        #promoDrink: int
+        +PromotionItem(promoID:int, promoName:String, promoPrice:double, promoMain:int, promoDessert:int, promoDrink:int)
+        +PromotionItem(csv:String[])
+        +toCsv(): String[]
+        +getPromoMain(): int
+        +setPromoMain(promoMain:int): void
+        +getPromoDessert(): int
+        +setPromoDessert(promoDessert:int): void
+        +getPromoDrink(): int
+        +setPromoDrink(promoDrink:int): void
+        +printPromotionDetail(): String
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

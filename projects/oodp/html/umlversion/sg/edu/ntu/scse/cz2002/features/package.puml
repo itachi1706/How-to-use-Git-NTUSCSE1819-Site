@@ -9,7 +9,7 @@
             +OrderItem(otherData:String[])
             +OrderItem(itemId:int, quantity:int, itemType:OrderItem.OrderItemType)
             +toCompiledString(): String
-            -getPromo(): Promotion
+            -getPromo(): PromotionItem
             -getMenuItem(): MenuItem
             +getItem(): Object
             +getItemName(): String
@@ -160,6 +160,8 @@
         Order +-- sg.edu.ntu.scse.cz2002.features.Order.OrderState
 
         Order <|-- Invoice
+
+        sg.edu.ntu.scse.cz2002.util.ICsvSerializable <|.. Invoice
 
         Invoice +-- sg.edu.ntu.scse.cz2002.features.Invoice.PaymentType
 

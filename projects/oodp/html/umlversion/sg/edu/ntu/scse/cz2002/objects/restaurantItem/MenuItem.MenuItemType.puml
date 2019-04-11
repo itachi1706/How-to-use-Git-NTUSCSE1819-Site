@@ -1,6 +1,6 @@
 @startuml
 
-    enum MenuItem.MenuItemType [[../sg/edu/ntu/scse/cz2002/objects/menuitem/MenuItem.MenuItemType.html]] {
+    enum MenuItem.MenuItemType [[../sg/edu/ntu/scse/cz2002/objects/restaurantItem/MenuItem.MenuItemType.html]] {
         {static} +TBA
         {static} +MAIN
         {static} +DESSERT

@@ -1,0 +1,83 @@
+@startuml
+
+    namespace sg.edu.ntu.scse.cz2002.objects.restaurantItem {
+
+        class MenuItem [[../sg/edu/ntu/scse/cz2002/objects/restaurantItem/MenuItem.html]] {
+            #description: String
+            +MenuItem(id:int, name:String, type:int, description:String, price:double)
+            +MenuItem(csv:String[])
+            +toCsv(): String[]
+            +setType(type:int): void
+            +convertToItemType(type:int): MenuItem.MenuItemType
+            +getDescription(): String
+            +setDescription(description:String): void
+            +printItemDetail(): String
+        }
+
+        enum sg.edu.ntu.scse.cz2002.objects.restaurantItem.MenuItem.MenuItemType [[../sg/edu/ntu/scse/cz2002/objects/restaurantItem/MenuItem.MenuItemType.html]] {
+            {static} +TBA
+            {static} +MAIN
+            {static} +DESSERT
+            {static} +DRINK
+        }
+
+        class ItemNotFoundException [[../sg/edu/ntu/scse/cz2002/objects/restaurantItem/ItemNotFoundException.html]] {
+            +ItemNotFoundException(message:String)
+        }
+
+        class PromotionItem [[../sg/edu/ntu/scse/cz2002/objects/restaurantItem/PromotionItem.html]] {
+            #promoMain: int
+            #promoDessert: int
+            #promoDrink: int
+            +PromotionItem(promoID:int, promoName:String, promoPrice:double, promoMain:int, promoDessert:int, promoDrink:int)
+            +PromotionItem(csv:String[])
+            +toCsv(): String[]
+            +getPromoMain(): int
+            +setPromoMain(promoMain:int): void
+            +getPromoDessert(): int
+            +setPromoDessert(promoDessert:int): void
+            +getPromoDrink(): int
+            +setPromoDrink(promoDrink:int): void
+            +printPromotionDetail(): String
+        }
+
+        class RestaurantItem [[../sg/edu/ntu/scse/cz2002/objects/restaurantItem/RestaurantItem.html]] {
+            #restaurantItemID: int
+            #restaurantItemName: String
+            #restaurantItemPrice: double
+            +RestaurantItem(restaurantItemID:int, restaurantItemName:String, restaurantItemPrice:double)
+            +RestaurantItem(csv:String[])
+            +toCsv(): String[]
+            +getId(): int
+            +setId(restaurantItemID:int): void
+            +getName(): String
+            +setName(restaurantItemName:String): void
+            +getPrice(): double
+            +setPrice(restaurantItemPrice:double): void
+        }
+
+        RestaurantItem <|-- MenuItem
+
+        interface sg.edu.ntu.scse.cz2002.util.ICsvSerializable {
+            {abstract} +toCsv(): String[]
+        }
+        sg.edu.ntu.scse.cz2002.util.ICsvSerializable <|.. MenuItem
+
+        MenuItem +-- sg.edu.ntu.scse.cz2002.objects.restaurantItem.MenuItem.MenuItemType
+
+        class java.lang.Exception
+        java.lang.Exception <|-- ItemNotFoundException
+
+        RestaurantItem <|-- PromotionItem
+
+        sg.edu.ntu.scse.cz2002.util.ICsvSerializable <|.. PromotionItem
+
+        sg.edu.ntu.scse.cz2002.util.ICsvSerializable <|.. RestaurantItem
+
+        MenuItem --> sg.edu.ntu.scse.cz2002.objects.restaurantItem.MenuItem.MenuItemType: eType\ntype
+
+    }
+
+
+    center footer UMLDoclet 1.1.3, PlantUML 1.2018.12
+@enduml

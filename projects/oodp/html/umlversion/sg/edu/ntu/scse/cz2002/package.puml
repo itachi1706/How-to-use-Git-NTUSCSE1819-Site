@@ -8,7 +8,7 @@
             {static} +menuItems: ArrayList<MenuItem>
             {static} +invoices: ArrayList<Invoice>
             {static} +reservations: ArrayList<Reservation>
-            {static} +promotions: ArrayList<Promotion>
+            {static} +promotions: ArrayList<PromotionItem>
             {static} +staffs: ArrayList<Staff>
             {static} +restaurantSession: char
             {static} +DEBUG: boolean
