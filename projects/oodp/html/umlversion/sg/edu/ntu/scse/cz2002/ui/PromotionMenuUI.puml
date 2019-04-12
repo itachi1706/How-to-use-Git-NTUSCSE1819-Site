@@ -1,13 +1,14 @@
 @startuml
 
     class PromotionMenuUI [[../sg/edu/ntu/scse/cz2002/ui/PromotionMenuUI.html]] {
-        ~sc: Scanner
+        -sc: Scanner
         #generateMenuScreen(): int
         +printPromotion(): void
-        +addNewPromotion(newPromoName:String, newPromoPrice:double, newPromoMain:int, newPromoDessert:int, newPromoDrink:int): void
-        +editPromotion(targetPromoID:int, editPromoName:String, editPromoPrice:double, editPromoMain:int, editPromoDessert:int, editPromoDrink:int): void
-        +deletePromotion(targetPromoID:int): void
+        +addNewPromotion(): void
+        +editPromotion(): void
+        +deletePromotion(): void
         {static} +retrievePromotion(targetPromoID:int): PromotionItem
+        +arrayChecker(menuArrayList:ArrayList<MenuItem>, newPromoItemType:int, textParameter:String): boolean
     }
 
 

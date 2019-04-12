@@ -23,23 +23,25 @@
         }
 
         class FoodMenuUI [[../sg/edu/ntu/scse/cz2002/ui/FoodMenuUI.html]] {
+            -sc: Scanner
             #generateMenuScreen(): int
-            +printMenu(): void
-            +addNewMenuItem(newItemName:String, newItemType:int, newItemDescription:String, newItemPrice:double): void
-            +editMenuItem(targetItemID:int, editItemName:String, editItemType:int, editItemDescription:String, editItemPrice:double): void
-            +deleteMenuItem(targetItemID:int): void
+            -printMenu(): void
+            -addNewMenuItem(): void
+            -editMenuItem(): void
+            -deleteMenuItem(): void
             {static} +retrieveMenuItem(targetItemID:int): MenuItem
             {static} +retrieveMenuItemListFiltered(targetItemType:MenuItem.MenuItemType): ArrayList<MenuItem>
         }
 
         class PromotionMenuUI [[../sg/edu/ntu/scse/cz2002/ui/PromotionMenuUI.html]] {
-            ~sc: Scanner
+            -sc: Scanner
             #generateMenuScreen(): int
             +printPromotion(): void
-            +addNewPromotion(newPromoName:String, newPromoPrice:double, newPromoMain:int, newPromoDessert:int, newPromoDrink:int): void
-            +editPromotion(targetPromoID:int, editPromoName:String, editPromoPrice:double, editPromoMain:int, editPromoDessert:int, editPromoDrink:int): void
-            +deletePromotion(targetPromoID:int): void
+            +addNewPromotion(): void
+            +editPromotion(): void
+            +deletePromotion(): void
             {static} +retrievePromotion(targetPromoID:int): PromotionItem
+            +arrayChecker(menuArrayList:ArrayList<MenuItem>, newPromoItemType:int, textParameter:String): boolean
         }
 
         class CheckoutMenuUI [[../sg/edu/ntu/scse/cz2002/ui/CheckoutMenuUI.html]] {

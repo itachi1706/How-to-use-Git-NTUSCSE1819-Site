@@ -15,7 +15,7 @@
         }
 
         enum sg.edu.ntu.scse.cz2002.objects.restaurantItem.MenuItem.MenuItemType [[../sg/edu/ntu/scse/cz2002/objects/restaurantItem/MenuItem.MenuItemType.html]] {
-            {static} +TBA
+            {static} +ALL
             {static} +MAIN
             {static} +DESSERT
             {static} +DRINK
