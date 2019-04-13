@@ -8,7 +8,7 @@
         +editPromotion(): void
         +deletePromotion(): void
         {static} +retrievePromotion(targetPromoID:int): PromotionItem
-        +arrayChecker(menuArrayList:ArrayList<MenuItem>, newPromoItemType:int, textParameter:String): boolean
+        +menuTypeChecker(menuArrayList:ArrayList<MenuItem>, newPromoItemType:int, textParameter:String): boolean
     }
 
 

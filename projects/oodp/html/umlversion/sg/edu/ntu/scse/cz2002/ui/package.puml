@@ -41,7 +41,7 @@
             +editPromotion(): void
             +deletePromotion(): void
             {static} +retrievePromotion(targetPromoID:int): PromotionItem
-            +arrayChecker(menuArrayList:ArrayList<MenuItem>, newPromoItemType:int, textParameter:String): boolean
+            +menuTypeChecker(menuArrayList:ArrayList<MenuItem>, newPromoItemType:int, textParameter:String): boolean
         }
 
         class CheckoutMenuUI [[../sg/edu/ntu/scse/cz2002/ui/CheckoutMenuUI.html]] {
