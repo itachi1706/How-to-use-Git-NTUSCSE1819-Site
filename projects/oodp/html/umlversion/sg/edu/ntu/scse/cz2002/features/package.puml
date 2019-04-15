@@ -52,6 +52,7 @@
             {static} +hasReservation(telNo:String): Table
             {static} +getTablesBookedOnDateBySession(resvDate:LocalDate, resvSession:char): ArrayList<Table>
             {static} +removeReservationFromList(telNo:String): void
+            {static} +removeReservationFromList(r:Reservation): void
             {static} +removeReservationFromList(telNo:String, resvId:int): void
         }
 
