@@ -1,11 +1,11 @@
 @startuml
 
     class RestaurantItem [[../sg/edu/ntu/scse/cz2002/objects/restaurantItem/RestaurantItem.html]] {
-        #restaurantItemID: int
-        #restaurantItemName: String
-        #restaurantItemPrice: double
-        +RestaurantItem(restaurantItemID:int, restaurantItemName:String, restaurantItemPrice:double)
-        +RestaurantItem(csv:String[])
+        -restaurantItemID: int
+        -restaurantItemName: String
+        -restaurantItemPrice: double
+        ~RestaurantItem(restaurantItemID:int, restaurantItemName:String, restaurantItemPrice:double)
+        ~RestaurantItem(csv:String[])
         +toCsv(): String[]
         +getId(): int
         +setId(restaurantItemID:int): void

@@ -34,10 +34,10 @@
         class PromotionMenuUI [[../sg/edu/ntu/scse/cz2002/ui/PromotionMenuUI.html]] {
             -sc: Scanner
             #generateMenuScreen(): int
-            +printPromotion(): void
-            +addNewPromotion(): void
-            +editPromotion(): void
-            +deletePromotion(): void
+            -printPromotion(): void
+            -addNewPromotion(): void
+            -editPromotion(): void
+            -deletePromotion(): void
         }
 
         class CheckoutMenuUI [[../sg/edu/ntu/scse/cz2002/ui/CheckoutMenuUI.html]] {

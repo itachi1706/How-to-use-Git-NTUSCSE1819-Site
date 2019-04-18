@@ -25,9 +25,9 @@
         }
 
         class PromotionItem [[../sg/edu/ntu/scse/cz2002/objects/restaurantItem/PromotionItem.html]] {
-            #promoMain: int
-            #promoDessert: int
-            #promoDrink: int
+            -promoMain: int
+            -promoDessert: int
+            -promoDrink: int
             +PromotionItem(promoID:int, promoName:String, promoPrice:double, promoMain:int, promoDessert:int, promoDrink:int)
             +PromotionItem(csv:String[])
             +toCsv(): String[]
@@ -42,11 +42,11 @@
         }
 
         class RestaurantItem [[../sg/edu/ntu/scse/cz2002/objects/restaurantItem/RestaurantItem.html]] {
-            #restaurantItemID: int
-            #restaurantItemName: String
-            #restaurantItemPrice: double
-            +RestaurantItem(restaurantItemID:int, restaurantItemName:String, restaurantItemPrice:double)
-            +RestaurantItem(csv:String[])
+            -restaurantItemID: int
+            -restaurantItemName: String
+            -restaurantItemPrice: double
+            ~RestaurantItem(restaurantItemID:int, restaurantItemName:String, restaurantItemPrice:double)
+            ~RestaurantItem(csv:String[])
             +toCsv(): String[]
             +getId(): int
             +setId(restaurantItemID:int): void
