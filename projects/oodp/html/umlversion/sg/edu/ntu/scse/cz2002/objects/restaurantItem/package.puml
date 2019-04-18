@@ -8,10 +8,13 @@
             +MenuItem(csv:String[])
             +toCsv(): String[]
             +setType(type:int): void
-            +convertToItemType(type:int): MenuItem.MenuItemType
             +getDescription(): String
             +setDescription(description:String): void
+            +convertToItemType(type:int): MenuItem.MenuItemType
             +printItemDetail(): String
+            {static} +menuTypeChecker(menuArrayList:ArrayList<MenuItem>, newPromoItemType:int, textParameter:String): boolean
+            {static} +retrieveMenuItem(targetItemID:int): MenuItem
+            {static} +retrieveMenuItemListFiltered(targetItemType:MenuItem.MenuItemType): ArrayList<MenuItem>
         }
 
         enum sg.edu.ntu.scse.cz2002.objects.restaurantItem.MenuItem.MenuItemType [[../sg/edu/ntu/scse/cz2002/objects/restaurantItem/MenuItem.MenuItemType.html]] {
@@ -35,6 +38,7 @@
             +getPromoDrink(): int
             +setPromoDrink(promoDrink:int): void
             +printPromotionDetail(): String
+            {static} +retrievePromotion(targetPromoID:int): PromotionItem
         }
 
         class RestaurantItem [[../sg/edu/ntu/scse/cz2002/objects/restaurantItem/RestaurantItem.html]] {

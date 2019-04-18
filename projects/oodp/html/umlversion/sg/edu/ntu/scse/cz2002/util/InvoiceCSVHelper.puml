@@ -3,8 +3,6 @@
     class InvoiceCSVHelper [[../sg/edu/ntu/scse/cz2002/util/InvoiceCSVHelper.html]] {
         {static} -mInstance: InvoiceCSVHelper
         -orderCsv: String
-        -InvoiceCSVHelper()
-        + --InvoiceCSVHelper-- (filename:String)
         {static} +getInstance(): InvoiceCSVHelper
         +readFromCsv(): ArrayList<Invoice>
         +writeToCsv(items:ArrayList<Invoice>): void

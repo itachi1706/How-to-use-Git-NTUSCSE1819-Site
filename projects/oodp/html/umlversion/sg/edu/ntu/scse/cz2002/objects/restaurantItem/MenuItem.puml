@@ -8,10 +8,13 @@
         +toCsv(): String[]
         +getType(): MenuItem.MenuItemType
         +setType(type:int): void
-        +convertToItemType(type:int): MenuItem.MenuItemType
         +getDescription(): String
         +setDescription(description:String): void
+        +convertToItemType(type:int): MenuItem.MenuItemType
         +printItemDetail(): String
+        {static} +menuTypeChecker(menuArrayList:ArrayList<MenuItem>, newPromoItemType:int, textParameter:String): boolean
+        {static} +retrieveMenuItem(targetItemID:int): MenuItem
+        {static} +retrieveMenuItemListFiltered(targetItemType:MenuItem.MenuItemType): ArrayList<MenuItem>
     }
 
 

@@ -3,11 +3,8 @@
     class TableCSVHelper [[../sg/edu/ntu/scse/cz2002/util/TableCSVHelper.html]] {
         {static} -mInstance: TableCSVHelper
         -tableCsv: String
-        -TableCSVHelper()
-        + --TableCSVHelper-- (filename:String)
         {static} +getInstance(): TableCSVHelper
         +readFromCsv(): ArrayList<Table>
-        + --writeToCsv-- (tables:ArrayList<Table>): void
     }
 
 

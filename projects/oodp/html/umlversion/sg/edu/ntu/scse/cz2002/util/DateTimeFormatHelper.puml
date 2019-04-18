@@ -13,10 +13,8 @@
         {static} +compareIfBeforeToday(inputDate:LocalDate): boolean
         {static} +formatMillisToDateTime(millis:long): String
         {static} +checkResvTimeSession(resvTime:LocalTime, sessionStart:LocalTime, sessionEnd:LocalTime): boolean
-        {static} + --formatToStringTodayDateTime-- (): String
         {static} +validateDate(date:String): boolean
         {static} +getSysTimeMillisWithSGTimeZone(): long
-        {static} + --validateDate-- (d:int, m:int, y:int): boolean
     }
 
 

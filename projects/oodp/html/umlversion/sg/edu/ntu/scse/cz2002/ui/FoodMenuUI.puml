@@ -7,8 +7,6 @@
         -addNewMenuItem(): void
         -editMenuItem(): void
         -deleteMenuItem(): void
-        {static} +retrieveMenuItem(targetItemID:int): MenuItem
-        {static} +retrieveMenuItemListFiltered(targetItemType:MenuItem.MenuItemType): ArrayList<MenuItem>
     }
 
 

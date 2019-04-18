@@ -3,8 +3,6 @@
     class StaffCSVHelper [[../sg/edu/ntu/scse/cz2002/util/StaffCSVHelper.html]] {
         {static} -mInstance: StaffCSVHelper
         -staffCsv: String
-        -StaffCSVHelper()
-        + --StaffCSVHelper-- (filename:String)
         {static} +getInstance(): StaffCSVHelper
         +readFromCsv(): ArrayList<Staff>
         +writeToCsv(staffs:ArrayList<Staff>): void
