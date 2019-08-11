@@ -37,6 +37,14 @@ video {
   flex: 50.0%;
 }
 
+.compatibility {
+  font-family: 'Roboto', sans-serif;
+  font-size: large;
+  padding: 20px;
+  background: lightgray;
+  white-space: pre-line;
+}
+
 #breadcrumb-ctrl {
   right: 0px;
   position: relative;
