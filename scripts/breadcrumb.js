@@ -4,7 +4,7 @@ var pathArray = window.location.pathname.split('/');
 var currentPage = pathArray[2].replace(".html", "");
 
 //Create array of options to be added
-var array = ["github",
+var array = ["github", "gitlab",
     "sourcetree",
     "clone",
     "import-intellij",
@@ -20,6 +20,7 @@ var array = ["github",
 ];
 var arrayText = [
     "Introduction to GitHub",
+    "Introduction to GitLab",
     "Introduction to SourceTree",
     "How to clone a repository",
     "Import Project into IntelliJ IDEA",
