@@ -8,28 +8,33 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" integrity="sha256-PF6MatZtiJ8/c9O9HQ8uSUXr++R9KBYu4gbNG5511WE=" crossorigin="anonymous" />
   </head>
 
   <body>
     <h1>How to use Git for the project</h1>
     <p>The following links will provide you with guides (pictures and video) on how to use Git for OODP, MDP or any other projects basically<br>
-    <i>(Note: The sample project showcased here is a Gradle Java Project, but most of the instructions are generic and works with any languages with the exception of importing)</i></p>
+    <i>(Note: The sample project showcased here is a Gradle Java Project, but most of the instructions are generic and works with any languages with the exception of importing)</i><br>
+    Take note that the icons beside each link (e.g <i class="fab fa-github"></i>, <i class="fab fa-sourcetree"></i> or <i class="fab fa-gitlab"></i>) denotes which VCS provider is relevant for the guide</p>
     <ul>
-      <li><a href="/guides/github.html">Introduction to GitHub</a></li>
-      <li><a href="/guides/sourcetree.html">Introduction to SourceTree</a></li>
-      <li><a href="/guides/clone.html">How to clone a repository</a></li>
+      <li>VCS Provider Introduction<ul>
+          <li><a href="/guides/github.html"><i class="fab fa-github"></i> GitHub</a></li>
+          <li><a href="/guides/gitlab.html"><i class="fab fa-gitlab"></i> GitLab (Coming Soon)</a></li>
+      </ul></li>
+      <li><a href="/guides/sourcetree.html"><i class="fab fa-sourcetree"></i> Introduction to SourceTree</a></li>
+      <li><a href="/guides/clone.html"><i class="fab fa-github"></i>/<i class="fab fa-sourcetree"></i> How to clone a repository</a></li>
       <li>How to import cloned git Repo into IDE<ul>
           <li><a href="/guides/import-intellij.html">IntelliJ IDEA</a></li>
           <li><a href="/guides/import-eclipse.html">Eclipse</a></li>
         </ul></li>
-      <li><a href="/guides/commit.html">How to commit a file</a></li>
-      <li><a href="/guides/pull.html">How to update local repo with new code from GitHub (pull)</a></li>
-      <li><a href="/guides/push.html">How to push to GitHub</a></li>
-      <li><a href="/guides/pr.html"><b>IMPORTANT</b> How to create a feature (Pull Requests)</a></li>
-      <li><a href="/guides/conflict.html">Resolve Code Conflicts</a></li>
-      <li><a href="/guides/rebase.html">Rebase Branch against another branch</a></li>
-      <li><a href="/guides/amend.html"><i>Optional</i> Amend unpushed commits</a></li>
-      <li><a href="/guides/buildserver.html"><i>Optional</i> View CI Builds</a></li>
+      <li><a href="/guides/commit.html"><i class="fab fa-github"></i>/<i class="fab fa-gitlab"></i>/<i class="fab fa-sourcetree"></i> How to commit a file</a></li>
+      <li><a href="/guides/pull.html"><i class="fab fa-github"></i>/<i class="fab fa-gitlab"></i>/<i class="fab fa-sourcetree"></i> How to update local repo with new code from GitHub/GitLab (pull)</a></li>
+      <li><a href="/guides/push.html"><i class="fab fa-github"></i>/<i class="fab fa-gitlab"></i>/<i class="fab fa-sourcetree"></i> How to push to GitHub/GitLab</a></li>
+      <li><a href="/guides/pr.html"><i class="fab fa-github"></i>/<i class="fab fa-sourcetree"></i> <b>IMPORTANT</b> How to create a feature (Pull Requests)</a></li>
+      <li><a href="/guides/conflict.html"><i class="fab fa-github"></i>/<i class="fab fa-sourcetree"></i> Resolve Code Conflicts</a></li>
+      <li><a href="/guides/rebase.html"><i class="fab fa-github"></i>/<i class="fab fa-gitlab"></i>/<i class="fab fa-sourcetree"></i> Rebase Branch against another branch</a></li>
+      <li><a href="/guides/amend.html"><i class="fab fa-github"></i>/<i class="fab fa-gitlab"></i>/<i class="fab fa-sourcetree"></i> <i>Optional</i> Amend unpushed commits</a></li>
+      <li><a href="/guides/buildserver.html"><i class="fab fa-github"></i>/<i class="fab fa-sourcetree"></i> <i>Optional</i> View CI Builds</a></li>
     </ul>
 
     <h2>What's required for this</h2>
@@ -45,8 +50,8 @@
     </ul>
 
     <h1>Q&A</h1>
-    <h2>Why git or GitHub?</h2>
-    <p>Being a Version Control System (VCS) and a VCS provider, this will allow us to be able to collaborate on the same codebase simultaneously
+    <h2>Why git or GitHub/GitLab?</h2>
+    <p>Being a Version Control System (VCS) and a VCS provider respectively, this will allow us to be able to collaborate on the same codebase simultaneously
       with support for History (through the Commits system) and conflict resolution</p>
     <h2>We need an account for SourceTree? Can I use something else?</h2>
     <p>YES! However, this guide is catered to SourceTree but other Git GUI programs will have their own equivalent features. You just have to hunt for them. Or you can always use git console	&#128527;</p>
@@ -69,7 +74,14 @@
     <p><a href="https://confluence.atlassian.com/get-started-with-sourcetree">Atlassian's Official "Get Started with SourceTree" Guide</a></p>
   
     <h1>Internal TODO for this site</h1>
-    <p>Create a GitLab equivalent for the links here</p>
+    <ul>
+      <li>Finish Intro to GitLab</li>
+      <li>GitLab Clone</li>
+      <li>GitLab Merge Requests (MR)</li>
+      <li>GitLab Conflict Resolution in MR (Web)</li>
+      <li>GitLab CI View Builds</li>
+      <li>Update all guides to reflect if its <i class="fab fa-github"></i> or <i class="fab fa-gitlab"></i> compatible</li>
+    </ul>
 
     <h1>Projects</h1>
     <p><i>Note: This is only for project members. It will not be relevant to any public viewers. So please ignore if you are not a related Project Member</i></p>
