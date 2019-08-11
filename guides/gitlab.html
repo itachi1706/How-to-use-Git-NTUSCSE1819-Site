@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <h1>Introduction to GitHub</h1>
+    <h1>Introduction to GitLab (WIP)</h1>
     <div id="sidebar">
       <a class="button" id="rtnbtn" href="../index.html">↵ Return to Main Screen</a>
       <div id="breadcrumb-ctrl">
@@ -20,10 +20,10 @@
           <a class="button" id="nxtbtn" href="sourcetree.html">Introduction to SourceTree</a>
       </div>
     </div>
-
+<br/>
     <pre class="prettyprint">
-      This file only relates to <i class="fab fa-github"></i> GitHub.
-      <a href="gitlab.html">Click here to view the <i class="fab fa-gitlab"></i> GitLab Version</a>
+      This file only relates to <i class="fab fa-gitlab"></i> GitLab.
+      <a href="github.html">Click here to view the <i class="fab fa-github"></i> GitHub Version</a>
     </pre>
 
     <p id="description">This page will give you a brief guide on the <a href="https://github.com">GitHub.com</a> User Interface. It is color coded to tell you what it's referring to</p>
@@ -34,10 +34,12 @@
       <li><a href="#jump-issue">Issue Screen</a></li>
       <li><a href="#jump-pr">Pull Request Screen</a></li>
       <li><a href="#jump-project">Project Screen</a></li>
+      <li><a href="#jump-ci">CI/CD Pipelines Screen</a></li>
+      <li><a href="#jump-ide"><i class="fab fa-gitlab"></i> Web IDE Screen</a></li>
     </ul>
     
     <h2><a id="jump-mics"></a>Main Interface and Code Screen</h2>
-    <img class="image" src="../media/ghst/main-1.png" />
+    <img class="image" src="../media/gitlab/main/main.jpg" />
     <ol>
       <li>Repository Statistics: Total Commits, Branches, Releases and Contributors. Clicking on the thin colored line will provide a list of languages detected in the repository</li>
       <li>A dropbown box to swtich branches and a quick shortcut to create a new PR</li>
@@ -51,7 +53,7 @@
         <li>The file list in the current selected branch as well as the last commit made that modified the file and how long ago that was</li>
     </ol>
     <br>
-    <img class="image" src="../media/ghst/code-1.png" />
+    <img class="image" src="../media/gitlab/main/code.jpg" />
     <ol>
       <li>Dropdown box to switch branches</li>
       <li>Latest commit made that modified this file</li>
@@ -64,7 +66,7 @@
       <li>Content of file</li>
     </ol>
     <br>
-    <img class="image" src="../media/ghst/code-2.png" />
+    <img class="image" src="../media/gitlab/main/edit.jpg" />
     <ol>
       <li>Preview changes made to the file</li>
       <li>Content of the file where you can edit</li>
@@ -75,7 +77,7 @@
     </ol>
 
     <h2><a id="jump-issue"></a>Issue Screen</h2>
-    <img class="image" src="../media/ghst/issue-1.png" />
+    <img class="image" src="../media/gitlab/issue/issuelist.jpg" />
     <ol>
       <li>Button to create a new issue</li>
       <li>Switch between open and closed issues</li>
@@ -83,7 +85,7 @@
       <li>List of all issues</li>
     </ol>
     <br>
-    <img class="image" src="../media/ghst/issue-2.png" />
+    <img class="image" src="../media/gitlab/issue/issue.jpg" />
     <ol>
       <li>Button to edit title or create a new issue</li>
       <li>Comment and changes made to the issue</li>
@@ -101,9 +103,13 @@
         <li>Delete Issue - Delete this issue</li>
       </ul></li>
     </ol>
+    <img class="image" src="../media/gitlab/issue/new.jpg" />
+    <ol>
+      <li>Coming Soon</li>
+    </ol>
     
     <h2><a id="jump-pr"></a>Pull Requests Screen</h2>
-    <img class="image" src="../media/ghst/pr-1.png" />
+    <img class="image" src="../media/gitlab/mr/mrlist.jpg" />
     <ol>
       <li>Button to create a new pull request</li>
       <li>Switch between open and closed pull requests</li>
@@ -111,7 +117,7 @@
       <li>List of all pull requests</li>
     </ol>
     <br>
-    <img class="image" src="../media/ghst/pr-2.png" />
+    <img class="image" src="../media/gitlab/mr/mr.jpg" />
     <ol>
       <li>Button to edit PR title</li>
       <li>Tabs to switch pages (left to right): <ul>
@@ -133,20 +139,53 @@
       <li>Checks being done to this PR as well as the button to merge the PR</li>
       <li>Box where you can enter comments to the PR as well as close it (if you are the issue creator)</li>
     </ol>
+    <img class="image" src="../media/gitlab/mr/new.jpg" />
+    <ol>
+      <li>Coming Soon</li>
+    </ol>
 
     <h2><a id="jump-project"></a>Project Screen (It's like Trello/JIRA)</h2>
-    <img class="image" src="../media/ghst/proj-1.png" />
+    <img class="image" src="../media/gitlab/board/issueboard.jpg" />
     <ol>
       <li>Create new projects</li>
       <li>Filter between open and closed projects</li>
       <li>List of all projects</li>
     </ol>
     <br>
-    <img class="image" src="../media/ghst/proj-2.png" />
+
+    <h2><a id="jump-ci"></a>CI/CD Pipelines</h2>
+    <img class="image" src="../media/gitlab/cicd/pipelinelist.jpg" />
     <ol>
-      <li>Add issue cards (or add issue to the specific board)</li>
-      <li>Issue Cards</li>
+      <li>Coming Soon</li>
     </ol>
+    <br>
+    <img class="image" src="../media/gitlab/cicd/pipeline.jpg" />
+    <ol>
+      <li>Coming Soon</li>
+    </ol>
+    <br>
+    <img class="image" src="../media/gitlab/cicd/job.jpg" />
+    <ol>
+      <li>Coming Soon</li>
+    </ol>
+    <br>
+
+    <h2><a id="jump-ide"></a>Web IDE (A <i class="fab fa-gitlab"></i> exclusive!)</h2>
+    <img class="image" src="../media/gitlab/webide/edit.jpg" />
+    <ol>
+      <li>Coming Soon</li>
+    </ol>
+    <br>
+    <img class="image" src="../media/gitlab/webide/review.jpg" />
+    <ol>
+      <li>Coming Soon</li>
+    </ol>
+    <br>
+    <img class="image" src="../media/gitlab/webide/commit.jpg" />
+    <ol>
+      <li>Coming Soon</li>
+    </ol>
+    <br>
 
     <button onclick="topFunction()" id="topBtn" title="Go to top">^<br>Back to<br>Top</button>
     <script src="../scripts/common.js" type="text/javascript"></script>
