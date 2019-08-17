@@ -39,6 +39,10 @@ button {
   flex: 50.0%;
 }
 
+.test:before {
+  font-family: FontAwesome;
+}
+
 .compatibility {
   font-family: 'Roboto', sans-serif;
   font-size: large;
@@ -66,7 +70,8 @@ button {
 }
 
 #breadcrumb-select {
-  width: 250px;
+  /* width: 250px; */
+  width: auto;
   padding: 1.3px;
 }
 
