@@ -6,33 +6,40 @@ var currentPage = pathArray[2].replace(".html", "");
 //Create array of options to be added
 var array = ["github", "gitlab",
     "sourcetree",
-    "clone",
+    "clone", "clone-gitlab",
     "import-intellij",
     "import-eclipse",
     "commit",
     "pull",
     "push",
-    "pr",
-    "conflict",
+    "pr", "mr",
+    "conflict", "conflict-web",
     "rebase",
     "amend",
-    "buildserver"
+    "buildserver",
+    "pipeline",
+    "webide"
 ];
 var arrayText = [
     "Introduction to GitHub",
     "Introduction to GitLab",
     "Introduction to SourceTree",
-    "How to clone a repository",
+    "How to clone a GitHub repository",
+    "How to clone a GitLab repository",
     "Import Project into IntelliJ IDEA",
     "Import Project into Eclipse",
     "How to commit a file",
     "How to update local repo with new code from GitHub (pull)",
     "How to push to GitHub",
     "[IMPORTANT] How to create a feature (Pull Requests)",
+    "[IMPORTANT] How to create a feature (Merge Requests)",
     "Resolve Code Conflicts",
+    "Resolve GitLab Code Conflicts during MR online",
     "Rebase Branch against another branch",
     "[Optional] Amend unpushed commits",
-    "[Optional] View CI Builds"
+    "[Optional] View GitLab Travis CI Builds",
+    "[Optional] View GitLab CI Builds",
+    "[Optional] Modify code with GitLab Web IDE"
 ];
 
 //Create and append the options
