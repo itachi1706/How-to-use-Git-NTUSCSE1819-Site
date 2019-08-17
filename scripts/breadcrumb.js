@@ -65,6 +65,16 @@ var faText = [
     "gl"
 ];
 
+var faHTML = [
+    "<i class=\"fab fa-github\"></i>/<i class=\"fab fa-gitlab\"></i>/<i class=\"fab fa-sourcetree\"></i> ",
+    "<i class=\"fab fa-github\"></i> ",
+    "<i class=\"fab fa-gitlab\"></i> ",
+    "<i class=\"fab fa-sourcetree\"></i> ",
+    "<i class=\"fab fa-gitlab\"></i>/<i class=\"fab fa-sourcetree\"></i> ",
+    "<i class=\"fab fa-github\"></i>/<i class=\"fab fa-sourcetree\"></i> ",
+    ""
+];
+
 //Create and append the options
 for (var i = 0; i < array.length; i++) {
     var option = document.createElement("option");
@@ -93,16 +103,6 @@ selectList.addEventListener("change", function() {
             window.location = url;
         }
 });
-
-var faHTML = [
-    "<i class=\"fab fa-github\"></i>/<i class=\"fab fa-gitlab\"></i>/<i class=\"fab fa-sourcetree\"></i> ",
-    "<i class=\"fab fa-github\"></i> ",
-    "<i class=\"fab fa-gitlab\"></i> ",
-    "<i class=\"fab fa-sourcetree\"></i> ",
-    "<i class=\"fab fa-gitlab\"></i>/<i class=\"fab fa-sourcetree\"></i> ",
-    "<i class=\"fab fa-github\"></i>/<i class=\"fab fa-sourcetree\"></i> ",
-    ""
-]
 
 function generateTextWithFAIcons(text, index) {
     var iconType = faText[index];
