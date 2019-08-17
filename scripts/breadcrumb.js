@@ -42,6 +42,29 @@ var arrayText = [
     "[Optional] Modify code with GitLab Web IDE"
 ];
 
+// gh - GitHub, gl - GitLab, ghst - GitHub + Source Tree, glst - GitLab + SourceTree, all - GitHub + GitLab + SourceTree
+var faText = [
+    "gh",
+    "gl",
+    "st",
+    "ghst",
+    "glst",
+    "",
+    "",
+    "all",
+    "all",
+    "all",
+    "ghst",
+    "glst",
+    "all",
+    "gl",
+    "all",
+    "all",
+    "gh",
+    "gl",
+    "gl"
+];
+
 //Create and append the options
 for (var i = 0; i < array.length; i++) {
     var option = document.createElement("option");
@@ -56,11 +79,11 @@ if (pageInArray) {
     // Update the next and previous buttons
     var index = array.indexOf(currentPage);
     if (index !== 0) {
-        updateBreadcrumbButton(arrayText[index-1], array[index-1] + ".html", true); // Get Previous Button
+        updateBreadcrumbButton(generateTextWithFAIcons(arrayText[index-1], index-1), array[index-1] + ".html", true); // Get Previous Button
     }
     
     if (index !== array.length - 1) {
-        updateBreadcrumbButton(arrayText[index+1], array[index+1] + ".html", false); // Get Next Button
+        updateBreadcrumbButton(generateTextWithFAIcons(arrayText[index+1], index+1), array[index+1] + ".html", false); // Get Next Button
     }
 }
 
@@ -70,6 +93,30 @@ selectList.addEventListener("change", function() {
             window.location = url;
         }
 });
+
+var faHTML = [
+    "<i class=\"fab fa-github\"></i>/<i class=\"fab fa-gitlab\"></i>/<i class=\"fab fa-sourcetree\"></i> ",
+    "<i class=\"fab fa-github\"></i> ",
+    "<i class=\"fab fa-gitlab\"></i> ",
+    "<i class=\"fab fa-sourcetree\"></i> ",
+    "<i class=\"fab fa-gitlab\"></i>/<i class=\"fab fa-sourcetree\"></i> ",
+    "<i class=\"fab fa-github\"></i>/<i class=\"fab fa-sourcetree\"></i> ",
+    ""
+]
+
+function generateTextWithFAIcons(text, index) {
+    var iconType = faText[index];
+    if (iconType == null) return text;
+    switch (iconType) {
+        case "all": return faHTML[0] + text;
+        case "gl": return faHTML[2] + text;
+        case "gh": return faHTML[1] + text;
+        case "st": return faHTML[3] + text;
+        case "glst": return faHTML[4] + text;
+        case "ghst": return faHTML[5] + text;
+        default: return faHTML[6] + text;
+    }
+}
 
 function updateBreadcrumbButton(newtext, newurl, prev = false) {
     var btn = document.getElementById((prev) ? "prebtn" : "nxtbtn");
