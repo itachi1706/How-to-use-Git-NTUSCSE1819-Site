@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <h1>View Builds on GitLab CI (WIP)</h1>
+    <h1>View Builds on GitLab CI <i class="fab fa-gitlab"></i></h1>
     <div id="sidebar">
       <button type="button"><a class="button" id="rtnbtn" href="../index.html">↵ Return to Main Screen</a></button>
       <div id="breadcrumb-ctrl">
@@ -26,16 +26,21 @@
       <a href="buildserver.html">Click here to view the <i class="fab fa-github"></i> GitHub Version</a>
     </pre>
 
-    <p id="description">Ever wonder what all those checks the CI is doing when you are doing a PR (or any commits actually)?<br>
-    Or wonder why your build is failing for some reason? This will show you how to access the CI to view the logs</p>
+    <p id="description">Ever wonder what all those checks the CI is doing when you are doing a MR (or any commits actually)?<br>
+    Or wonder why your build is failing for some reason? This guide will show you how to access the CI to view the logs</p>
 
     <ol>
-      <li>Go too your PR (or commit) and click the <i>Details</i> link</li>
-      <img class="image" src="../media/gitlab/guide/pipeline-1.png"/>
-      <li>Click on the link for <i>the build</i> like shown in the picture below</li>
-      <img class="image" src="../media/gitlab/guide/pipeline-2.png"/>
-      <li>You can now view the logs as shown in the picture below</li>
-      <img class="image" src="../media/gitlab/guide/pipeline-3.png"/>
+      <li>Go too your MR (or commit) and click the <i>Pipelines</i> Tab</li>
+      <li>Click on the icon in the "Status" column<br>
+        <i>Alternatively you can click on the Pipeline # hyperlink to go straight into the pipeline</i><br>
+        <img alt="View GitLab CI #1" class="image" src="../media/gitlab/guide/pipeline-1.png"/>
+      </li>
+      <li>Click on the build/test you wish to check the logs on<br>
+        <img alt="View GitLab CI #2" class="image" src="../media/gitlab/guide/pipeline-2.png"/>
+      </li>
+      <li>You can now view the logs as shown in the picture below<br>
+        <img alt="View GitLab CI #3" class="image" src="../media/gitlab/guide/pipeline-3.png"/>
+      </li>
     </ol>
     
     <div id="divvid"><b>Demo Video</b><br>
