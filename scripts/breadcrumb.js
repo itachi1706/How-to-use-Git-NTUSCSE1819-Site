@@ -53,6 +53,15 @@ for (var i = 0; i < array.length; i++) {
 var pageInArray = (array.indexOf(currentPage) > -1);
 if (pageInArray) {
     selectList.value = currentPage;
+    // Update the next and previous buttons
+    var index = array.indexOf(currentPage);
+    if (index !== 0) {
+        updateBreadcrumbButton(arrayText[index-1], array[index-1] + ".html", true); // Get Previous Button
+    }
+    
+    if (index !== array.length - 1) {
+        updateBreadcrumbButton(arrayText[index+1], array[index+1] + ".html", false); // Get Next Button
+    }
 }
 
 selectList.addEventListener("change", function() {
@@ -61,3 +70,9 @@ selectList.addEventListener("change", function() {
             window.location = url;
         }
 });
+
+function updateBreadcrumbButton(newtext, newurl, prev = false) {
+    var btn = document.getElementById((prev) ? "prebtn" : "nxtbtn");
+    btn.innerHTML = newtext;
+    btn.href = newurl;
+}
