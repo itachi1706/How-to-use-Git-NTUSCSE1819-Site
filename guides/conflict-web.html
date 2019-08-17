@@ -30,20 +30,20 @@
 
     <ol>
       <li>If a merge conflict occurs (either through pull or rebase or whatever), an error will pop up somewhere along the lines shown in this console window</li>
-      <img class="image" src="../media/gitlab/guide/conflict-1.jpg"/>
+      <img class="image" src="../media/gitlab/guide/conflict-1.png"/>
       <li>When then happen, check the files that have conflicted (you can see it in the console or in the File Status tab on SourceTree where they will display them as ! files)</li>
       <li>Use your IDE to head over to that file (or open in any text editor)</li>
       <li>Identify the conflicted code and resolve them normally</li>
       <span><b>Before Conflict Resolution</b><br>
-      <img class="image" src="../media/gitlab/guide/conflict-2.jpg"/><br></span>
+      <img class="image" src="../media/gitlab/guide/conflict-2.png"/><br></span>
       <span><b>After Conflict Resolution</b><br>
-      <img class="image" src="../media/gitlab/guide/conflict-3.jpg"/><br></span>
+      <img class="image" src="../media/gitlab/guide/conflict-3.png"/><br></span>
       <li>Head back to SourceTree and select the resolved conflicted files in <i>Unstaged Files</i> and stage them accordingly</li>
-      <img class="image" src="../media/gitlab/guide/conflict-4.jpg"/>
+      <img class="image" src="../media/gitlab/guide/conflict-4.png"/>
       <li>Tell git to continue the operation you are doing<br>
       If you are doing a pull, just go ahead and click <i>Commit</i> in File Status (see <a href="commit.html">Commit Code</a>)<br>
       If you are doing a rebase, go back to the console and execute <pre class="prettyprint">git rebase --continue</pre> (See pic below)</li>
-      <img class="image" src="../media/gitlab/guide/conflict-5.jpg"/>
+      <img class="image" src="../media/gitlab/guide/conflict-5.png"/>
     </ol>
     
     
