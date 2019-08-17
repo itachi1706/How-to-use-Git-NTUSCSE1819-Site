@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <h1>Introduction to GitLab (WIP)</h1>
+    <h1>Introduction to GitLab</h1>
     <div id="sidebar">
       <button type="button"><a class="button" id="rtnbtn" href="../index.html">↵ Return to Main Screen</a></button>
       <div id="breadcrumb-ctrl">
@@ -32,158 +32,230 @@
     <ul>
       <li><a href="#jump-mics">Main Interface and Code Screen</a></li>
       <li><a href="#jump-issue">Issue Screen</a></li>
-      <li><a href="#jump-pr">Pull Request Screen</a></li>
-      <li><a href="#jump-project">Project Screen</a></li>
+      <li><a href="#jump-mr">Merge Request (MR) Screen</a></li>
+      <li><a href="#jump-board">Issue Boards Screen</a></li>
       <li><a href="#jump-ci">CI/CD Pipelines Screen</a></li>
       <li><a href="#jump-ide"><i class="fab fa-gitlab"></i> Web IDE Screen</a></li>
     </ul>
     
     <h2><a id="jump-mics"></a>Main Interface and Code Screen</h2>
-    <img class="image" src="../media/gitlab/main/main.jpg" />
+    <img alt="Main Interface" class="image" src="../media/gitlab/main/main.jpg" />
     <ol>
-      <li>Repository Statistics: Total Commits, Branches, Releases and Contributors. Clicking on the thin colored line will provide a list of languages detected in the repository</li>
-      <li>A dropbown box to swtich branches and a quick shortcut to create a new PR</li>
+      <li>Repository Statistics: Licenses, Total Commits, Branches, Tags, Disk Space Used and Contributors. Hovering on the thin colored line below will provide a list of languages detected in the repository</li>
+      <li>A dropbown box to swtich branches and a quick shortcut to create a new file/folder/branch/tag/upload file</li>
       <li>Some useful buttons (from left to right): <ul>
-        <li>Create New File - Creates a new file for you to edit directly from the website</li>
-        <li>Upload files - Uploads files to the repository from the website</li>
-        <li>Find file - Finds a file in the repository by the file name</li>
-        <li>Clone or download - Provides a URL where you can use to clone the repository. Also some buttons to open the repository in GitHub Desktop or to download the entire repository as a .zip file (See <a href="clone.html">Clone Repository</a> for more information)</li>
+        <li>Notification Settings - Modifies your notification settings for this repository</li>
+        <li>Star - "Favourites" the repository on your profile</li>
+        <li>Fork - Forks the repository to your own profile</li>
+        <li>Clone - Provides a SSH/HTTPS  URL where you can use to clone the repository. (See <a href="clone-gitlab.html">Clone Repository</a> for more information)</li>
       </ul></li>
       <li>Latest commit made to the repository's branch</li>
-        <li>The file list in the current selected branch as well as the last commit made that modified the file and how long ago that was</li>
+      <li>The file list in the currently selected branch as well as the last commit made that modified the file and the time since it is last modified</li>
+      <li>Some useful tools (from left to right): <ul>
+        <li>History - Views the commit history of the repository and branch</li>
+        <li>Find File - Finds a file in the repository by the file name</li>
+        <li>Web IDE - Launches the inbuilt IDE</li>
+        <li>Download - Provides the ability to download a compressed version of your source code or artifacts</li>
+      </ul></li>
     </ol>
     <br>
-    <img class="image" src="../media/gitlab/main/code.jpg" />
+    <img alt="Code View" class="image" src="../media/gitlab/main/code.jpg" />
     <ol>
       <li>Dropdown box to switch branches</li>
       <li>Latest commit made that modified this file</li>
-      <li>Some useful screens (left to right): <ul>
-        <li>Raw - View the file directly</li>
+      <li>Some useful buttons (left to right): <ul>
+        <li>Find File - Finds a file in the repository by the file name</li>
         <li>Blame - View who exactly changed which part of the code in this file at which commit</li>
         <li>History - View the entire history of the file</li>
+        <li>Permalink - A permenant link to the currently viewing file as of this commit</li>
       </ul></li>
-      <li>Edit button to edit the file from the web directly</li>
+      <li>Various buttons to interact with the file (left to right): <ul>
+          <li>Copy Source to Clipboard - Copies the file to the device clipboard</li>
+          <li>View Raw - View the file directly</li>
+          <li>Download File - Downloads the file</li>
+          <li>Lock/Unlock - Locks/Unlocks the file to prevent overwrites by another committer</li>
+          <li>Edit - Edits the file straight from the website</li>
+          <li>Web IDE - Launches the inbuilt IDE</li>
+          <li>Replace - Replace the file with another file</li>
+          <li>Delete - Deletes the file</li>
+      </ul></li>
       <li>Content of file</li>
     </ol>
     <br>
-    <img class="image" src="../media/gitlab/main/edit.jpg" />
+    <img alt="Edit File" class="image" src="../media/gitlab/main/edit.jpg" />
     <ol>
       <li>Preview changes made to the file</li>
       <li>Content of the file where you can edit</li>
-      <li>Commit Title</li>
-      <li>Commit Description</li>
-      <li>Which email to commit as and to commit to which branch/PR</li>
+      <li>Commit Message</li>
+      <li>Branch to commit your changes to</li>
       <li>Button to commit or cancel edit</li>
     </ol>
 
     <h2><a id="jump-issue"></a>Issue Screen</h2>
-    <img class="image" src="../media/gitlab/issue/issuelist.jpg" />
+    <img alt="Issue List" class="image" src="../media/gitlab/issue/issuelist.jpg" />
     <ol>
-      <li>Button to create a new issue</li>
-      <li>Switch between open and closed issues</li>
-      <li>Filters to filter issues by the various properties</li>
+      <li>Button to create a new issue or do bulk modification of existing issues</li>
+      <li>Switch between open, closed and all issues</li>
+      <li>Search or filter issues by the various properties</li>
       <li>List of all issues</li>
     </ol>
     <br>
-    <img class="image" src="../media/gitlab/issue/issue.jpg" />
+    <img alt="Issue Page" class="image" src="../media/gitlab/issue/issue.jpg" />
     <ol>
-      <li>Button to edit title or create a new issue</li>
-      <li>Comment and changes made to the issue</li>
-      <li>Issue Properties (top to bottom): <ul>
+      <li>Button to close or create a new issue</li>
+      <li>Issue title, description, other related issues and ability to edit the issue (pencil icon)</li>
+      <li>Issue Properties that are relevant (top to bottom): <ul>
         <li>Assignee - Who is assigned to the issue</li>
+        <li>Milestone - The current milestone/sprint that this issue belongs to</li>
+        <li>Time Tracking - The amount of time estimated or spent on this issue</li>
+        <li>Due Date - When the issue is due on</li>
         <li>Labels - Labels assigned to the issue (bug, enhancement etc)</li>
-        <li>Projects - What project board this issue is linked to</li>
-        <li>Milestone - Which milestone this issue is linked to</li>
+        <li>Issue Weight - How important/critical is this issue</li>
+        <li>Issue Participants - The list of participants in this issue</li>
+        <li>Issue Notifications - Whether you will be notified about changes to this issue</li>
+        <li>Issue Reference - A reference to this issue</li>
       </ul></li>
+      <li>Comments and changes made to this issue</li>
       <li>Box where you can enter comments to the issue as well as close it (if you are the issue creator)</li>
-      <li>Some issue controls (top to bottom): <ul>
-        <li>Lock Conversation - Restrict comments to collaborators only</li>
-        <li>Pin Issue - Pin issue to the top of the list</li>
-        <li>Transfer Issue - Transfer issue to another repository</li>
-        <li>Delete Issue - Delete this issue</li>
-      </ul></li>
     </ol>
-    <img class="image" src="../media/gitlab/issue/new.jpg" />
+    <img alt="New Issue" class="image" src="../media/gitlab/issue/new.jpg" />
     <ol>
-      <li>Coming Soon</li>
+      <li>Issue title</li>
+      <li>Description of the issue</li>
+      <li>Issue Properties (From top to bottom, left to right): <ul>
+        <li>Assignee - Who to assign to this issue</li>
+        <li>Milestone - What milestone/sprint does this issue belong to</li>
+        <li>Labels - Labels assigned to this issue (bug, enhancement, priority etc.)</li>
+        <li>Issue Weight - How important/crtical is this issue</li>
+        <li>Due Date - When is this issue due</li>
+      </ul></li>
+      <li>Button to submit and create this issue or cancel the creation of the issue</li>
     </ol>
     
-    <h2><a id="jump-pr"></a>Pull Requests Screen</h2>
-    <img class="image" src="../media/gitlab/mr/mrlist.jpg" />
+    <h2><a id="jump-mr"></a>Merge Requests (MR) Screen</h2>
+    <img alt="Merge Request List" class="image" src="../media/gitlab/mr/mrlist.jpg" />
     <ol>
-      <li>Button to create a new pull request</li>
-      <li>Switch between open and closed pull requests</li>
-      <li>Filters to filter pull requests by the various properties</li>
-      <li>List of all pull requests</li>
+      <li>Button to create a new MR or do bulk modification of MRs</li>
+      <li>Switch between open, merged, close or all MRs</li>
+      <li>Search or filter MRs by the various properties</li>
+      <li>List of all MRs</li>
     </ol>
     <br>
-    <img class="image" src="../media/gitlab/mr/mr.jpg" />
+    <img alt="Merge Request Page" class="image" src="../media/gitlab/mr/mr.jpg" />
     <ol>
-      <li>Button to edit PR title</li>
+      <li>Button to edit or close the MR</li>
+      <li>MR Title, Description and branch it is being merged from and to</li>
+      <li>MR Properties (top to bottom): <ul>
+          <li>Assignee - Who is assigned to the MR</li>
+          <li>Milestone - Which milestone/sprint this MR is linked to</li>
+          <li>Time Tracking - The amount of time estimated/spent on this MR</li>
+          <li>Labels - Labels assigned to the MR (bug, enhancement etc)</li>
+          <li>Lock MR - Restrict comments to collaborators only</li>
+          <li>Participants - List of participants involved in this MR</li>
+          <li>Notifications - Whether to receive GitLab notifications on this MR</li>
+      </ul></li>
+      <li>CI Status, Approval Status and Mergability Status</li>
       <li>Tabs to switch pages (left to right): <ul>
-        <li>Conversation - The screen you see now</li>
+        <li>Discussion - The screen you see now</li>
         <li>Commits - List of commits in the PR</li>
-        <li>Checks - Checks that are being ran on this PR by a CI or service</li>
-        <li>Files changed - Diff of files that are changed in this Pull Request</li>
+        <li>Pipelines - The pipelines that are currently running checks on this MR</li>
+        <li>Changes - Diff of files that are changed in this MR</li>
       </ul></li>
-      <li>Comment and changes made to the issue</li>
-      <li>Issue Properties (top to bottom): <ul>
-        <li>Reviewers - Who is involved in reviewing the PR</li>
-        <li>Assignee - Who is assigned to the PR</li>
-        <li>Labels - Labels assigned to the PR (bug, enhancement etc)</li>
-        <li>Projects - What project board this PR is linked to</li>
-        <li>Milestone - Which milestone this PR is linked to</li>
-        <li>Notifications - Whether to receive GitHub notifications on this PR</li>
-        <li>Lock Conversation - Restrict comments to collaborators only</li>
-      </ul></li>
-      <li>Checks being done to this PR as well as the button to merge the PR</li>
-      <li>Box where you can enter comments to the PR as well as close it (if you are the issue creator)</li>
+      <li>Comment and changes made to the issue as well as the box where you can enter comments to the MR as well as close it (if you are the MR creator)</li>
     </ol>
-    <img class="image" src="../media/gitlab/mr/new.jpg" />
+    <img alt="New Merge Request" class="image" src="../media/gitlab/mr/new.jpg" />
     <ol>
-      <li>Coming Soon</li>
+      <li>Merge Request Title</li>
+      <li>Merge Request Description</li>
+      <li>MR Properties (from top to bottom): <ul>
+        <li>Assignee - Who is assigned to this MR</li>
+        <li>Milestone - Which milestone/sprint is this MR linked to</li>
+        <li>Labels - Labels assigned to this MR</li>
+        <li>Approvers - List of approvals required and approvers (if any)</li>
+        <li>Blocking MRs - The list of all other MRs blocking this MR that must be merged before this can be merged</li>
+      </ul></li>
+      <li>The branch you are committing to and from as well as if the commits should be squashed or deleted after merging</li>
+      <li>The button to create the MR or cancel the creation of it</li>
     </ol>
 
-    <h2><a id="jump-project"></a>Project Screen (It's like Trello/JIRA)</h2>
-    <img class="image" src="../media/gitlab/board/issueboard.jpg" />
+    <h2><a id="jump-board"></a>Issue Boards Screen (It's like Trello/JIRA)</h2>
+    <img alt="Issue Board" class="image" src="../media/gitlab/board/issueboard.jpg" />
     <ol>
-      <li>Create new projects</li>
-      <li>Filter between open and closed projects</li>
-      <li>List of all projects</li>
+      <li>Add issues to the board/column</li>
+      <li>Issue Column to hold the cards</li>
+      <li>An issue card</li>
+      <li>Column statistics like the number of issues and total weights in the column</li>
     </ol>
     <br>
 
     <h2><a id="jump-ci"></a>CI/CD Pipelines</h2>
-    <img class="image" src="../media/gitlab/cicd/pipelinelist.jpg" />
+    <img alt="Pipeline List" class="image" src="../media/gitlab/cicd/pipelinelist.jpg" />
     <ol>
-      <li>Coming Soon</li>
+      <li>Buttons to manually run the pipeline, clear caches or error check gitlab-ci.yml file</li>
+      <li>Tabs between the various status of the CI: <ul>
+        <li>All - All Pipelines</li>
+        <li>Pending - Pipelines that have yet to be ran</li>
+        <li>Running - Currently running pipeline</li>
+        <li>Finished - Pipelines that are completed</li>
+        <li>Branches - The list of branches with pipelines</li>
+        <li>Tags - The list of tags with pipelines</li>
+      </ul></li>
+      <li>List of pipelines</li>
     </ol>
     <br>
-    <img class="image" src="../media/gitlab/cicd/pipeline.jpg" />
+    <img alt="Pipeline/Job List" class="image" src="../media/gitlab/cicd/pipeline.jpg" />
     <ol>
-      <li>Coming Soon</li>
+      <li>Pipeline Information (Commit Title, number and duration of jobs, tags and current commit number)</li>
+      <li>Tabs to switch between screens: <ul>
+        <li>Pipeline - Shows the pipeline itself</li>
+        <li>Jobs - Shows more detailed job details</li>
+        <li>Security - Security assessment of the current commit if available (SAST)</li>
+      </ul></li>
+      <li>List of all jobs in the pipeline</li>
     </ol>
     <br>
-    <img class="image" src="../media/gitlab/cicd/job.jpg" />
+    <img alt="Job Information" class="image" src="../media/gitlab/cicd/job.jpg" />
     <ol>
-      <li>Coming Soon</li>
+      <li>Information regarding the current job</li>
+      <li>General pipeline and job information: <ul>
+        <li>How long the job is running</li>
+        <li>How long can it run for</li>
+        <li>Who is running this job</li>
+        <li>Access job artifacts (if any)</li>
+        <li>Commit number and message</li>
+        <li>Pipeline list with a selector to switch between the different pipeline stages</li>
+        <li>List of all jobs in the particular pipeline stage</li>
+      </ul></li>
     </ol>
     <br>
 
     <h2><a id="jump-ide"></a>Web IDE (A <i class="fab fa-gitlab"></i> exclusive!)</h2>
-    <img class="image" src="../media/gitlab/webide/edit.jpg" />
+    <img alt="Web IDE Edit View" class="image" src="../media/gitlab/webide/edit.jpg" />
     <ol>
-      <li>Coming Soon</li>
+      <li>List of currently opened documents</li>
+      <li>Working area for working with files</li>
+      <li>Current Branch/MR that is being accessed</li>
+      <li>List of all files in the repository</li>
+      <li>Button to commit changes made as well as statistics of files</li>
     </ol>
     <br>
-    <img class="image" src="../media/gitlab/webide/review.jpg" />
+    <img alt="Web IDE Review View" class="image" src="../media/gitlab/webide/review.jpg" />
     <ol>
-      <li>Coming Soon</li>
+      <li>Button to stage or discard changes to this file</li>
+      <li>A diff of the file being changed (Left - Old, Right - New)</li>
+      <li>Quick shortcut buttons to stage or discard all changes</li>
+      <li>Unstaged changes - These changes are not committed to the repository</li>
+      <li>Staged changes - These changes will be committed to the repository</li>
+      <li>Button to commit changes as well as statistics of files modified/staged/unstaged</li>
     </ol>
     <br>
-    <img class="image" src="../media/gitlab/webide/commit.jpg" />
+    <img alt="Web IDE Commit View" class="image" src="../media/gitlab/webide/commit.jpg" />
     <ol>
-      <li>Coming Soon</li>
+      <li>A diff of the file being changed (Left - Old, Right - New)</li>
+      <li>Commit message for what you are committing to</li>
+      <li>Branch to commit to as well as the button to commit the changes you made <ul>
+        <li><b>NOTE: </b>Please ensure that your changes has been staged (yellow box) before continuing with the commit</li>
+      </ul></li>
     </ol>
     <br>
 
