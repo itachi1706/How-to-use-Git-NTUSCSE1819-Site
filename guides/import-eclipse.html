@@ -67,7 +67,11 @@
     
     <div id="divvid"><b>Demo Video</b><br>
     <span>The following is a video on how this is being done. Read the how-to guide before watching the video for actual steps to do it</span></div>
-    <video preload="metadata" controls src="../media/Import to Eclipse.mp4" type="video/mp4">Your browser does not support video files</video>
+    <video preload="metadata" controls>
+      <source src="../media/Import to Eclipse.webm" type="video/webm" />
+      <source src="../media/Import to Eclipse.mp4" type="video/mp4" />
+      Your browser does not support video files
+    </video>
 
     <button type="button" onclick="topFunction()" id="topBtn" title="Go to top">^<br>Back to<br>Top</button>
     <script src="../scripts/common.js" type="text/javascript"></script>
