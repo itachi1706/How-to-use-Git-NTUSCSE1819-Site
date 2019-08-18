@@ -37,7 +37,7 @@ var arrayText = [
     "Resolve GitLab Code Conflicts online during MR",
     "Rebase Branch against another branch",
     "[Optional] Amend unpushed commits",
-    "[Optional] View GitLab Travis CI Builds",
+    "[Optional] View GitHub Travis CI Builds",
     "[Optional] View GitLab CI Builds",
     "[Optional] Modify code with GitLab Web IDE"
 ];
