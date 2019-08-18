@@ -28,38 +28,42 @@
     <p id="description">The following guide shows you how to resolve conflicts if it happens (either through rebasing or pulling code). Console usage is required</p>
 
     <ol>
-      <li>If a merge conflict occurs (either through pull or rebase or whatever), an error will pop up somewhere along the lines shown in this console window</li>
-      <picture class="image">
-        <source type="image/webp" srcset="../media/conflict-1.webp" />
-        <img src="../media/conflict-1.jpg"/>
-      </picture>
+      <li>If a merge conflict occurs (either through pull or rebase or whatever), an error will pop up somewhere along the lines shown in this console window<br>
+        <picture class="image">
+          <source type="image/webp" srcset="../media/conflict-1.webp" />
+          <img alt="Conflict Resolution #1" src="../media/conflict-1.jpg"/>
+        </picture>
+      </li>
       <li>When then happen, check the files that have conflicted (you can see it in the console or in the File Status tab on SourceTree where they will display them as ! files)</li>
       <li>Use your IDE to head over to that file (or open in any text editor)</li>
-      <li>Identify the conflicted code and resolve them normally</li>
-      <span><b>Before Conflict Resolution</b><br>
+      <li>Identify the conflicted code and resolve them normally<br>
+        <span><b>Before Conflict Resolution</b><br>
+          <picture class="image">
+            <source type="image/webp" srcset="../media/conflict-2.webp" />
+            <img alt="Conflict Resolution #2" src="../media/conflict-2.jpg"/>
+          </picture>
+        <br></span>
+        <span><b>After Conflict Resolution</b><br>
+          <picture class="image">
+            <source type="image/webp" srcset="../media/conflict-3.webp" />
+            <img alt="Conflict Resolution #3" src="../media/conflict-3.jpg"/>
+          </picture>
+        <br></span>
+      </li>
+      <li>Head back to SourceTree and select the resolved conflicted files in <i>Unstaged Files</i> and stage them accordingly<br>
         <picture class="image">
-          <source type="image/webp" srcset="../media/conflict-2.webp" />
-          <img src="../media/conflict-2.jpg"/>
+          <source type="image/webp" srcset="../media/conflict-4.webp" />
+          <img alt="Conflict Resolution #4" src="../media/conflict-4.jpg"/>
         </picture>
-      <br></span>
-      <span><b>After Conflict Resolution</b><br>
-        <picture class="image">
-          <source type="image/webp" srcset="../media/conflict-3.webp" />
-          <img src="../media/conflict-3.jpg"/>
-        </picture>
-      <br></span>
-      <li>Head back to SourceTree and select the resolved conflicted files in <i>Unstaged Files</i> and stage them accordingly</li>
-      <picture class="image">
-        <source type="image/webp" srcset="../media/conflict-4.webp" />
-        <img src="../media/conflict-4.jpg"/>
-      </picture>
+      </li>
       <li>Tell git to continue the operation you are doing<br>
-      If you are doing a pull, just go ahead and click <i>Commit</i> in File Status (see <a href="commit.html">Commit Code</a>)<br>
-      If you are doing a rebase, go back to the console and execute <pre class="prettyprint">git rebase --continue</pre> (See pic below)</li>
-      <picture class="image">
-        <source type="image/webp" srcset="../media/conflict-5.webp" />
-        <img src="../media/conflict-5.jpg"/>
-      </picture>
+        If you are doing a pull, just go ahead and click <i>Commit</i> in File Status (see <a href="commit.html">Commit Code</a>)<br>
+        If you are doing a rebase, go back to the console and execute <pre class="prettyprint">git rebase --continue</pre> (See pic below)<br>
+        <picture class="image">
+          <source type="image/webp" srcset="../media/conflict-5.webp" />
+          <img alt="Conflict Resolution #5" src="../media/conflict-5.jpg"/>
+        </picture>
+      </li>
     </ol>
     
     
