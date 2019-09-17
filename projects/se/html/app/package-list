@@ -1,0 +1,13 @@
+$dokka.format:html
+$dokka.linkExtension:html
+
+sg.edu.ntu.scse.cz2006.gymbuddies
+sg.edu.ntu.scse.cz2006.gymbuddies.datastruct
+sg.edu.ntu.scse.cz2006.gymbuddies.tasks
+sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdlist
+sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdsearch
+sg.edu.ntu.scse.cz2006.gymbuddies.ui.chat
+sg.edu.ntu.scse.cz2006.gymbuddies.ui.forum
+sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist
+sg.edu.ntu.scse.cz2006.gymbuddies.ui.home
+sg.edu.ntu.scse.cz2006.gymbuddies.util
