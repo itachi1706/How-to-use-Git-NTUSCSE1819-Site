@@ -2,6 +2,7 @@ $dokka.format:html
 $dokka.linkExtension:html
 
 sg.edu.ntu.scse.cz2006.gymbuddies
+sg.edu.ntu.scse.cz2006.gymbuddies.adapter
 sg.edu.ntu.scse.cz2006.gymbuddies.data
 sg.edu.ntu.scse.cz2006.gymbuddies.datastruct
 sg.edu.ntu.scse.cz2006.gymbuddies.tasks
