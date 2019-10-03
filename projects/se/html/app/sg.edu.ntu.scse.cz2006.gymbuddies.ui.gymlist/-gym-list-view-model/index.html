@@ -26,10 +26,24 @@
 <tbody>
 <tr>
 <td>
-<p><a href="m-text.html">mText</a></p>
+<p><a href="current-user-fav-list.html">currentUserFavList</a></p>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">mText</span><span class="symbol">: </span><span class="identifier">MutableLiveData</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+<code><span class="keyword">var </span><span class="identifier">currentUserFavList</span><span class="symbol">: </span><span class="identifier">MutableLiveData</span><span class="symbol">&lt;</span><a href="https://developer.android.com/reference/java/util/HashMap.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="fav-count.html">favCount</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">favCount</span><span class="symbol">: </span><span class="identifier">MutableLiveData</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="selected-gym.html">selectedGym</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">selectedGym</span><span class="symbol">: </span><span class="identifier">MutableLiveData</span><span class="symbol">&lt;</span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-gym-list/-gym-shell/index.html"><span class="identifier">GymShell</span></a><span class="symbol">&gt;</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -38,10 +52,45 @@
 <tbody>
 <tr>
 <td>
-<p><a href="get-text.html">getText</a></p>
+<p><a href="get-current-user-favourites.html">getCurrentUserFavourites</a></p>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getText</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getCurrentUserFavourites</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="https://developer.android.com/reference/java/util/HashMap.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-fav-count.html">getFavCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getFavCount</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="get-selected-gym.html">getSelectedGym</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">getSelectedGym</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">LiveData</span><span class="symbol">&lt;</span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-gym-list/-gym-shell/index.html"><span class="identifier">GymShell</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="set-selected-gym.html">setSelectedGym</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setSelectedGym</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListViewModel$setSelectedGym(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.FavGymObject)/gym">gym</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-fav-gym-object/index.html"><span class="identifier">FavGymObject</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="update-current-user-favourites.html">updateCurrentUserFavourites</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateCurrentUserFavourites</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListViewModel$updateCurrentUserFavourites(java.util.HashMap((kotlin.String, kotlin.Int)))/currentFav">currentFav</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/util/HashMap.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="update-fav-count.html">updateFavCount</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateFavCount</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.gymlist.GymListViewModel$updateFavCount(kotlin.Int)/count">count</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 </tbody>
 </table>
