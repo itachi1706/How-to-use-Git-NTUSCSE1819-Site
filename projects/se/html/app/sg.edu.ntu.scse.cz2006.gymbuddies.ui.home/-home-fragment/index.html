@@ -72,7 +72,7 @@ Kenneth Soh, Chia Yu</p>
 <p><a href="carpark.html">carpark</a></p>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">carpark</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/Button.html"><span class="identifier">Button</span></a></code>
+<code><span class="keyword">var </span><span class="identifier">carpark</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/LinearLayout.html"><span class="identifier">LinearLayout</span></a></code>
 <p>View Gym's Nearby Carparks button</p>
 </td>
 </tr>
@@ -173,6 +173,15 @@ Kenneth Soh, Chia Yu</p>
 <td>
 <code><span class="keyword">var </span><span class="identifier">firstMarkerLoad</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
 <p>Flag to determine if this is the first time we are initializing the Google map markers for the gym</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="flag-reviewing.html">flagReviewing</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">flagReviewing</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>If the user is currently reviewing a gym</p>
 </td>
 </tr>
 <tr>
@@ -299,15 +308,6 @@ Kenneth Soh, Chia Yu</p>
 <td>
 <code><span class="keyword">var </span><span class="identifier">markerList</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/HashMap.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><span class="identifier">MarkerOptions</span><span class="symbol">,</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-gym-list/-gym-shell/index.html"><span class="identifier">GymShell</span></a><span class="symbol">&gt;</span></code>
 <p>A map of the markers and their corresponding gym objects</p>
-</td>
-</tr>
-<tr>
-<td>
-<p><a href="rate.html">rate</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">rate</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/Button.html"><span class="identifier">Button</span></a></code>
-<p>Rate and review gym button</p>
 </td>
 </tr>
 <tr>
@@ -461,6 +461,15 @@ Kenneth Soh, Chia Yu</p>
 </tr>
 <tr>
 <td>
+<p><a href="set-gym-status.html">setGymStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setGymStatus</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$setGymStatus(kotlin.Boolean, kotlin.String, kotlin.Float)/hasReview">hasReview</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$setGymStatus(kotlin.Boolean, kotlin.String, kotlin.Float)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$setGymStatus(kotlin.Boolean, kotlin.String, kotlin.Float)/rating">rating</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Internal function to set the logged in user's gym review status This will determine if the user has a review for that particular gym or not. If there is, the view review layout is used, otherwise the create new review layout is used</p>
+</td>
+</tr>
+<tr>
+<td>
 <p><a href="setup-gym-details-controls.html">setupGymDetailsControls</a></p>
 </td>
 <td>
@@ -479,6 +488,15 @@ Kenneth Soh, Chia Yu</p>
 </tr>
 <tr>
 <td>
+<p><a href="submit-review.html">submitReview</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">submitReview</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$submitReview(me.zhanghai.android.materialratingbar.MaterialRatingBar, com.google.android.material.textfield.TextInputEditText)/bar">bar</span><span class="symbol">:</span>&nbsp;<span class="identifier">MaterialRatingBar</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$submitReview(me.zhanghai.android.materialratingbar.MaterialRatingBar, com.google.android.material.textfield.TextInputEditText)/reviewMessage">reviewMessage</span><span class="symbol">:</span>&nbsp;<span class="identifier">TextInputEditText</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Internal function to submit review for the selected gym</p>
+</td>
+</tr>
+<tr>
+<td>
 <p><a href="unselect-gym-details.html">unselectGymDetails</a></p>
 </td>
 <td>
@@ -493,6 +511,15 @@ Kenneth Soh, Chia Yu</p>
 <td>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateGymDetails</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$updateGymDetails(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymList.GymShell)/gym">gym</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-gym-list/-gym-shell/index.html"><span class="identifier">GymShell</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Updates the data in the gym details bottom sheet</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="update-gym-ratings.html">updateGymRatings</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateGymRatings</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Internal function to update gym ratings for a selected gym</p>
 </td>
 </tr>
 <tr>
