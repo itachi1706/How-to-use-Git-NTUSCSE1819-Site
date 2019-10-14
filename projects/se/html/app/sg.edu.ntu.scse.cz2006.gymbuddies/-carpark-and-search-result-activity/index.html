@@ -1,0 +1,308 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>CarparkAndSearchResultActivity - app</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies</a>&nbsp;/&nbsp;<a href="./index.html">CarparkAndSearchResultActivity</a><br/>
+<br/>
+<h1>CarparkAndSearchResultActivity</h1>
+<code><span class="keyword">class </span><span class="identifier">CarparkAndSearchResultActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span><span class="symbol">, </span><span class="identifier">OnMapReadyCallback</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">CarparkAndSearchResultActivity</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="auto-expand-flag.html">autoExpandFlag</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">autoExpandFlag</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="back-stack.html">backStack</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">backStack</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Enable custom backstack handling</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="coordinates.html">coordinates</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">coordinates</span><span class="symbol">: </span><span class="identifier">LatLng</span><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="flag-reviewing.html">flagReviewing</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">flagReviewing</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="gps-perm.html">gpsPerm</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">gpsPerm</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="gym-detail-fav-listener.html">gymDetailFavListener</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">gymDetailFavListener</span><span class="symbol">: </span><span class="identifier">ListenerRegistration</span><span class="symbol">?</span></code>
+<p>The Firebase Firestore listener for favourites in the gym details bottom sheet
+This is used to handle real time updates to the favourites count of the gym</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="m-map.html">mMap</a></p>
+</td>
+<td>
+<code><span class="keyword">lateinit</span> <span class="keyword">var </span><span class="identifier">mMap</span><span class="symbol">: </span><span class="identifier">GoogleMap</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="selected-gym-uid.html">selectedGymUid</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">selectedGymUid</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="state.html">state</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">state</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="call-search-task.html">callSearchTask</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">callSearchTask</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.CarparkAndSearchResultActivity$callSearchTask(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymSearchBy)/param">param</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-gym-search-by/index.html"><span class="identifier">GymSearchBy</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="do-carpark.html">doCarpark</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">doCarpark</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="do-search.html">doSearch</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">doSearch</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="error-and-exit.html">errorAndExit</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">errorAndExit</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.CarparkAndSearchResultActivity$errorAndExit(kotlin.String)/errorMessage">errorMessage</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-back-pressed.html">onBackPressed</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onBackPressed</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-create.html">onCreate</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onCreate</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.CarparkAndSearchResultActivity$onCreate(android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-map-ready.html">onMapReady</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onMapReady</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.CarparkAndSearchResultActivity$onMapReady(com.google.android.gms.maps.GoogleMap)/p0">p0</span><span class="symbol">:</span>&nbsp;<span class="identifier">GoogleMap</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-options-item-selected.html">onOptionsItemSelected</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onOptionsItemSelected</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.CarparkAndSearchResultActivity$onOptionsItemSelected(android.view.MenuItem)/item">item</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/MenuItem.html"><span class="identifier">MenuItem</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-pause.html">onPause</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onPause</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-request-permissions-result.html">onRequestPermissionsResult</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onRequestPermissionsResult</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.CarparkAndSearchResultActivity$onRequestPermissionsResult(kotlin.Int, kotlin.Array((kotlin.String)), kotlin.IntArray)/requestCode">requestCode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.CarparkAndSearchResultActivity$onRequestPermissionsResult(kotlin.Int, kotlin.Array((kotlin.String)), kotlin.IntArray)/permissions">permissions</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.CarparkAndSearchResultActivity$onRequestPermissionsResult(kotlin.Int, kotlin.Array((kotlin.String)), kotlin.IntArray)/grantResults">grantResults</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int-array/index.html"><span class="identifier">IntArray</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-resume.html">onResume</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onResume</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="on-search-result.html">onSearchResult</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">onSearchResult</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.CarparkAndSearchResultActivity$onSearchResult(java.util.ArrayList((sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.FavGymObject)))/result">result</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/util/ArrayList.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-fav-gym-object/index.html"><span class="identifier">FavGymObject</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="set-gym-status.html">setGymStatus</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setGymStatus</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.CarparkAndSearchResultActivity$setGymStatus(kotlin.Boolean, kotlin.String, kotlin.Float)/hasReview">hasReview</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.CarparkAndSearchResultActivity$setGymStatus(kotlin.Boolean, kotlin.String, kotlin.Float)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.CarparkAndSearchResultActivity$setGymStatus(kotlin.Boolean, kotlin.String, kotlin.Float)/rating">rating</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Internal function to set the logged in user's gym review status
+This will determine if the user has a review for that particular gym or not.
+If there is, the view review layout is used, otherwise the create new review layout is used</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="setup-gym-details-controls.html">setupGymDetailsControls</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">setupGymDetailsControls</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Initialize method for setting up the gym details bottom sheet</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="show-gym-details.html">showGymDetails</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">showGymDetails</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Internal function called to hide the favourites list bottom sheet and display the gym details bottom sheet</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="submit-review.html">submitReview</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">submitReview</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.CarparkAndSearchResultActivity$submitReview(me.zhanghai.android.materialratingbar.MaterialRatingBar, com.google.android.material.textfield.TextInputEditText)/bar">bar</span><span class="symbol">:</span>&nbsp;<span class="identifier">MaterialRatingBar</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.CarparkAndSearchResultActivity$submitReview(me.zhanghai.android.materialratingbar.MaterialRatingBar, com.google.android.material.textfield.TextInputEditText)/reviewMessage">reviewMessage</span><span class="symbol">:</span>&nbsp;<span class="identifier">TextInputEditText</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Internal function to submit review for the selected gym</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="unselect-gym-details.html">unselectGymDetails</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">unselectGymDetails</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Internal function called to hide the gym details bottom sheet and redisplay the favourites list bottom sheet</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="update-gym-details.html">updateGymDetails</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateGymDetails</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.CarparkAndSearchResultActivity$updateGymDetails(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymList.GymShell)/gym">gym</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-gym-list/-gym-shell/index.html"><span class="identifier">GymShell</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Updates the data in the gym details bottom sheet</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="update-gym-ratings.html">updateGymRatings</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateGymRatings</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Internal function to update gym ratings for a selected gym</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="update-results-layout-height.html">updateResultsLayoutHeight</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">updateResultsLayoutHeight</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="zoom-to-my-location.html">zoomToMyLocation</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">zoomToMyLocation</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.CarparkAndSearchResultActivity$zoomToMyLocation(com.google.android.gms.maps.model.LatLng)/lastLocation">lastLocation</span><span class="symbol">:</span>&nbsp;<span class="identifier">LatLng</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Internal method to zoom the map to the user's current location</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Companion Object Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-r-c_-l-o-c_-s-e-a-r-c-h.html">RC_LOC_SEARCH</a></p>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">RC_LOC_SEARCH</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-s-t-a-t-e_-c-a-r-p-a-r-k.html">STATE_CARPARK</a></p>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">STATE_CARPARK</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-s-t-a-t-e_-s-e-a-r-c-h.html">STATE_SEARCH</a></p>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">STATE_SEARCH</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-s-t-a-t-e_-u-n-k-n-o-w-n.html">STATE_UNKNOWN</a></p>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">STATE_UNKNOWN</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-t-a-g.html">TAG</a></p>
+</td>
+<td>
+<code><span class="keyword">const</span> <span class="keyword">val </span><span class="identifier">TAG</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>
