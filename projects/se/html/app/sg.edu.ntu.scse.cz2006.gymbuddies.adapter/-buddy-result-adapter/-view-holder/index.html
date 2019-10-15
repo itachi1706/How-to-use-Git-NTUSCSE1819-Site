@@ -8,7 +8,16 @@
 <a href="../../../index.html">app</a>&nbsp;/&nbsp;<a href="../../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.adapter</a>&nbsp;/&nbsp;<a href="../index.html">BuddyResultAdapter</a>&nbsp;/&nbsp;<a href="./index.html">ViewHolder</a><br/>
 <br/>
 <h1>ViewHolder</h1>
-<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ViewHolder</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">, </span><a href="https://developer.android.com/reference/android/view/View/OnClickListener.html"><span class="identifier">OnClickListener</span></a><span class="symbol">, </span><a href="https://developer.android.com/reference/android/widget/CompoundButton/OnCheckedChangeListener.html"><span class="identifier">OnCheckedChangeListener</span></a></code>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ViewHolder</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">, </span><a href="https://developer.android.com/reference/android/view/View/OnClickListener.html"><span class="identifier">OnClickListener</span></a></code>
+<p>View Holder to hold data displaying data</p>
+<p><strong>Author</strong><br/>
+Chia Yu</p>
+<p><strong>Since</strong><br/>
+2019-09-28</p>
+<p><strong>Property</strong><br/>
+itemView the view represents the whole item</p>
+<p><strong>Constructor</strong><br/>
+Creates a adapter for the Buddy Search Result List RecyclerView</p>
 <h3>Constructors</h3>
 <table>
 <tbody>
@@ -47,24 +56,10 @@
 </tr>
 <tr>
 <td>
-<p><a href="item-view.html">itemView</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">itemView</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a></code></td>
-</tr>
-<tr>
-<td>
 <p><a href="ll-pref-days.html">llPrefDays</a></p>
 </td>
 <td>
 <code><span class="keyword">var </span><span class="identifier">llPrefDays</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/LinearLayout.html"><span class="identifier">LinearLayout</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="position.html">position</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">position</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -80,13 +75,6 @@
 <tbody>
 <tr>
 <td>
-<p><a href="on-checked-changed.html">onCheckedChanged</a></p>
-</td>
-<td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCheckedChanged</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter.ViewHolder$onCheckedChanged(android.widget.CompoundButton, kotlin.Boolean)/compoundButton">compoundButton</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/widget/CompoundButton.html"><span class="identifier">CompoundButton</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter.ViewHolder$onCheckedChanged(android.widget.CompoundButton, kotlin.Boolean)/checked">checked</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
 <p><a href="on-click.html">onClick</a></p>
 </td>
 <td>
@@ -94,31 +82,30 @@
 </tr>
 <tr>
 <td>
-<p><a href="set-position.html">setPosition</a></p>
+<p><a href="update.html">update</a></p>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setPosition</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter.ViewHolder$setPosition(kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="update-as.html">updateAs</a></p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">update</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>update item view based on holder's current position</p>
 </td>
-<td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateAs</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter.ViewHolder$updateAs(kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
 <p><a href="update-pref-days.html">updatePrefDays</a></p>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updatePrefDays</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter.ViewHolder$updatePrefDays(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)/user">user</span><span class="symbol">:</span>&nbsp;<a href="../../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updatePrefDays</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter.ViewHolder$updatePrefDays(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)/user">user</span><span class="symbol">:</span>&nbsp;<a href="../../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>update preference workout days based on user</p>
+</td>
 </tr>
 <tr>
 <td>
 <p><a href="update-profile-pic.html">updateProfilePic</a></p>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateProfilePic</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter.ViewHolder$updateProfilePic(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)/user">user</span><span class="symbol">:</span>&nbsp;<a href="../../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateProfilePic</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter.ViewHolder$updateProfilePic(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)/user">user</span><span class="symbol">:</span>&nbsp;<a href="../../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>update profile picture for each user</p>
+</td>
 </tr>
 </tbody>
 </table>
