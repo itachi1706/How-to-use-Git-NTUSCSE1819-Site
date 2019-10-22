@@ -8,7 +8,7 @@
 <a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies</a>&nbsp;/&nbsp;<a href="./index.html">BuddySearchResultActivity</a><br/>
 <br/>
 <h1>BuddySearchResultActivity</h1>
-<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuddySearchResultActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span><span class="symbol">, </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.adapter/-buddy-result-adapter/-on-buddy-clicked-listener/index.html"><span class="identifier">OnBuddyClickedListener</span></a></code>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuddySearchResultActivity</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">AppCompatActivity</span><span class="symbol">, </span><a href="../-app-constants/index.html"><span class="identifier">AppConstants</span></a><span class="symbol">, </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.adapter/-buddy-result-adapter/-on-buddy-clicked-listener/index.html"><span class="identifier">OnBuddyClickedListener</span></a></code>
 <p>This is the display buddy search result it gets searching condition from Search buddies fragment, and perform query to Firestore After getting response, it display other users on Recycler view. User can then interact and add them as buddy</p>
 <p><strong>Author</strong><br/>
 Chia Yu</p>
@@ -47,17 +47,45 @@ Chia Yu</p>
 </tr>
 <tr>
 <td>
-<p><a href="fav-helper.html">favHelper</a></p>
+<p><a href="fav-buddies-ref.html">favBuddiesRef</a></p>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">favHelper</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.util/-fav-buddy-helper/index.html"><span class="identifier">FavBuddyHelper</span></a></code></td>
+<code><span class="keyword">var </span><span class="identifier">favBuddiesRef</span><span class="symbol">: </span><span class="identifier">DocumentReference</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="list-data.html">listData</a></p>
+<p><a href="fav-record.html">favRecord</a></p>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">listData</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/ArrayList.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">&gt;</span></code></td>
+<code><span class="keyword">var </span><span class="identifier">favRecord</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-fav-buddy-record/index.html"><span class="identifier">FavBuddyRecord</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="fav-record-change-listener.html">favRecordChangeListener</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">favRecordChangeListener</span><span class="symbol">: </span><span class="identifier">ListenerRegistration</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="firestore.html">firestore</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">firestore</span><span class="symbol">: </span><span class="identifier">FirebaseFirestore</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="list-fav-user-ids.html">listFavUserIds</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">listFavUserIds</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/ArrayList.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="list-users.html">listUsers</a></p>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">listUsers</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/ArrayList.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">&gt;</span></code></td>
 </tr>
 <tr>
 <td>
@@ -68,15 +96,76 @@ Chia Yu</p>
 </tr>
 </tbody>
 </table>
+<h3>Inherited Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../-app-constants/-c-o-l-l-e-c-t-i-o-n_-c-h-a-t.html">COLLECTION_CHAT</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">COLLECTION_CHAT</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-app-constants/-c-o-l-l-e-c-t-i-o-n_-f-a-v_-b-u-d-d-y.html">COLLECTION_FAV_BUDDY</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">COLLECTION_FAV_BUDDY</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="../-app-constants/-c-o-l-l-e-c-t-i-o-n_-m-e-s-s-a-g-e-s.html">COLLECTION_MESSAGES</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">COLLECTION_MESSAGES</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+</tr>
+</tbody>
+</table>
 <h3>Functions</h3>
 <table>
 <tbody>
+<tr>
+<td>
+<p><a href="commit-fav-record.html">commitFavRecord</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">commitFavRecord</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
 <tr>
 <td>
 <p><a href="display-buddy-profile.html">displayBuddyProfile</a></p>
 </td>
 <td>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">displayBuddyProfile</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.BuddySearchResultActivity$displayBuddyProfile(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User, android.graphics.drawable.Drawable)/user">user</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.BuddySearchResultActivity$displayBuddyProfile(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User, android.graphics.drawable.Drawable)/drawable">drawable</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/graphics/drawable/Drawable.html"><span class="identifier">Drawable</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="do-add-fav-buddy.html">doAddFavBuddy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">doAddFavBuddy</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.BuddySearchResultActivity$doAddFavBuddy(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)/otherUser">otherUser</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="do-remove-fav-buddy.html">doRemoveFavBuddy</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">doRemoveFavBuddy</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.BuddySearchResultActivity$doRemoveFavBuddy(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)/otherUser">otherUser</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="go-chat-activity.html">goChatActivity</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">goChatActivity</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.BuddySearchResultActivity$goChatActivity(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)/other">other</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="listen-fav-record-changes.html">listenFavRecordChanges</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">listenFavRecordChanges</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -125,6 +214,27 @@ Chia Yu</p>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">queryBuddy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Craft query to firestore, and notify Recycler view adapter to update Recycler view.</p>
 </td>
+</tr>
+<tr>
+<td>
+<p><a href="query-fav-user-record.html">queryFavUserRecord</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">queryFavUserRecord</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="read-fav-record-doc.html">readFavRecordDoc</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readFavRecordDoc</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.BuddySearchResultActivity$readFavRecordDoc(com.google.firebase.firestore.DocumentSnapshot)/documentSnapshot">documentSnapshot</span><span class="symbol">:</span>&nbsp;<span class="identifier">DocumentSnapshot</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="stop-listen-fav-record-changes.html">stopListenFavRecordChanges</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">stopListenFavRecordChanges</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 </tbody>
 </table>

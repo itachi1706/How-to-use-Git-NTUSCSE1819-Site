@@ -49,7 +49,7 @@ Creates a adapter for the Buddy Search Result List RecyclerView</p>
 <p><a href="-init-.html">&lt;init&gt;</a></p>
 </td>
 <td>
-<code><span class="identifier">BuddyResultAdapter</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter$<init>(kotlin.collections.MutableList((sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)))/listBuddies">listBuddies</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code>
+<code><span class="identifier">BuddyResultAdapter</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter$<init>(kotlin.collections.MutableList((sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)), kotlin.collections.MutableList((kotlin.String)))/listBuddies">listBuddies</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter$<init>(kotlin.collections.MutableList((sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)), kotlin.collections.MutableList((kotlin.String)))/favUsers">favUsers</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code>
 <p>Constructor to create Recycler Adapter for Buddy search result</p>
 </td>
 </tr>
@@ -95,10 +95,10 @@ Creates a adapter for the Buddy Search Result List RecyclerView</p>
 </tr>
 <tr>
 <td>
-<p><a href="fav-buddy-helper.html">favBuddyHelper</a></p>
+<p><a href="fav-users.html">favUsers</a></p>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">favBuddyHelper</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.util/-fav-buddy-helper/index.html"><span class="identifier">FavBuddyHelper</span></a></code></td>
+<code><span class="keyword">var </span><span class="identifier">favUsers</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
 </tr>
 <tr>
 <td>
@@ -154,13 +154,6 @@ Creates a adapter for the Buddy Search Result List RecyclerView</p>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreateViewHolder</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter$onCreateViewHolder(android.view.ViewGroup, kotlin.Int)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter$onCreateViewHolder(android.view.ViewGroup, kotlin.Int)/viewType">viewType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-view-holder/index.html"><span class="identifier">ViewHolder</span></a></code>
 <p>render an item view, and assign the view to view holder</p>
 </td>
-</tr>
-<tr>
-<td>
-<p><a href="set-fav-buddy-helper.html">setFavBuddyHelper</a></p>
-</td>
-<td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setFavBuddyHelper</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter$setFavBuddyHelper(sg.edu.ntu.scse.cz2006.gymbuddies.util.FavBuddyHelper)/favBuddyHelper">favBuddyHelper</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.util/-fav-buddy-helper/index.html"><span class="identifier">FavBuddyHelper</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 </tbody>
 </table>
