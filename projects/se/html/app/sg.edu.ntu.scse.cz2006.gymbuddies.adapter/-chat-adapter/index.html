@@ -42,10 +42,31 @@ Chia Yu</p>
 <tbody>
 <tr>
 <td>
-<p><a href="-a-c-t-i-o-n_-i-t-e-m_-v-i-e-w_-c-l-i-c-k-e-d.html">ACTION_ITEM_VIEW_CLICKED</a></p>
+<p><a href="-a-c-t-i-o-n_-c-l-i-c-k_-o-n_-f-a-v_-i-t-e-m.html">ACTION_CLICK_ON_FAV_ITEM</a></p>
 </td>
 <td>
-<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ACTION_ITEM_VIEW_CLICKED</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ACTION_CLICK_ON_FAV_ITEM</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-a-c-t-i-o-n_-c-l-i-c-k_-o-n_-i-t-e-m_-b-o-d-y.html">ACTION_CLICK_ON_ITEM_BODY</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ACTION_CLICK_ON_ITEM_BODY</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-a-c-t-i-o-n_-c-l-i-c-k_-o-n_-i-t-e-m_-p-i-c.html">ACTION_CLICK_ON_ITEM_PIC</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ACTION_CLICK_ON_ITEM_PIC</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="-a-c-t-i-o-n_-i-n-v-a-l-i-d.html">ACTION_INVALID</a></p>
+</td>
+<td>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">ACTION_INVALID</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -82,13 +103,6 @@ Chia Yu</p>
 <td>
 <code><span class="keyword">var </span><span class="identifier">sdf</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/text/SimpleDateFormat.html"><span class="identifier">SimpleDateFormat</span></a></code></td>
 </tr>
-<tr>
-<td>
-<p><a href="user-uid.html">userUid</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">userUid</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
-</tr>
 </tbody>
 </table>
 <h3>Functions</h3>
@@ -114,6 +128,13 @@ Chia Yu</p>
 </td>
 <td>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreateViewHolder</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter$onCreateViewHolder(android.view.ViewGroup, kotlin.Int)/parent">parent</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter$onCreateViewHolder(android.view.ViewGroup, kotlin.Int)/viewType">viewType</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-chat-view-holder/index.html"><span class="identifier">ChatViewHolder</span></a></code></td>
+</tr>
+<tr>
+<td>
+<p><a href="set-fav-user-ids.html">setFavUserIds</a></p>
+</td>
+<td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setFavUserIds</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter$setFavUserIds(kotlin.collections.MutableList((kotlin.String)))/favUserIds">favUserIds</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html"><span class="identifier">MutableList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
