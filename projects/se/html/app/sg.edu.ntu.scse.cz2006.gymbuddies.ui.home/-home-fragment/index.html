@@ -8,7 +8,7 @@
 <a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.ui.home</a>&nbsp;/&nbsp;<a href="./index.html">HomeFragment</a><br/>
 <br/>
 <h1>HomeFragment</h1>
-<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">HomeFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Fragment</span><span class="symbol">, </span><span class="identifier">OnMapReadyCallback</span><span class="symbol">, </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.util/-swipe-delete-callback/-i-swipe-callback/index.html"><span class="identifier">ISwipeCallback</span></a></code>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">HomeFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Fragment</span><span class="symbol">, </span><span class="identifier">OnMapReadyCallback</span><span class="symbol">, </span><span class="identifier">ISwipeCallback</span></code>
 <p>Fragment being used to display the Home activity of the application. Including nearby gyms, gym details, favourited gyms etc</p>
 <p><strong>Author</strong><br/>
 Kenneth Soh, Chia Yu</p>
@@ -19,12 +19,11 @@ Kenneth Soh, Chia Yu</p>
 <tbody>
 <tr>
 <td>
-<p><a href="-init-.html">&lt;init&gt;</a></p>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
 </td>
 <td>
-<code><span class="identifier">HomeFragment</span><span class="symbol">(</span><span class="symbol">)</span></code>
 <p>Fragment being used to display the Home activity of the application. Including nearby gyms, gym details, favourited gyms etc</p>
-</td>
+<code><span class="identifier">HomeFragment</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -33,309 +32,275 @@ Kenneth Soh, Chia Yu</p>
 <tbody>
 <tr>
 <td>
-<p><a href="-r-c_-l-o-c.html">RC_LOC</a></p>
+<h4><a href="auto-expand-flag.html">autoExpandFlag</a></h4>
 </td>
 <td>
-<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RC_LOC</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
-<p>The Request Code for Location Permission requests</p>
-</td>
-</tr>
-<tr>
-<td>
-<p><a href="-t-a-g.html">TAG</a></p>
-</td>
-<td>
-<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TAG</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
-<p>Used for logging purposes for this activity</p>
-</td>
-</tr>
-<tr>
-<td>
-<p><a href="auto-expand-flag.html">autoExpandFlag</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">autoExpandFlag</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
 <p>A flag to check if we should auto expand the gym details bottom sheet after it has settled</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">autoExpandFlag</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="back-stack.html">backStack</a></p>
+<h4><a href="back-stack.html">backStack</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">backStack</span><span class="symbol">: </span><span class="identifier">OnBackPressedCallback</span></code>
 <p>Custom backstack handler</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">backStack</span><span class="symbol">: </span><span class="identifier">OnBackPressedCallback</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="carpark.html">carpark</a></p>
+<h4><a href="carpark.html">carpark</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">carpark</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/LinearLayout.html"><span class="identifier">LinearLayout</span></a></code>
 <p>View Gym's Nearby Carparks button</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">carpark</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/LinearLayout.html"><span class="identifier">LinearLayout</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="coordinates.html">coordinates</a></p>
+<h4><a href="coordinates.html">coordinates</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">coordinates</span><span class="symbol">: </span><span class="identifier">LatLng</span></code>
 <p>The coordinates of the currently displayed gym</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">coordinates</span><span class="symbol">: </span><span class="identifier">LatLng</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="coordinator-layout.html">coordinatorLayout</a></p>
+<h4><a href="coordinator-layout.html">coordinatorLayout</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">coordinatorLayout</span><span class="symbol">: </span><span class="identifier">CoordinatorLayout</span></code>
 <p>The coordinator layout handling the fragment</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">coordinatorLayout</span><span class="symbol">: </span><span class="identifier">CoordinatorLayout</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="current-user-fav-list.html">currentUserFavList</a></p>
+<h4><a href="current-user-fav-list.html">currentUserFavList</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">currentUserFavList</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/HashMap.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">&gt;</span></code>
 <p>A hashmap containing the realtime favourites list of the logged in user</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">currentUserFavList</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="fav-adapter.html">favAdapter</a></p>
+<h4><a href="fav-adapter.html">favAdapter</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">favAdapter</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.adapter/-fav-gym-adapter/index.html"><span class="identifier">FavGymAdapter</span></a></code>
 <p>An adapter to store the favourites list for the RecyclerView</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">favAdapter</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.adapter/-fav-gym-adapter/index.html"><span class="identifier">FavGymAdapter</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="fav-bottom-sheet.html">favBottomSheet</a></p>
+<h4><a href="fav-bottom-sheet.html">favBottomSheet</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">favBottomSheet</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a></code>
 <p>The favourites list bottom sheet</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">favBottomSheet</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="fav-bottom-sheet-behavior.html">favBottomSheetBehavior</a></p>
+<h4><a href="fav-bottom-sheet-behavior.html">favBottomSheetBehavior</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">favBottomSheetBehavior</span><span class="symbol">: </span><span class="identifier">BottomSheetBehavior</span><span class="symbol">&lt;</span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">&gt;</span></code>
 <p>Handles the behavior of the favourites list bottom sheet</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">favBottomSheetBehavior</span><span class="symbol">: </span><span class="identifier">BottomSheetBehavior</span><span class="symbol">&lt;</span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="fav-count.html">favCount</a></p>
+<h4><a href="fav-count.html">favCount</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">favCount</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/TextView.html"><span class="identifier">TextView</span></a></code>
 <p>Gym Favourites Count TextView</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">favCount</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/TextView.html"><span class="identifier">TextView</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="fav-list-registered.html">favListRegistered</a></p>
+<h4><a href="fav-listener.html">favListener</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">favListRegistered</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
-<p>A flag to check if we have finished populating the favourites list</p>
-</td>
-</tr>
-<tr>
-<td>
-<p><a href="fav-listener.html">favListener</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">favListener</span><span class="symbol">: </span><span class="identifier">ListenerRegistration</span></code>
 <p>Firebase Firestore Favourites List Real-time listener</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">favListener</span><span class="symbol">: </span><span class="identifier">ListenerRegistration</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="favourites-list.html">favouritesList</a></p>
+<h4><a href="fav-list-registered.html">favListRegistered</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">favouritesList</span><span class="symbol">: </span><span class="identifier">RecyclerView</span></code>
+<p>A flag to check if we have finished populating the favourites list</p>
+<code><span class="keyword">var </span><span class="identifier">favListRegistered</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="favourites-list.html">favouritesList</a></h4>
+</td>
+<td>
 <p>The favourites list recyclerview</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">favouritesList</span><span class="symbol">: </span><span class="identifier">RecyclerView</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="first-marker-load.html">firstMarkerLoad</a></p>
+<h4><a href="first-marker-load.html">firstMarkerLoad</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">firstMarkerLoad</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
 <p>Flag to determine if this is the first time we are initializing the Google map markers for the gym</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">firstMarkerLoad</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="flag-reviewing.html">flagReviewing</a></p>
+<h4><a href="flag-reviewing.html">flagReviewing</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">flagReviewing</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
 <p>If the user is currently reviewing a gym</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">flagReviewing</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="gym-bottom-sheet.html">gymBottomSheet</a></p>
+<h4><a href="gym-bottom-sheet.html">gymBottomSheet</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">gymBottomSheet</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a></code>
 <p>The gym details bottom sheet</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">gymBottomSheet</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="gym-bottom-sheet-behavior.html">gymBottomSheetBehavior</a></p>
+<h4><a href="gym-bottom-sheet-behavior.html">gymBottomSheetBehavior</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">gymBottomSheetBehavior</span><span class="symbol">: </span><span class="identifier">BottomSheetBehavior</span><span class="symbol">&lt;</span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">&gt;</span></code>
 <p>Handles the behavior of the gym details bottom sheet</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">gymBottomSheetBehavior</span><span class="symbol">: </span><span class="identifier">BottomSheetBehavior</span><span class="symbol">&lt;</span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="gym-desc.html">gymDesc</a></p>
+<h4><a href="gym-desc.html">gymDesc</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">gymDesc</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/TextView.html"><span class="identifier">TextView</span></a></code>
 <p>Gym Description TextView</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">gymDesc</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/TextView.html"><span class="identifier">TextView</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="gym-detail-fav-listener.html">gymDetailFavListener</a></p>
+<h4><a href="gym-detail-fav-listener.html">gymDetailFavListener</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">gymDetailFavListener</span><span class="symbol">: </span><span class="identifier">ListenerRegistration</span></code>
 <p>The Firebase Firestore listener for favourites in the gym details bottom sheet This is used to handle real time updates to the favourites count of the gym</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">gymDetailFavListener</span><span class="symbol">: </span><span class="identifier">ListenerRegistration</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="gym-location.html">gymLocation</a></p>
+<h4><a href="gym-location.html">gymLocation</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">gymLocation</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/TextView.html"><span class="identifier">TextView</span></a></code>
 <p>Gym Location TextView</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">gymLocation</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/TextView.html"><span class="identifier">TextView</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="gym-title.html">gymTitle</a></p>
+<h4><a href="gym-title.html">gymTitle</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">gymTitle</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/TextView.html"><span class="identifier">TextView</span></a></code>
 <p>Gym Title TextView</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">gymTitle</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/TextView.html"><span class="identifier">TextView</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="has-location-permission.html">hasLocationPermission</a></p>
+<h4><a href="has-location-permission.html">hasLocationPermission</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">hasLocationPermission</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
 <p>If the application has ACCESS_FINE_LOCATION permission flag</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">hasLocationPermission</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="heart-icon.html">heartIcon</a></p>
+<h4><a href="heart-icon.html">heartIcon</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">heartIcon</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.widget/-fav-button-view/index.html"><span class="identifier">FavButtonView</span></a></code>
 <p>Gym Favourites Icon</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">heartIcon</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.widget/-fav-button-view/index.html"><span class="identifier">FavButtonView</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="home-view-model.html">homeViewModel</a></p>
+<h4><a href="home-view-model.html">homeViewModel</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">homeViewModel</span><span class="symbol">: </span><a href="../-home-view-model/index.html"><span class="identifier">HomeViewModel</span></a></code>
 <p>The View Model</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">homeViewModel</span><span class="symbol">: </span><a href="../-home-view-model/index.html"><span class="identifier">HomeViewModel</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="last-location.html">lastLocation</a></p>
+<h4><a href="last-location.html">lastLocation</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">lastLocation</span><span class="symbol">: </span><span class="identifier">LatLng</span></code>
 <p>Last known location of the user</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">lastLocation</span><span class="symbol">: </span><span class="identifier">LatLng</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="location-client.html">locationClient</a></p>
+<h4><a href="location-client.html">locationClient</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">locationClient</span><span class="symbol">: </span><span class="identifier">FusedLocationProviderClient</span></code>
 <p>The user current location provider client</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">locationClient</span><span class="symbol">: </span><span class="identifier">FusedLocationProviderClient</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="m-map.html">mMap</a></p>
+<h4><a href="map-view.html">mapView</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">mMap</span><span class="symbol">: </span><span class="identifier">GoogleMap</span></code>
-<p>Google Maps Instance</p>
-</td>
-</tr>
-<tr>
-<td>
-<p><a href="map-view.html">mapView</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">mapView</span><span class="symbol">: </span><span class="identifier">MapView</span></code>
 <p>Google Maps View</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">mapView</span><span class="symbol">: </span><span class="identifier">MapView</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="marker-list.html">markerList</a></p>
+<h4><a href="marker-list.html">markerList</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">markerList</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/HashMap.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><span class="identifier">MarkerOptions</span><span class="symbol">,</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-gym-list/-gym-shell/index.html"><span class="identifier">GymShell</span></a><span class="symbol">&gt;</span></code>
 <p>A map of the markers and their corresponding gym objects</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">markerList</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"><span class="identifier">HashMap</span></a><span class="symbol">&lt;</span><span class="identifier">MarkerOptions</span><span class="symbol">!</span><span class="symbol">,</span>&nbsp;<span class="identifier">GymShell</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="reviews.html">reviews</a></p>
+<h4><a href="m-map.html">mMap</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">reviews</span><span class="symbol">: </span><span class="identifier">RecyclerView</span></code>
+<p>Google Maps Instance</p>
+<code><span class="keyword">var </span><span class="identifier">mMap</span><span class="symbol">: </span><span class="identifier">GoogleMap</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-r-c_-l-o-c.html">RC_LOC</a></h4>
+</td>
+<td>
+<p>The Request Code for Location Permission requests</p>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">RC_LOC</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="reviews.html">reviews</a></h4>
+</td>
+<td>
 <p>Gym Reviews recyclerview</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">reviews</span><span class="symbol">: </span><span class="identifier">RecyclerView</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="selected-gym-uid.html">selectedGymUid</a></p>
+<h4><a href="selected-gym-uid.html">selectedGymUid</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">selectedGymUid</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code>
 <p>The Gym Unique ID</p>
-</td>
+<code><span class="keyword">var </span><span class="identifier">selectedGymUid</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="sp.html">sp</a></p>
+<h4><a href="sp.html">sp</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">sp</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/content/SharedPreferences.html"><span class="identifier">SharedPreferences</span></a></code>
 <p>The application preference file</p>
+<code><span class="keyword">var </span><span class="identifier">sp</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/content/SharedPreferences.html"><span class="identifier">SharedPreferences</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-t-a-g.html">TAG</a></h4>
 </td>
+<td>
+<p>Used for logging purposes for this activity</p>
+<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TAG</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
 </tr>
 </tbody>
 </table>
@@ -344,208 +309,186 @@ Kenneth Soh, Chia Yu</p>
 <tbody>
 <tr>
 <td>
-<p><a href="delete.html">delete</a></p>
+<h4><a href="delete.html">delete</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$delete(kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
 <p>When a gym in the favourites list has been swiped to unfavourite</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">delete</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$delete(kotlin.Int)/position">position</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="empty-favourites.html">emptyFavourites</a></p>
+<h4><a href="empty-favourites.html">emptyFavourites</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">emptyFavourites</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Internal function to call when the user has no favourited gyms</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">emptyFavourites</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="has-gps.html">hasGps</a></p>
+<h4><a href="has-gps.html">hasGps</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasGps</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$hasGps(kotlin.Boolean)/startCheck">startCheck</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
 <p>Internal function to start the check for if the app has the ACCESS_FINE_LOCATION permission granted</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasGps</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$hasGps(kotlin.Boolean)/startCheck">startCheck</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="has-gps-permission.html">hasGpsPermission</a></p>
+<h4><a href="has-gps-permission.html">hasGpsPermission</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasGpsPermission</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
 <p>Checks if the application has ACCESS_FINE_LOCATION permission</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">hasGpsPermission</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="on-create-options-menu.html">onCreateOptionsMenu</a></p>
+<h4><a href="on-create-options-menu.html">onCreateOptionsMenu</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreateOptionsMenu</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onCreateOptionsMenu(android.view.Menu, android.view.MenuInflater)/menu">menu</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/Menu.html"><span class="identifier">Menu</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onCreateOptionsMenu(android.view.Menu, android.view.MenuInflater)/inflater">inflater</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/MenuInflater.html"><span class="identifier">MenuInflater</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Internal Android function to create the application options menu on the ActionBar</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreateOptionsMenu</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onCreateOptionsMenu(android.view.Menu, android.view.MenuInflater)/menu">menu</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/Menu.html"><span class="identifier">Menu</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onCreateOptionsMenu(android.view.Menu, android.view.MenuInflater)/inflater">inflater</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/MenuInflater.html"><span class="identifier">MenuInflater</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="on-create-view.html">onCreateView</a></p>
+<h4><a href="on-create-view.html">onCreateView</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreateView</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/inflater">inflater</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/LayoutInflater.html"><span class="identifier">LayoutInflater</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/container">container</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a></code>
 <p>Creates the fragment view</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreateView</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/inflater">inflater</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/LayoutInflater.html"><span class="identifier">LayoutInflater</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/container">container</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">?</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="on-map-ready.html">onMapReady</a></p>
+<h4><a href="on-map-ready.html">onMapReady</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onMapReady</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onMapReady(com.google.android.gms.maps.GoogleMap)/googleMap">googleMap</span><span class="symbol">:</span>&nbsp;<span class="identifier">GoogleMap</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Internal method called when the Google Map instance has finished loading and is ready for interation</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onMapReady</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onMapReady(com.google.android.gms.maps.GoogleMap)/googleMap">googleMap</span><span class="symbol">:</span>&nbsp;<span class="identifier">GoogleMap</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="on-options-item-selected.html">onOptionsItemSelected</a></p>
+<h4><a href="on-options-item-selected.html">onOptionsItemSelected</a></h4>
 </td>
 <td>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onOptionsItemSelected</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onOptionsItemSelected(android.view.MenuItem)/item">item</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/MenuItem.html"><span class="identifier">MenuItem</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="on-pause.html">onPause</a></p>
+<h4><a href="on-pause.html">onPause</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onPause</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Lifecycle event called when the activity is paused</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onPause</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="on-request-permissions-result.html">onRequestPermissionsResult</a></p>
+<h4><a href="on-request-permissions-result.html">onRequestPermissionsResult</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onRequestPermissionsResult</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onRequestPermissionsResult(kotlin.Int, kotlin.Array((kotlin.String)), kotlin.IntArray)/requestCode">requestCode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onRequestPermissionsResult(kotlin.Int, kotlin.Array((kotlin.String)), kotlin.IntArray)/permissions">permissions</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onRequestPermissionsResult(kotlin.Int, kotlin.Array((kotlin.String)), kotlin.IntArray)/grantResults">grantResults</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int-array/index.html"><span class="identifier">IntArray</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Internal function to handle permission request results</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onRequestPermissionsResult</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onRequestPermissionsResult(kotlin.Int, kotlin.Array((kotlin.String)), kotlin.IntArray)/requestCode">requestCode</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onRequestPermissionsResult(kotlin.Int, kotlin.Array((kotlin.String)), kotlin.IntArray)/permissions">permissions</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html"><span class="identifier">Array</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onRequestPermissionsResult(kotlin.Int, kotlin.Array((kotlin.String)), kotlin.IntArray)/grantResults">grantResults</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int-array/index.html"><span class="identifier">IntArray</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="on-resume.html">onResume</a></p>
+<h4><a href="on-resume.html">onResume</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onResume</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Method called when the activity is resumed from the lifecycle</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onResume</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="on-view-created.html">onViewCreated</a></p>
+<h4><a href="on-view-created.html">onViewCreated</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onViewCreated</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onViewCreated(android.view.View, android.os.Bundle)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onViewCreated(android.view.View, android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Method called when the view is created in the lifecycle</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onViewCreated</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onViewCreated(android.view.View, android.os.Bundle)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$onViewCreated(android.view.View, android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="process-fav-list-updates.html">processFavListUpdates</a></p>
+<h4><a href="process-fav-list-updates.html">processFavListUpdates</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">processFavListUpdates</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$processFavListUpdates(com.google.firebase.firestore.QuerySnapshot)/querySnapshot">querySnapshot</span><span class="symbol">:</span>&nbsp;<span class="identifier">QuerySnapshot</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Process real-time updates from Firebase Firestore</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">processFavListUpdates</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$processFavListUpdates(com.google.firebase.firestore.QuerySnapshot)/querySnapshot">querySnapshot</span><span class="symbol">:</span>&nbsp;<span class="identifier">QuerySnapshot</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="register-fav-list.html">registerFavList</a></p>
+<h4><a href="register-fav-list.html">registerFavList</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">registerFavList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Registers the favourites list real time listener with Firebase Firestore</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">registerFavList</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="set-gym-status.html">setGymStatus</a></p>
+<h4><a href="set-gym-status.html">setGymStatus</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setGymStatus</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$setGymStatus(kotlin.Boolean, kotlin.String, kotlin.Float)/hasReview">hasReview</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$setGymStatus(kotlin.Boolean, kotlin.String, kotlin.Float)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$setGymStatus(kotlin.Boolean, kotlin.String, kotlin.Float)/rating">rating</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Internal function to set the logged in user's gym review status This will determine if the user has a review for that particular gym or not. If there is, the view review layout is used, otherwise the create new review layout is used</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setGymStatus</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$setGymStatus(kotlin.Boolean, kotlin.String, kotlin.Float)/hasReview">hasReview</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$setGymStatus(kotlin.Boolean, kotlin.String, kotlin.Float)/message">message</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$setGymStatus(kotlin.Boolean, kotlin.String, kotlin.Float)/rating">rating</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="setup-gym-details-controls.html">setupGymDetailsControls</a></p>
+<h4><a href="setup-gym-details-controls.html">setupGymDetailsControls</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setupGymDetailsControls</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Initialize method for setting up the gym details bottom sheet</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">setupGymDetailsControls</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="show-gym-details.html">showGymDetails</a></p>
+<h4><a href="show-gym-details.html">showGymDetails</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">showGymDetails</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Internal function called to hide the favourites list bottom sheet and display the gym details bottom sheet</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">showGymDetails</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="submit-review.html">submitReview</a></p>
+<h4><a href="submit-review.html">submitReview</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">submitReview</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$submitReview(me.zhanghai.android.materialratingbar.MaterialRatingBar, com.google.android.material.textfield.TextInputEditText)/bar">bar</span><span class="symbol">:</span>&nbsp;<span class="identifier">MaterialRatingBar</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$submitReview(me.zhanghai.android.materialratingbar.MaterialRatingBar, com.google.android.material.textfield.TextInputEditText)/reviewMessage">reviewMessage</span><span class="symbol">:</span>&nbsp;<span class="identifier">TextInputEditText</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Internal function to submit review for the selected gym</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">submitReview</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$submitReview(me.zhanghai.android.materialratingbar.MaterialRatingBar, com.google.android.material.textfield.TextInputEditText)/bar">bar</span><span class="symbol">:</span>&nbsp;<span class="identifier">MaterialRatingBar</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$submitReview(me.zhanghai.android.materialratingbar.MaterialRatingBar, com.google.android.material.textfield.TextInputEditText)/reviewMessage">reviewMessage</span><span class="symbol">:</span>&nbsp;<span class="identifier">TextInputEditText</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="unselect-gym-details.html">unselectGymDetails</a></p>
+<h4><a href="unselect-gym-details.html">unselectGymDetails</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">unselectGymDetails</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Internal function called to hide the gym details bottom sheet and redisplay the favourites list bottom sheet</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">unselectGymDetails</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="update-gym-details.html">updateGymDetails</a></p>
+<h4><a href="update-gym-details.html">updateGymDetails</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateGymDetails</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$updateGymDetails(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymList.GymShell)/gym">gym</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-gym-list/-gym-shell/index.html"><span class="identifier">GymShell</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Updates the data in the gym details bottom sheet</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateGymDetails</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$updateGymDetails(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymList.GymShell)/gym">gym</span><span class="symbol">:</span>&nbsp;<span class="identifier">GymShell</span><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="update-gym-ratings.html">updateGymRatings</a></p>
+<h4><a href="update-gym-ratings.html">updateGymRatings</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateGymRatings</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Internal function to update gym ratings for a selected gym</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateGymRatings</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="update-nearby-markers.html">updateNearbyMarkers</a></p>
+<h4><a href="update-nearby-markers.html">updateNearbyMarkers</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateNearbyMarkers</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$updateNearbyMarkers(java.util.ArrayList((com.google.android.gms.maps.model.MarkerOptions)))/results">results</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/java/util/ArrayList.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><span class="identifier">MarkerOptions</span><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Internal function to update the markers near to the user's location. The number of markers is configurable in the app settings</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updateNearbyMarkers</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.home.HomeFragment$updateNearbyMarkers(java.util.ArrayList((com.google.android.gms.maps.model.MarkerOptions)))/results">results</span><span class="symbol">:</span>&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><span class="identifier">MarkerOptions</span><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="zoom-to-my-location.html">zoomToMyLocation</a></p>
+<h4><a href="zoom-to-my-location.html">zoomToMyLocation</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">zoomToMyLocation</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
 <p>Internal method to zoom the map to the user's current location</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">zoomToMyLocation</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 </tbody>
 </table>

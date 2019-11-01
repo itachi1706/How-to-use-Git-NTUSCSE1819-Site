@@ -19,12 +19,11 @@ Chia Yu</p>
 <tbody>
 <tr>
 <td>
-<p><a href="-init-.html">&lt;init&gt;</a></p>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
 </td>
 <td>
-<code><span class="identifier">GBDatabase</span><span class="symbol">(</span><span class="symbol">)</span></code>
 <p>Room database for Gym Buddy app it uses singleton design pattern, it will only create one instance at all time</p>
-</td>
+<code><span class="identifier">GBDatabase</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -33,17 +32,17 @@ Chia Yu</p>
 <tbody>
 <tr>
 <td>
-<p><a href="-f-i-l-e_-d-b_-n-a-m-e.html">FILE_DB_NAME</a></p>
+<h4><a href="-f-i-l-e_-d-b_-n-a-m-e.html">FILE_DB_NAME</a></h4>
 </td>
 <td>
-<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">FILE_DB_NAME</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">FILE_DB_NAME</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="instance.html">instance</a></p>
+<h4><a href="instance.html">instance</a></h4>
 </td>
 <td>
-<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">instance</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GBDatabase</span></a></code></td>
+<code><span class="keyword">static</span> <span class="keyword">var </span><span class="identifier">instance</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GBDatabase</span></a><span class="symbol">!</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -52,19 +51,18 @@ Chia Yu</p>
 <tbody>
 <tr>
 <td>
-<p><a href="car-park-dao.html">carParkDao</a></p>
+<h4><a href="car-park-dao.html">carParkDao</a></h4>
 </td>
 <td>
-<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">carParkDao</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-car-park-dao/index.html"><span class="identifier">CarParkDao</span></a></code></td>
+<code><span class="keyword">abstract</span> <span class="keyword">fun </span><span class="identifier">carParkDao</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-car-park-dao/index.html"><span class="identifier">CarParkDao</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="get-instance.html">getInstance</a></p>
+<h4><a href="get-instance.html">getInstance</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getInstance</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.data.GBDatabase$getInstance(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GBDatabase</span></a></code>
 <p>Getter method for Gym Buddy database if the room database is not existed, it creates from database file in assets folder</p>
-</td>
+<code><span class="keyword">open</span> <span class="keyword">static</span> <span class="keyword">fun </span><span class="identifier">getInstance</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.data.GBDatabase$getInstance(android.content.Context)/context">context</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/content/Context.html"><span class="identifier">Context</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="./index.html"><span class="identifier">GBDatabase</span></a><span class="symbol">!</span></code></td>
 </tr>
 </tbody>
 </table>

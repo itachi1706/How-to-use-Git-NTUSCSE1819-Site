@@ -8,7 +8,7 @@
 <a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist</a>&nbsp;/&nbsp;<a href="./index.html">ChatListFragment</a><br/>
 <br/>
 <h1>ChatListFragment</h1>
-<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ChatListFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Fragment</span><span class="symbol">, </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies/-app-constants/index.html"><span class="identifier">AppConstants</span></a><span class="symbol">, </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.listener/-on-recycler-view-interacted-listener/index.html"><span class="identifier">OnRecyclerViewInteractedListener</span></a><span class="symbol">&lt;</span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.adapter/-chat-adapter/-chat-view-holder/index.html"><span class="identifier">ChatViewHolder</span></a><span class="symbol">&gt;</span></code>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ChatListFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Fragment</span><span class="symbol">, </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies/-app-constants/index.html"><span class="identifier">AppConstants</span></a><span class="symbol">, </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.listener/-on-recycler-view-interacted-listener/index.html"><span class="identifier">OnRecyclerViewInteractedListener</span></a><span class="symbol">&lt;</span><span class="identifier">ChatViewHolder</span><span class="symbol">!</span><span class="symbol">&gt;</span></code>
 <p><strong>Author</strong><br/>
 Chia Yu</p>
 <p><strong>Since</strong><br/>
@@ -18,7 +18,7 @@ Chia Yu</p>
 <tbody>
 <tr>
 <td>
-<p><a href="-init-.html">&lt;init&gt;</a></p>
+<h4><a href="-init-.html">&lt;init&gt;</a></h4>
 </td>
 <td>
 <code><span class="identifier">ChatListFragment</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
@@ -30,127 +30,94 @@ Chia Yu</p>
 <tbody>
 <tr>
 <td>
-<p><a href="-t-a-g.html">TAG</a></p>
+<h4><a href="adapter.html">adapter</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">adapter</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.adapter/-chat-adapter/index.html"><span class="identifier">ChatAdapter</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="chat-list-view-model.html">chatListViewModel</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">chatListViewModel</span><span class="symbol">: </span><a href="../-chat-list-view-model/index.html"><span class="identifier">ChatListViewModel</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="chats.html">chats</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">chats</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="fav-buddies-ref.html">favBuddiesRef</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">favBuddiesRef</span><span class="symbol">: </span><span class="identifier">DocumentReference</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="fav-record.html">favRecord</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">favRecord</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-fav-buddy-record/index.html"><span class="identifier">FavBuddyRecord</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="fav-user-ids.html">favUserIds</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">favUserIds</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="firestore.html">firestore</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">firestore</span><span class="symbol">: </span><span class="identifier">FirebaseFirestore</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="query-chat-listener.html">queryChatListener</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">queryChatListener</span><span class="symbol">: </span><span class="identifier">ListenerRegistration</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="query-chats.html">queryChats</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">queryChats</span><span class="symbol">: </span><span class="identifier">Query</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="query-fav-listener.html">queryFavListener</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">queryFavListener</span><span class="symbol">: </span><span class="identifier">ListenerRegistration</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="rv-chats.html">rvChats</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">rvChats</span><span class="symbol">: </span><span class="identifier">RecyclerView</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="srl-update-chats.html">srlUpdateChats</a></h4>
+</td>
+<td>
+<code><span class="keyword">var </span><span class="identifier">srlUpdateChats</span><span class="symbol">: </span><span class="identifier">SwipeRefreshLayout</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="-t-a-g.html">TAG</a></h4>
 </td>
 <td>
 <code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TAG</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="adapter.html">adapter</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">adapter</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.adapter/-chat-adapter/index.html"><span class="identifier">ChatAdapter</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="chat-list-view-model.html">chatListViewModel</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">chatListViewModel</span><span class="symbol">: </span><a href="../-chat-list-view-model/index.html"><span class="identifier">ChatListViewModel</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="chats.html">chats</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">chats</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/ArrayList.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">&gt;</span></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="fav-buddies-ref.html">favBuddiesRef</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">favBuddiesRef</span><span class="symbol">: </span><span class="identifier">DocumentReference</span></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="fav-record.html">favRecord</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">favRecord</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-fav-buddy-record/index.html"><span class="identifier">FavBuddyRecord</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="fav-user-ids.html">favUserIds</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">favUserIds</span><span class="symbol">: </span><a href="https://developer.android.com/reference/java/util/ArrayList.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">&gt;</span></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="firestore.html">firestore</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">firestore</span><span class="symbol">: </span><span class="identifier">FirebaseFirestore</span></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="query-chat-listener.html">queryChatListener</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">queryChatListener</span><span class="symbol">: </span><span class="identifier">ListenerRegistration</span></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="query-chats.html">queryChats</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">queryChats</span><span class="symbol">: </span><span class="identifier">Query</span></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="query-fav-listener.html">queryFavListener</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">queryFavListener</span><span class="symbol">: </span><span class="identifier">ListenerRegistration</span></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="rv-chats.html">rvChats</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">rvChats</span><span class="symbol">: </span><span class="identifier">RecyclerView</span></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="srl-update-chats.html">srlUpdateChats</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">srlUpdateChats</span><span class="symbol">: </span><span class="identifier">SwipeRefreshLayout</span></code></td>
-</tr>
-</tbody>
-</table>
-<h3>Inherited Properties</h3>
-<table>
-<tbody>
-<tr>
-<td>
-<p><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies/-app-constants/-c-o-l-l-e-c-t-i-o-n_-c-h-a-t.html">COLLECTION_CHAT</a></p>
-</td>
-<td>
-<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">COLLECTION_CHAT</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies/-app-constants/-c-o-l-l-e-c-t-i-o-n_-f-a-v_-b-u-d-d-y.html">COLLECTION_FAV_BUDDY</a></p>
-</td>
-<td>
-<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">COLLECTION_FAV_BUDDY</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies/-app-constants/-c-o-l-l-e-c-t-i-o-n_-m-e-s-s-a-g-e-s.html">COLLECTION_MESSAGES</a></p>
-</td>
-<td>
-<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">COLLECTION_MESSAGES</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies/-app-constants/-m-a-x_-c-a-c-h-e_-d-u-r-a-t-i-o-n.html">MAX_CACHE_DURATION</a></p>
-</td>
-<td>
-<code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">MAX_CACHE_DURATION</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html"><span class="identifier">Long</span></a></code></td>
 </tr>
 </tbody>
 </table>
@@ -159,91 +126,91 @@ Chia Yu</p>
 <tbody>
 <tr>
 <td>
-<p><a href="commit-fav-record.html">commitFavRecord</a></p>
+<h4><a href="commit-fav-record.html">commitFavRecord</a></h4>
 </td>
 <td>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">commitFavRecord</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="go-chat-activity.html">goChatActivity</a></p>
+<h4><a href="go-chat-activity.html">goChatActivity</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">goChatActivity</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist.ChatListFragment$goChatActivity(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.Chat)/chat">chat</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">goChatActivity</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist.ChatListFragment$goChatActivity(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.Chat)/chat">chat</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="listen-chat-list-changes.html">listenChatListChanges</a></p>
+<h4><a href="listen-chat-list-changes.html">listenChatListChanges</a></h4>
 </td>
 <td>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">listenChatListChanges</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="listen-fav-changes.html">listenFavChanges</a></p>
+<h4><a href="listen-fav-changes.html">listenFavChanges</a></h4>
 </td>
 <td>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">listenFavChanges</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="on-create-view.html">onCreateView</a></p>
+<h4><a href="on-create-view.html">onCreateView</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreateView</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist.ChatListFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/inflater">inflater</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/LayoutInflater.html"><span class="identifier">LayoutInflater</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist.ChatListFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/container">container</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist.ChatListFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a></code></td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreateView</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist.ChatListFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/inflater">inflater</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/LayoutInflater.html"><span class="identifier">LayoutInflater</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist.ChatListFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/container">container</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">?</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist.ChatListFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">?</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">?</span></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="on-pause.html">onPause</a></p>
+<h4><a href="on-pause.html">onPause</a></h4>
 </td>
 <td>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onPause</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="on-resume.html">onResume</a></p>
+<h4><a href="on-resume.html">onResume</a></h4>
 </td>
 <td>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onResume</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="on-view-interacted.html">onViewInteracted</a></p>
+<h4><a href="on-view-interacted.html">onViewInteracted</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onViewInteracted</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist.ChatListFragment$onViewInteracted(android.view.View, sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter.ChatViewHolder, kotlin.Int)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist.ChatListFragment$onViewInteracted(android.view.View, sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter.ChatViewHolder, kotlin.Int)/holder">holder</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.adapter/-chat-adapter/-chat-view-holder/index.html"><span class="identifier">ChatViewHolder</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist.ChatListFragment$onViewInteracted(android.view.View, sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter.ChatViewHolder, kotlin.Int)/action">action</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onViewInteracted</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist.ChatListFragment$onViewInteracted(android.view.View, sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter.ChatViewHolder, kotlin.Int)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist.ChatListFragment$onViewInteracted(android.view.View, sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter.ChatViewHolder, kotlin.Int)/holder">holder</span><span class="symbol">:</span>&nbsp;<span class="identifier">ChatViewHolder</span><span class="symbol">!</span><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist.ChatListFragment$onViewInteracted(android.view.View, sg.edu.ntu.scse.cz2006.gymbuddies.adapter.ChatAdapter.ChatViewHolder, kotlin.Int)/action">action</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="query-user.html">queryUser</a></p>
+<h4><a href="query-user.html">queryUser</a></h4>
 </td>
 <td>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">queryUser</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="read-query-snapshot.html">readQuerySnapshot</a></p>
+<h4><a href="read-query-snapshot.html">readQuerySnapshot</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readQuerySnapshot</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist.ChatListFragment$readQuerySnapshot(com.google.firebase.firestore.QuerySnapshot)/snapshots">snapshots</span><span class="symbol">:</span>&nbsp;<span class="identifier">QuerySnapshot</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readQuerySnapshot</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist.ChatListFragment$readQuerySnapshot(com.google.firebase.firestore.QuerySnapshot)/snapshots">snapshots</span><span class="symbol">:</span>&nbsp;<span class="identifier">QuerySnapshot</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="read-user-and-update-chats.html">readUserAndUpdateChats</a></p>
+<h4><a href="read-user-and-update-chats.html">readUserAndUpdateChats</a></h4>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readUserAndUpdateChats</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist.ChatListFragment$readUserAndUpdateChats(com.google.firebase.firestore.QuerySnapshot)/snapshots">snapshots</span><span class="symbol">:</span>&nbsp;<span class="identifier">QuerySnapshot</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readUserAndUpdateChats</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.chatlist.ChatListFragment$readUserAndUpdateChats(com.google.firebase.firestore.QuerySnapshot)/snapshots">snapshots</span><span class="symbol">:</span>&nbsp;<span class="identifier">QuerySnapshot</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="stop-listen-chat-list-changes.html">stopListenChatListChanges</a></p>
+<h4><a href="stop-listen-chat-list-changes.html">stopListenChatListChanges</a></h4>
 </td>
 <td>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">stopListenChatListChanges</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
-<p><a href="stop-listen-fav-changes.html">stopListenFavChanges</a></p>
+<h4><a href="stop-listen-fav-changes.html">stopListenFavChanges</a></h4>
 </td>
 <td>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">stopListenFavChanges</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
