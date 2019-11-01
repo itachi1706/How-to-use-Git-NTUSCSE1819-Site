@@ -9,15 +9,11 @@
 <br/>
 <h1>ViewHolder</h1>
 <code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">ViewHolder</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">ViewHolder</span><span class="symbol">, </span><a href="https://developer.android.com/reference/android/view/View/OnClickListener.html"><span class="identifier">OnClickListener</span></a></code>
-<p>View Holder to hold data displaying data</p>
+<p>View Holder to hold references to frequent modified views</p>
 <p><strong>Author</strong><br/>
 Chia Yu</p>
 <p><strong>Since</strong><br/>
 2019-09-28</p>
-<p><strong>Property</strong><br/>
-itemView the view represents the whole item</p>
-<p><strong>Constructor</strong><br/>
-Creates a adapter for the Buddy Search Result List RecyclerView</p>
 <h3>Constructors</h3>
 <table>
 <tbody>
@@ -26,6 +22,7 @@ Creates a adapter for the Buddy Search Result List RecyclerView</p>
 <h4><a href="-init-.html">&lt;init&gt;</a></h4>
 </td>
 <td>
+<p>constructor method</p>
 <code><span class="identifier">ViewHolder</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter.ViewHolder$<init>(android.view.View)/itemView">itemView</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">!</span><span class="symbol">)</span></code></td>
 </tr>
 </tbody>
@@ -38,6 +35,7 @@ Creates a adapter for the Buddy Search Result List RecyclerView</p>
 <h4><a href="cb-fav.html">cbFav</a></h4>
 </td>
 <td>
+<p>view that denote whether a user is buddy of current user</p>
 <code><span class="keyword">var </span><span class="identifier">cbFav</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/CheckBox.html"><span class="identifier">CheckBox</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -45,6 +43,7 @@ Creates a adapter for the Buddy Search Result List RecyclerView</p>
 <h4><a href="img-view-gender.html">imgViewGender</a></h4>
 </td>
 <td>
+<p>view that display user's gender by icon</p>
 <code><span class="keyword">var </span><span class="identifier">imgViewGender</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/ImageView.html"><span class="identifier">ImageView</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -52,6 +51,7 @@ Creates a adapter for the Buddy Search Result List RecyclerView</p>
 <h4><a href="img-view-pic.html">imgViewPic</a></h4>
 </td>
 <td>
+<p>view that display user's profile picture</p>
 <code><span class="keyword">var </span><span class="identifier">imgViewPic</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/ImageView.html"><span class="identifier">ImageView</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -59,6 +59,7 @@ Creates a adapter for the Buddy Search Result List RecyclerView</p>
 <h4><a href="ll-pref-days.html">llPrefDays</a></h4>
 </td>
 <td>
+<p>view group that display user's preferred workout days</p>
 <code><span class="keyword">var </span><span class="identifier">llPrefDays</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/LinearLayout.html"><span class="identifier">LinearLayout</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -66,6 +67,7 @@ Creates a adapter for the Buddy Search Result List RecyclerView</p>
 <h4><a href="tv-name.html">tvName</a></h4>
 </td>
 <td>
+<p>view that display user name</p>
 <code><span class="keyword">var </span><span class="identifier">tvName</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/TextView.html"><span class="identifier">TextView</span></a><span class="symbol">!</span></code></td>
 </tr>
 </tbody>
@@ -78,6 +80,7 @@ Creates a adapter for the Buddy Search Result List RecyclerView</p>
 <h4><a href="on-click.html">onClick</a></h4>
 </td>
 <td>
+<p>when user click on certain view, it update observer by interface</p>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onClick</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter.ViewHolder$onClick(android.view.View)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
@@ -93,7 +96,7 @@ Creates a adapter for the Buddy Search Result List RecyclerView</p>
 <h4><a href="update-pref-days.html">updatePrefDays</a></h4>
 </td>
 <td>
-<p>update preference workout days based on user</p>
+<p>update preferred workout days based on user</p>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">updatePrefDays</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter.ViewHolder$updatePrefDays(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)/user">user</span><span class="symbol">:</span>&nbsp;<a href="../../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 </tbody>
