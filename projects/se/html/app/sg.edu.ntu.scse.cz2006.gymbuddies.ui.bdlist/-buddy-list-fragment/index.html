@@ -8,7 +8,12 @@
 <a href="../../index.html">app</a>&nbsp;/&nbsp;<a href="../index.html">sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdlist</a>&nbsp;/&nbsp;<a href="./index.html">BuddyListFragment</a><br/>
 <br/>
 <h1>BuddyListFragment</h1>
-<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuddyListFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Fragment</span><span class="symbol">, </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies/-app-constants/index.html"><span class="identifier">AppConstants</span></a><span class="symbol">, </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.listener/-on-recycler-view-clicked-listener/index.html"><span class="identifier">OnRecyclerViewClickedListener</span></a><span class="symbol">&lt;</span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.adapter/-buddy-result-adapter/-view-holder/index.html"><span class="identifier">ViewHolder</span></a><span class="symbol">&gt;</span></code>
+<code><span class="keyword">open</span> <span class="keyword">class </span><span class="identifier">BuddyListFragment</span>&nbsp;<span class="symbol">:</span>&nbsp;<span class="identifier">Fragment</span><span class="symbol">, </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies/-app-constants/index.html"><span class="identifier">AppConstants</span></a><span class="symbol">, </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.listener/-on-recycler-view-interacted-listener/index.html"><span class="identifier">OnRecyclerViewInteractedListener</span></a><span class="symbol">&lt;</span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.adapter/-buddy-result-adapter/-view-holder/index.html"><span class="identifier">ViewHolder</span></a><span class="symbol">&gt;</span></code>
+<p>The fragment display list of buddies (favoured user) of current user it allow user to view profile information, start chat and un-favour of user</p>
+<p><strong>Author</strong><br/>
+Chia Yu</p>
+<p><strong>Since</strong><br/>
+2019-09-06</p>
 <h3>Constructors</h3>
 <table>
 <tbody>
@@ -17,7 +22,9 @@
 <p><a href="-init-.html">&lt;init&gt;</a></p>
 </td>
 <td>
-<code><span class="identifier">BuddyListFragment</span><span class="symbol">(</span><span class="symbol">)</span></code></td>
+<code><span class="identifier">BuddyListFragment</span><span class="symbol">(</span><span class="symbol">)</span></code>
+<p>The fragment display list of buddies (favoured user) of current user it allow user to view profile information, start chat and un-favour of user</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -58,13 +65,6 @@
 </td>
 <td>
 <code><span class="keyword">var </span><span class="identifier">favRecord</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-fav-buddy-record/index.html"><span class="identifier">FavBuddyRecord</span></a></code></td>
-</tr>
-<tr>
-<td>
-<p><a href="fav-record-change-listener.html">favRecordChangeListener</a></p>
-</td>
-<td>
-<code><span class="keyword">var </span><span class="identifier">favRecordChangeListener</span><span class="symbol">: </span><span class="identifier">ListenerRegistration</span></code></td>
 </tr>
 <tr>
 <td>
@@ -158,7 +158,9 @@
 <p><a href="on-create-view.html">onCreateView</a></p>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreateView</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdlist.BuddyListFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/inflater">inflater</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/LayoutInflater.html"><span class="identifier">LayoutInflater</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdlist.BuddyListFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/container">container</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdlist.BuddyListFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a></code></td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onCreateView</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdlist.BuddyListFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/inflater">inflater</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/LayoutInflater.html"><span class="identifier">LayoutInflater</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdlist.BuddyListFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/container">container</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/ViewGroup.html"><span class="identifier">ViewGroup</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdlist.BuddyListFragment$onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)/savedInstanceState">savedInstanceState</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/os/Bundle.html"><span class="identifier">Bundle</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a></code>
+<p>Internal lifecycle fragment for creating the fragment view</p>
+</td>
 </tr>
 <tr>
 <td>
@@ -183,10 +185,10 @@
 </tr>
 <tr>
 <td>
-<p><a href="on-view-clicked.html">onViewClicked</a></p>
+<p><a href="on-view-interacted.html">onViewInteracted</a></p>
 </td>
 <td>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onViewClicked</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdlist.BuddyListFragment$onViewClicked(android.view.View, sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter.ViewHolder, kotlin.Int)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdlist.BuddyListFragment$onViewClicked(android.view.View, sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter.ViewHolder, kotlin.Int)/holder">holder</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.adapter/-buddy-result-adapter/-view-holder/index.html"><span class="identifier">ViewHolder</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdlist.BuddyListFragment$onViewClicked(android.view.View, sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter.ViewHolder, kotlin.Int)/action">action</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">onViewInteracted</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdlist.BuddyListFragment$onViewInteracted(android.view.View, sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter.ViewHolder, kotlin.Int)/view">view</span><span class="symbol">:</span>&nbsp;<a href="https://developer.android.com/reference/android/view/View.html"><span class="identifier">View</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdlist.BuddyListFragment$onViewInteracted(android.view.View, sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter.ViewHolder, kotlin.Int)/holder">holder</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.adapter/-buddy-result-adapter/-view-holder/index.html"><span class="identifier">ViewHolder</span></a><span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ui.bdlist.BuddyListFragment$onViewInteracted(android.view.View, sg.edu.ntu.scse.cz2006.gymbuddies.adapter.BuddyResultAdapter.ViewHolder, kotlin.Int)/action">action</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
