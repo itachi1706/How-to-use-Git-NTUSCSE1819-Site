@@ -9,8 +9,12 @@
 <br/>
 <h1>GymRatingStats</h1>
 <code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">GymRatingStats</span></code>
-<p>Created by Kenneth on 14/10/2019.
+<p>Statistics for Gym Ratings. For use by recycler adapters in recyclerviews
 for sg.edu.ntu.scse.cz2006.gymbuddies.datastruct in Gym Buddies!</p>
+<p><strong>Author</strong><br/>
+Kenneth Soh</p>
+<p><strong>Since</strong><br/>
+2019-10-14</p>
 <h3>Constructors</h3>
 <table>
 <tbody>
@@ -20,8 +24,7 @@ for sg.edu.ntu.scse.cz2006.gymbuddies.datastruct in Gym Buddies!</p>
 </td>
 <td>
 <code><span class="identifier">GymRatingStats</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymRatingStats$<init>(kotlin.Float, kotlin.Int, kotlin.Float)/averageRating">averageRating</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0.0f<span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymRatingStats$<init>(kotlin.Float, kotlin.Int, kotlin.Float)/count">count</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0<span class="symbol">, </span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.GymRatingStats$<init>(kotlin.Float, kotlin.Int, kotlin.Float)/totalRating">totalRating</span><span class="symbol">:</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a>&nbsp;<span class="symbol">=</span>&nbsp;0.0f<span class="symbol">)</span></code>
-<p>Created by Kenneth on 14/10/2019.
-for sg.edu.ntu.scse.cz2006.gymbuddies.datastruct in Gym Buddies!</p>
+<p>Returns an object signifying the gym rating statistics for a particular gym</p>
 </td>
 </tr>
 </tbody>
@@ -34,21 +37,27 @@ for sg.edu.ntu.scse.cz2006.gymbuddies.datastruct in Gym Buddies!</p>
 <p><a href="average-rating.html">averageRating</a></p>
 </td>
 <td>
-<code><span class="keyword">val </span><span class="identifier">averageRating</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a></code></td>
+<code><span class="keyword">val </span><span class="identifier">averageRating</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a></code>
+<p>Float Average Rating of Gym</p>
+</td>
 </tr>
 <tr>
 <td>
 <p><a href="count.html">count</a></p>
 </td>
 <td>
-<code><span class="keyword">val </span><span class="identifier">count</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code></td>
+<code><span class="keyword">val </span><span class="identifier">count</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html"><span class="identifier">Int</span></a></code>
+<p>Int Number of Ratings for the Gym</p>
+</td>
 </tr>
 <tr>
 <td>
 <p><a href="total-rating.html">totalRating</a></p>
 </td>
 <td>
-<code><span class="keyword">val </span><span class="identifier">totalRating</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a></code></td>
+<code><span class="keyword">val </span><span class="identifier">totalRating</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html"><span class="identifier">Float</span></a></code>
+<p>Float Total Rating Score for gym (tabulated by summing up all the ratings in the gym)</p>
+</td>
 </tr>
 </tbody>
 </table>
