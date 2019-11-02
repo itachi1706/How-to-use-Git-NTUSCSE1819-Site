@@ -35,6 +35,7 @@ Chia Yu</p>
 <h4><a href="adapter.html">adapter</a></h4>
 </td>
 <td>
+<p>adapter to bind <code><a href="messages.html">#messages</a></code> onto <code><a href="rv-messages.html">#rvMessages</a></code></p>
 <code><span class="keyword">var </span><span class="identifier">adapter</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.adapter/-message-adapter/index.html"><span class="identifier">MessageAdapter</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -42,6 +43,7 @@ Chia Yu</p>
 <h4><a href="chat-ref.html">chatRef</a></h4>
 </td>
 <td>
+<p>document reference used to get current chat room's info, response of query will be converted to <code><a href="cur-chat.html">#curChat</a></code></p>
 <code><span class="keyword">var </span><span class="identifier">chatRef</span><span class="symbol">: </span><span class="identifier">DocumentReference</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -49,6 +51,7 @@ Chia Yu</p>
 <h4><a href="cur-chat.html">curChat</a></h4>
 </td>
 <td>
+<p>actual chat object holds information of current chat room</p>
 <code><span class="keyword">var </span><span class="identifier">curChat</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-chat/index.html"><span class="identifier">Chat</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -56,6 +59,7 @@ Chia Yu</p>
 <h4><a href="et-message.html">etMessage</a></h4>
 </td>
 <td>
+<p>View reference to EditText, which allow user to input message</p>
 <code><span class="keyword">var </span><span class="identifier">etMessage</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/EditText.html"><span class="identifier">EditText</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -63,6 +67,7 @@ Chia Yu</p>
 <h4><a href="firestore.html">firestore</a></h4>
 </td>
 <td>
+<p>Firestore instance to query data</p>
 <code><span class="keyword">var </span><span class="identifier">firestore</span><span class="symbol">: </span><span class="identifier">FirebaseFirestore</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -70,6 +75,7 @@ Chia Yu</p>
 <h4><a href="img-btn-send.html">imgBtnSend</a></h4>
 </td>
 <td>
+<p>View reference to ImageButton, allow user to send out message</p>
 <code><span class="keyword">var </span><span class="identifier">imgBtnSend</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/ImageButton.html"><span class="identifier">ImageButton</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -77,6 +83,7 @@ Chia Yu</p>
 <h4><a href="img-buddy-pic.html">imgBuddyPic</a></h4>
 </td>
 <td>
+<p>view reference to ImageView, that shows icon of chat room</p>
 <code><span class="keyword">var </span><span class="identifier">imgBuddyPic</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/ImageView.html"><span class="identifier">ImageView</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -84,6 +91,7 @@ Chia Yu</p>
 <h4><a href="messages.html">messages</a></h4>
 </td>
 <td>
+<p>list of chat messages within chat room</p>
 <code><span class="keyword">var </span><span class="identifier">messages</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-chat-message/index.html"><span class="identifier">ChatMessage</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -91,6 +99,7 @@ Chia Yu</p>
 <h4><a href="msg-listener.html">msgListener</a></h4>
 </td>
 <td>
+<p>observer to listen to changes on messages changes in current chat room</p>
 <code><span class="keyword">var </span><span class="identifier">msgListener</span><span class="symbol">: </span><span class="identifier">ListenerRegistration</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -98,6 +107,7 @@ Chia Yu</p>
 <h4><a href="rv-messages.html">rvMessages</a></h4>
 </td>
 <td>
+<p>view reference to RecyclerView, which display <code><a href="messages.html">#messages</a></code> to user with help of <code><a href="adapter.html">#adapter</a></code></p>
 <code><span class="keyword">var </span><span class="identifier">rvMessages</span><span class="symbol">: </span><span class="identifier">RecyclerView</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -105,6 +115,7 @@ Chia Yu</p>
 <h4><a href="-t-a-g.html">TAG</a></h4>
 </td>
 <td>
+<p>TAG is unique identifier to for logging purpose</p>
 <code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TAG</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
 </tr>
 <tr>
@@ -112,6 +123,7 @@ Chia Yu</p>
 <h4><a href="tv-title.html">tvTitle</a></h4>
 </td>
 <td>
+<p>view reference to TextView, that shows title of chat room</p>
 <code><span class="keyword">var </span><span class="identifier">tvTitle</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/TextView.html"><span class="identifier">TextView</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -119,6 +131,7 @@ Chia Yu</p>
 <h4><a href="uid.html">uid</a></h4>
 </td>
 <td>
+<p>current user's id</p>
 <code><span class="keyword">var </span><span class="identifier">uid</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span></code></td>
 </tr>
 </tbody>
@@ -237,14 +250,6 @@ Chia Yu</p>
 <td>
 <p>The method performs recall of chat message on FirebaseFirestore</p>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">recallMessage</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.ChatActivity$recallMessage(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.ChatMessage)/msg">msg</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-chat-message/index.html"><span class="identifier">ChatMessage</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
-</tr>
-<tr>
-<td>
-<h4><a href="show-dialog-invalid-args.html">showDialogInvalidArgs</a></h4>
-</td>
-<td>
-<p>The method display invalid messages when data received from another activity is insufficient to initialised activity.</p>
-<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">showDialogInvalidArgs</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>

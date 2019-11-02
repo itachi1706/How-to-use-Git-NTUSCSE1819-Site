@@ -35,6 +35,7 @@ Chia Yu</p>
 <h4><a href="adapter.html">adapter</a></h4>
 </td>
 <td>
+<p>adapter to bind <code><a href="list-users.html">#listUsers</a></code> onto <code><a href="rv-result.html">#rvResult</a></code></p>
 <code><span class="keyword">var </span><span class="identifier">adapter</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.adapter/-buddy-result-adapter/index.html"><span class="identifier">BuddyResultAdapter</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -42,6 +43,7 @@ Chia Yu</p>
 <h4><a href="fav-buddies-ref.html">favBuddiesRef</a></h4>
 </td>
 <td>
+<p>document reference used to query user's favoured buddies record, response of query will be converted to <code><a href="fav-record.html">#favRecord</a></code></p>
 <code><span class="keyword">var </span><span class="identifier">favBuddiesRef</span><span class="symbol">: </span><span class="identifier">DocumentReference</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -49,6 +51,7 @@ Chia Yu</p>
 <h4><a href="fav-record.html">favRecord</a></h4>
 </td>
 <td>
+<p>actual object that keeps records of user's favoured buddies record</p>
 <code><span class="keyword">var </span><span class="identifier">favRecord</span><span class="symbol">: </span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-fav-buddy-record/index.html"><span class="identifier">FavBuddyRecord</span></a><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -56,6 +59,7 @@ Chia Yu</p>
 <h4><a href="fav-record-change-listener.html">favRecordChangeListener</a></h4>
 </td>
 <td>
+<p>observer to listen to changes on user's favoured record changes</p>
 <code><span class="keyword">var </span><span class="identifier">favRecordChangeListener</span><span class="symbol">: </span><span class="identifier">ListenerRegistration</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -63,6 +67,7 @@ Chia Yu</p>
 <h4><a href="firestore.html">firestore</a></h4>
 </td>
 <td>
+<p>Firestore instance to query data</p>
 <code><span class="keyword">var </span><span class="identifier">firestore</span><span class="symbol">: </span><span class="identifier">FirebaseFirestore</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -70,6 +75,7 @@ Chia Yu</p>
 <h4><a href="list-fav-user-ids.html">listFavUserIds</a></h4>
 </td>
 <td>
+<p>list of favoured users' uid, used to identify buddies</p>
 <code><span class="keyword">var </span><span class="identifier">listFavUserIds</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -77,13 +83,23 @@ Chia Yu</p>
 <h4><a href="list-users.html">listUsers</a></h4>
 </td>
 <td>
+<p>list of users that matched searching condition</p>
 <code><span class="keyword">var </span><span class="identifier">listUsers</span><span class="symbol">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html"><span class="identifier">ArrayList</span></a><span class="symbol">&lt;</span><a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">!</span><span class="symbol">&gt;</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="query-search-user.html">querySearchUser</a></h4>
+</td>
+<td>
+<p>query to search user based on search condition</p>
+<code><span class="keyword">var </span><span class="identifier">querySearchUser</span><span class="symbol">: </span><span class="identifier">Query</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
 <td>
 <h4><a href="rv-result.html">rvResult</a></h4>
 </td>
 <td>
+<p>view reference to recycler view that display list of user that matching search conditions</p>
 <code><span class="keyword">var </span><span class="identifier">rvResult</span><span class="symbol">: </span><span class="identifier">RecyclerView</span><span class="symbol">!</span></code></td>
 </tr>
 <tr>
@@ -91,7 +107,16 @@ Chia Yu</p>
 <h4><a href="-t-a-g.html">TAG</a></h4>
 </td>
 <td>
-<code><span class="keyword">var </span><span class="identifier">TAG</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span></code></td>
+<p>TAG is unique identifier to for logging purpose</p>
+<code><span class="keyword">val </span><span class="identifier">TAG</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="tv-empty-message.html">tvEmptyMessage</a></h4>
+</td>
+<td>
+<p>view reference to empty view, when there is no user matched the condition, this view will be displayed</p>
+<code><span class="keyword">var </span><span class="identifier">tvEmptyMessage</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/TextView.html"><span class="identifier">TextView</span></a><span class="symbol">!</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -100,9 +125,23 @@ Chia Yu</p>
 <tbody>
 <tr>
 <td>
+<h4><a href="build-search-query.html">buildSearchQuery</a></h4>
+</td>
+<td>
+<p>Craft search user query to firestore, query is based on search parameters are: <ul> <li>preferred workout days</li>
+ <li>preferred location</li>
+ <li>preferred time</li>
+ <li>preferred gender</li>
+ </ul>
+</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">buildSearchQuery</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><span class="identifier">Query</span><span class="symbol">!</span></code></td>
+</tr>
+<tr>
+<td>
 <h4><a href="commit-fav-record.html">commitFavRecord</a></h4>
 </td>
 <td>
+<p>query to FirebaseFirestore to update</p>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">commitFavRecord</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
@@ -110,6 +149,7 @@ Chia Yu</p>
 <h4><a href="do-add-fav-buddy.html">doAddFavBuddy</a></h4>
 </td>
 <td>
+<p>Add another user as buddies, uid will be added to favourite list and update to firestore</p>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">doAddFavBuddy</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.BuddySearchResultActivity$doAddFavBuddy(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)/otherUser">otherUser</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
@@ -117,6 +157,7 @@ Chia Yu</p>
 <h4><a href="do-remove-fav-buddy.html">doRemoveFavBuddy</a></h4>
 </td>
 <td>
+<p>Remove buddy, Uid will be removed from favourite list and update to firestore</p>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">doRemoveFavBuddy</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.BuddySearchResultActivity$doRemoveFavBuddy(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)/otherUser">otherUser</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
@@ -124,6 +165,7 @@ Chia Yu</p>
 <h4><a href="go-chat-activity.html">goChatActivity</a></h4>
 </td>
 <td>
+<p>Redirect user to chat activity</p>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">goChatActivity</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.BuddySearchResultActivity$goChatActivity(sg.edu.ntu.scse.cz2006.gymbuddies.datastruct.User)/other">other</span><span class="symbol">:</span>&nbsp;<a href="../../sg.edu.ntu.scse.cz2006.gymbuddies.datastruct/-user/index.html"><span class="identifier">User</span></a><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
@@ -133,6 +175,14 @@ Chia Yu</p>
 <td>
 <p>Register as an observer to listen changes of searched user result</p>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">listenFavRecordChanges</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="notify-and-update-view.html">notifyAndUpdateView</a></h4>
+</td>
+<td>
+<p>notify recycler view about data is being modified. if nothing to display, it display empty view</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notifyAndUpdateView</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
@@ -179,7 +229,7 @@ Chia Yu</p>
 <h4><a href="query-buddy.html">queryBuddy</a></h4>
 </td>
 <td>
-<p>Craft query to firestore, and notify Recycler view adapter to update Recycler view.</p>
+<p>perform query to Firestore, and update data based on response</p>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">queryBuddy</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
@@ -195,7 +245,7 @@ Chia Yu</p>
 <h4><a href="read-fav-record-doc.html">readFavRecordDoc</a></h4>
 </td>
 <td>
-<p><code><a href="query-fav-user-record.html">#queryFavUserRecord()</a></code></p>
+<p>After query to firestore by <code><a href="query-fav-user-record.html">#queryFavUserRecord()</a></code>, this method reads response and update data to be display</p>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">readFavRecordDoc</span><span class="symbol">(</span><span class="identifier" id="sg.edu.ntu.scse.cz2006.gymbuddies.BuddySearchResultActivity$readFavRecordDoc(com.google.firebase.firestore.DocumentSnapshot)/documentSnapshot">documentSnapshot</span><span class="symbol">:</span>&nbsp;<span class="identifier">DocumentSnapshot</span><span class="symbol">!</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
