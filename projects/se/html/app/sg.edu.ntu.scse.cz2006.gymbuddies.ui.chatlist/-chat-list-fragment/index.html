@@ -126,6 +126,14 @@ Chia Yu</p>
 <p>TAG is unique identifier to for logging purpose</p>
 <code><span class="keyword">static</span> <span class="keyword">val </span><span class="identifier">TAG</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html"><span class="identifier">String</span></a></code></td>
 </tr>
+<tr>
+<td>
+<h4><a href="tv-empty-message.html">tvEmptyMessage</a></h4>
+</td>
+<td>
+<p>view reference to empty view, when there is no user matched the condition, this view will be displayed</p>
+<code><span class="keyword">var </span><span class="identifier">tvEmptyMessage</span><span class="symbol">: </span><a href="https://developer.android.com/reference/android/widget/TextView.html"><span class="identifier">TextView</span></a><span class="symbol">!</span></code></td>
+</tr>
 </tbody>
 </table>
 <h3>Functions</h3>
@@ -162,6 +170,14 @@ Chia Yu</p>
 <td>
 <p>register an observer to listen to changes on user's favoured buddies records</p>
 <code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">listenFavChanges</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
+</tr>
+<tr>
+<td>
+<h4><a href="notify-and-update-view.html">notifyAndUpdateView</a></h4>
+</td>
+<td>
+<p>notify recycler view about data is being modified. if nothing to display, it display empty view</p>
+<code><span class="keyword">open</span> <span class="keyword">fun </span><span class="identifier">notifyAndUpdateView</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code></td>
 </tr>
 <tr>
 <td>
